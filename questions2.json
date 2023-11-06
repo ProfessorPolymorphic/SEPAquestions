@@ -1,0 +1,110 @@
+[
+    {
+        "questionID": 8,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "What does a systems thinking approach entail?",
+        "options": {
+            "a": "Considering each part of a system in isolation",
+            "b": "Focusing only on the most prominent part of a system",
+            "c": "Considering how all parts of a system interrelate and influence each other",
+            "d": "Ignoring feedback loops and cycles within a system"
+        }
+    },
+    {
+        "questionID": 9,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "In the context of infectious diseases, what is the 'R0' (basic reproduction number)?",
+        "options": {
+            "a": "The total number of people infected by a disease",
+            "b": "The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population",
+            "c": "The percentage of a population that needs to be immune for herd immunity to be reached",
+            "d": "The time it takes for symptoms to appear after a person is infected"
+        }
+    },
+    {
+        "questionID": 10,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "What is a feedback loop in the context of systems thinking?",
+        "options": {
+            "a": "The time it takes for a change to circulate through a system",
+            "b": "The one-way sequence of cause and effect in a system",
+            "c": "A mechanism where a change in a system leads to an outcome that affects the original change",
+            "d": "The linear connection of two separate systems"
+        }
+    },
+    {
+        "questionID": 11,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "What does the term 'herd immunity' refer to in the context of infectious diseases?",
+        "options": {
+            "a": "Immunity developed in animals in a herd",
+            "b": "The protection a vaccine offers to an individual",
+            "c": "When a high percentage of a population is immune to a disease, indirectly protecting those who are not immune",
+            "d": "When everyone in a population is immune to a disease"
+        }
+    },
+    {
+        "questionID": 12,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "Why is systems thinking particularly important when studying infectious disease dynamics?",
+        "options": {
+            "a": "Because systems thinking is a new trend in scientific research",
+            "b": "Because the spread of infectious diseases is influenced by a complex interplay of biological, social, and environmental factors",
+            "c": "Because systems thinking makes the study of diseases easier",
+            "d": "Because infectious diseases only exist within certain systems"
+        }
+    },
+    {
+        "questionID": 13,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "How might climate change impact infectious disease dynamics according to a systems thinking perspective?",
+        "options": {
+            "a": "Climate change has no impact on infectious disease dynamics",
+            "b": "Climate change may alter habitats and lifestyles, indirectly affecting the spread of some diseases",
+            "c": "Climate change only affects diseases spread by mosquitoes",
+            "d": "Climate change impacts are unrelated to systems thinking"
+        }
+    },
+    {
+        "questionID": 14,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "In a systems model of infectious disease, what role does 'socioeconomic status' play?",
+        "options": {
+            "a": "It determines the type of disease a person will get",
+            "b": "It may influence a person's vulnerability to disease, access to healthcare, and health behaviors",
+            "c": "It only matters in low-income countries",
+            "d": "It has no role in infectious disease dynamics"
+        }
+    },
+    {
+        "questionID": 15,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "What does a 'reservoir' refer to in the context of infectious disease dynamics?",
+        "options": {
+            "a": "The water bodies where diseases originate",
+            "b": "A population (animal, human, or environmental) where a pathogen normally lives and multiplies",
+            "c": "The hospitals where patients are treated",
+            "d": "A specific area in the human body where a disease persists"
+        }
+    },
+    {
+        "questionID": 16,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "What is the concept of 'social distancing' intended to impact in the spread of infectious diseases?",
+        "options": {
+            "a": "The basic reproduction number (R0)",
+            "b": "The economic impact of the disease",
+            "c": "The severity of symptoms in individual patients",
+            "d": "The geographic distribution of the disease"
+        }
+    }
+]

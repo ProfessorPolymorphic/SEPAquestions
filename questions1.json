@@ -1,0 +1,65 @@
+[
+  {
+    "question": "Which of the following factors is NOT considered to be a component of an infectious disease system?",
+    "options": {
+      "a": "The pathogen that causes the disease",
+      "b": "The host population that the pathogen infects",
+      "c": "The environment in which the pathogen and host interact",
+      "d": "The stock market"
+    }
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of a complex adaptive system?",
+    "options": {
+      "a": "Nonlinear relationships",
+      "b": "Feedback loops",
+      "c": "Predetermined outcomes",
+      "d": "Self-organization"
+    }
+  },
+  {
+    "question": "What is the role of herd immunity in controlling the spread of an infectious disease?",
+    "options": {
+      "a": "It increases the susceptibility of the population to the disease",
+      "b": "It reduces the number of individuals who can contract the disease",
+      "c": "It eliminates the disease completely",
+      "d": "It increases the virulence of the pathogen"
+    }
+  },
+  {
+    "question": "How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease?",
+    "options": {
+      "a": "It has no effect",
+      "b": "It increases the transmission of the disease",
+      "c": "It decreases the transmission of the disease",
+      "d": "It can have either effect depending on the pathogen and host"
+    }
+  },
+  {
+    "question": "How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system?",
+    "options": {
+      "a": "They have no effect",
+      "b": "They increase the spread of the disease",
+      "c": "They decrease the spread of the disease",
+      "d": "They can have either effect depending on the specific intervention and the context of the system"
+    }
+  },
+  {
+    "question": "What is an example of a feedback loop in an infectious disease system?",
+    "options": {
+      "a": "An increase in the number of infected individuals leads to an increase in the number of deaths",
+      "b": "An increase in the number of vaccinated individuals leads to a decrease in the number of susceptible individuals",
+      "c": "An increase in the number of infected individuals leads to an increase in the number of susceptible individuals",
+      "d": "An increase in the number of susceptible individuals leads to an increase in the number of infected individuals"
+    }
+  },
+  {
+    "question": "How does globalization affect the dynamics of infectious disease systems?",
+    "options": {
+      "a": "It has no effect",
+      "b": "It increases the spread of diseases",
+      "c": "It decreases the spread of diseases",
+      "d": "It can have either effect depending on the specific context and the disease in question"
+    }
+  }
+]

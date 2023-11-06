@@ -1,0 +1,86 @@
+---
+title: "Activity 3"
+---
+
+# Activity 3: Impact of Air Travel on Disease Spread
+
+## Learning Objectives
+
+- Evaluate how the inclusion of air travel alters the spread of infectious diseases in a spatial model.
+- Understand the role of transportation hubs in the dissemination of diseases.
+- Assess the global reach of diseases with the incorporation of air travel into the simulation.
+
+---
+
+## Slide 1: Air Travel and Disease Dissemination
+
+### Introduction to Air Travel in Epidemiological Modeling
+
+- Air travel allows for rapid and long-distance transmission of diseases.
+- Transportation hubs can act as amplifiers for disease spread.
+
+### The 1918 Influenza with Air Travel
+
+- Analyzing how air travel would have changed the spread of the 1918 influenza.
+- Speculating on the global implications of such rapid dissemination.
+
+---
+
+## Slide 2: Setting Up the Air Travel Scenario
+
+### Adjusting the Simulation
+
+- Enable air travel in the simulation parameters.
+- Maintain the initial infection point in Orlando, FL.
+
+### Expected Changes
+
+- Predicted faster spread to non-adjacent states and countries.
+- Increased rate of outbreak in major transportation hubs.
+
+---
+
+## Slide 3: Observing the Simulation
+
+### Interaction and Observation
+
+- Monitor how the disease spread differs with the introduction of air travel.
+- Observe the development of new hotspots and the speed of international spread.
+
+### Documentation
+
+- Document the time it takes for the infection to reach different regions.
+- Compare this to the ground transportation model outcomes.
+
+---
+
+## Slide 4: Analyzing the Outcomes
+
+### Key Analytical Questions
+
+- How did air travel affect the speed and extent of the disease spread?
+- What role did major airports play in the dissemination process?
+- How does the spread pattern compare to the historical data of the 1918 influenza?
+
+---
+
+## Slide 5: Reflection on Modern Implications
+
+### Contemporary Relevance
+
+- Discuss modern examples where air travel facilitated the rapid spread of diseases.
+- Reflect on the implications for public health policy and response strategies.
+
+### The Importance of Modeling in Public Health
+
+- Contemplate how accurate modeling can inform preventative measures and containment strategies during an outbreak.
+
+---
+
+## Activity Steps
+
+1. Enable air travel in the simulation settings and initiate the spread from Orlando, FL.
+2. Observe and document the spread pattern of the disease, focusing on the rate of spread and new hotspots.
+3. Engage with the interactive map to see the specific effects of air travel on different states and countries.
+4. Answer questions designed to encourage critical thinking about the role of air travel in disease dynamics.
+5. Participate in a discussion on the findings and their implications for current and future infectious disease outbreaks.

@@ -1,0 +1,37 @@
+[
+  {
+    "questionId": 1,
+    "answer": "d",
+    "detail": "The stock market"
+  },
+  {
+    "questionId": 2,
+    "answer": "c",
+    "detail": "Predetermined outcomes"
+  },
+  {
+    "questionId": 3,
+    "answer": "b",
+    "detail": "It reduces the number of individuals who can contract the disease"
+  },
+  {
+    "questionId": 4,
+    "answer": "d",
+    "detail": "It can have either effect depending on the pathogen and host"
+  },
+  {
+    "questionId": 5,
+    "answer": "d",
+    "detail": "They can have either effect depending on the specific intervention and the context of the system"
+  },
+  {
+    "questionId": 6,
+    "answer": "d",
+    "detail": "An increase in the number of susceptible individuals leads to an increase in the number of infected individuals"
+  },
+  {
+    "questionId": 7,
+    "answer": "d",
+    "detail": "It can have either effect depending on the specific context and the disease in question"
+  }
+]

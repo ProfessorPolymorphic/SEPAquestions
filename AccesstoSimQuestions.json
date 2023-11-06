@@ -1,0 +1,72 @@
+[
+    {
+        "questionID": 17,
+        "question": "Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model?",
+        "options": {
+            "a": "The initial number of infected individuals.",
+            "b": "The susceptibility of the population.",
+            "c": "Population density and mobility patterns.",
+            "d": "The recovery rate of individuals."
+        },
+        "correctAnswer": "c",
+        "InfectiousDisease": true,
+        "AirTravel": false,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 18,
+        "question": "In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation?",
+        "options": {
+            "a": "It slows down the spread of the disease.",
+            "b": "It has no significant impact on the spread.",
+            "c": "It leads to a more uniform spread across regions.",
+            "d": "It increases the speed and reach of the disease spread."
+        },
+        "correctAnswer": "d",
+        "InfectiousDisease": true,
+        "AirTravel": true,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 19,
+        "question": "When using the simulation with air travel enabled, which states are likely to show higher rates of infection first?",
+        "options": {
+            "a": "States with lower populations.",
+            "b": "States with major transportation hubs.",
+            "c": "States that are geographically isolated.",
+            "d": "States with the highest temperatures."
+        },
+        "correctAnswer": "b",
+        "InfectiousDisease": true,
+        "AirTravel": true,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 20,
+        "question": "After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza?",
+        "options": {
+            "a": "Hotspots are primarily rural.",
+            "b": "Hotspots are random and evenly distributed.",
+            "c": "Hotspots are predominantly in coastal areas.",
+            "d": "Hotspots correlate with areas of high population density and major airports."
+        },
+        "correctAnswer": "d",
+        "InfectiousDisease": true,
+        "AirTravel": true,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 21,
+        "question": "What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza?",
+        "options": {
+            "a": "It requires less computational power to run.",
+            "b": "It provides a more realistic scenario by considering geographic distribution and human movement.",
+            "c": "It assumes homogeneous mixing, which simplifies the calculations.",
+            "d": "It does not require data on population density or travel patterns."
+        },
+        "correctAnswer": "b",
+        "InfectiousDisease": true,
+        "AirTravel": false,
+        "AccessToSim": true
+    }
+]

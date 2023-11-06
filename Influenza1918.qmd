@@ -1,0 +1,58 @@
+---
+title: "Influenza - 1918"
+---
+
+# Influenza Virus Overview
+
+Influenza, commonly known as the flu, is an infectious disease caused by the influenza virus. It primarily attacks the respiratory system and is characterized by symptoms such as fever, cough, sore throat, muscle pains, severe headache, coughing, weakness, and general discomfort.
+
+## Role in the Activities
+
+In the proposed simulation activities, influenza serves as a model organism to understand infectious disease dynamics. Participants will explore how the virus spreads through populations, the impact of various factors like spatial structure and transportation, and how these factors can influence the course of an outbreak.
+
+## The 1918 Influenza Pandemic
+
+The 1918 influenza pandemic, also known as the Spanish flu, was caused by an H1N1 influenza A virus. Lasting from February 1918 to April 1920, it infected one-third of the world's population and resulted in an estimated 50 million deaths worldwide.
+
+### Unique Characteristics of the 1918 Virus
+
+- **High Mortality Rate**: The 1918 virus caused an exceptionally high number of deaths.
+- **Widespread Impact**: It affected a broad demographic, including healthy young adults, creating a W-shaped mortality curve.
+- **Rapid Spread**: The virus spread quickly and globally, exacerbated by World War I troop movements.
+- **Limited Intervention Tools**: At the time, there were no effective vaccines or antivirals. Public health responses were limited to non-pharmaceutical interventions.
+
+### Comparison to Modern Flu Strains
+
+Modern flu strains differ from the 1918 virus in several key ways:
+
+- **Vaccines**: Today, vaccines can reduce infection risk or disease severity.
+- **Antiviral Medications**: Effective antiviral drugs are available to treat the flu.
+- **Public Health Infrastructure**: Modern surveillance and communication aid in controlling the virus's spread.
+- **Medical Care Advances**: Improvements in care reduce mortality rates.
+
+By using the 1918 influenza pandemic in the simulation activities, participants will understand the factors that can change the dynamics of an infectious disease outbreak. They will also explore "what if" scenarios, such as the influence of modern global travel on a virus with similar characteristics to the 1918 strain.
+
+These insights underscore the importance of preparedness and response in public health policy.
+
+
+## Modern Influenza Strains
+
+- **Basic Reproduction Number (R0)**: Ranges from `1.2 to 1.8`.
+- **Incubation Period**: Typically `1-4 days`, averaging about `2 days`.
+- **Infectious Period**: Around `5 days`, potentially longer in certain populations.
+- **Case Fatality Rate (CFR)**: Usually well below `0.1%` for seasonal influenza.
+
+## 1918 Influenza Strain
+
+- **Basic Reproduction Number (R0)**: Estimated between `2 and 3`.
+- **Incubation Period**: Assumed similar to modern strains, around `1-4 days`.
+- **Infectious Period**: Not well-defined but presumed comparable to modern strains.
+- **Case Fatality Rate (CFR)**: Significantly higher, estimated around `2.5%`.
+
+## Comparison
+
+- **R0**: The 1918 flu's R0 indicates a higher potential for spread compared to modern strains.
+- **Incubation and Infectious Periods**: Likely similar to modern strains, although historical data for 1918 is limited.
+- **CFR**: The CFR for the 1918 pandemic was substantially higher than that of seasonal influenza.
+
+Note: The above estimates can vary based on many factors, such as data sources, public health interventions, and characteristics of the population being studied. Historical estimates for the 1918 pandemic are particularly subject to uncertainty due to limited data.

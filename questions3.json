@@ -1,0 +1,219 @@
+[
+  {
+    "questionID": 17,
+    "question": "What does the 'S' in the SIR model of infectious diseases stand for?",
+    "options": {
+      "a": "Susceptible",
+      "b": "Sick",
+      "c": "Sensitive",
+      "d": "Submissive"
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 18,
+    "question": "In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent?",
+    "options": {
+      "a": "The rate at which recovered individuals lose immunity",
+      "b": "The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population",
+      "c": "The ratio of vaccinated individuals to susceptible individuals",
+      "d": "The resistance of the population to the disease"
+    },
+    "correctAnswer": "b",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 19,
+    "question": "Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious?",
+    "options": {
+      "a": "Susceptible",
+      "b": "Infectious",
+      "c": "Recovered",
+      "d": "Exposed"
+    },
+    "correctAnswer": "d",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 20,
+    "question": "What is the significance of 'herd immunity' in the context of infectious disease spread?",
+    "options": {
+      "a": "It refers to the immunity developed by livestock and has no relevance to human diseases.",
+      "b": "It's a strategy where only the strongest individuals are vaccinated to protect the weaker ones.",
+      "c": "It describes a situation where a sufficiently large proportion of the population is immune, thereby reducing the likelihood of disease spread.",
+      "d": "It signifies that the entire 'herd' or population has been infected and therefore is immune."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 21,
+    "question": "Which factor is NOT typically included in a simple infectious disease model?",
+    "options": {
+      "a": "Birth rates",
+      "b": "Death rates",
+      "c": "Immigration rates",
+      "d": "Weather patterns"
+    },
+    "correctAnswer": "d",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 22,
+    "question": "How can spatial structure of a population be important in the spread of infectious diseases?",
+    "options": {
+      "a": "Disease spread can be slower in spatially structured populations due to limited interactions between different regions.",
+      "b": "Spatial structure is irrelevant; infectious diseases spread at the same rate regardless of population structure.",
+      "c": "Spatial structure only matters in the spread of diseases in animal populations, not humans.",
+      "d": "Diseases spread faster in spatially structured populations because the disease adapts to different regions."
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 23,
+    "question": "If a disease has a basic reproduction number (R0) of less than 1, which of the following is true?",
+    "options": {
+      "a": "The disease will likely lead to an epidemic.",
+      "b": "The disease will spread but will not lead to an epidemic.",
+      "c": "The disease will gradually disappear from the population.",
+      "d": "The disease's spread is not affected by its R0 value."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 24,
+    "question": "Which statement is true regarding a 'super spreader' in the context of infectious disease transmission?",
+    "options": {
+      "a": "A super spreader is typically someone who is immune to the disease.",
+      "b": "A super spreader is an individual who infects significantly more people than the average infected person.",
+      "c": "Super spreaders are less likely to spread the disease if they are in a rural area.",
+      "d": "Super spreaders can only spread the disease in the absence of a vaccination program."
+    },
+    "correctAnswer": "b",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 25,
+    "question": "What is the impact of a higher incubation period on the spread of an infectious disease?",
+    "options": {
+      "a": "It leads to a faster spread as individuals are infectious for longer periods without showing symptoms.",
+      "b": "It has no significant impact on the spread of the disease.",
+      "c": "It usually results in a slower spread since the time to become infectious is longer.",
+      "d": "It decreases the disease's basic reproduction number (R0) directly."
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 26,
+    "question": "Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time?",
+    "options": {
+      "a": "The number of susceptible individuals will increase over time.",
+      "b": "The disease will reach a steady state with a constant number of infectious individuals.",
+      "c": "The number of infectious individuals will peak and then decrease as the number of susceptible individuals decreases.",
+      "d": "The number of recovered individuals will eventually decrease as they become susceptible again."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 27,
+    "question": "How does implementing a quarantine strategy affect the SIR model dynamics?",
+    "options": {
+      "a": "It increases the number of susceptible individuals.",
+      "b": "It has no effect on the SIR model dynamics.",
+      "c": "It reduces the effective contact rate between susceptible and infectious individuals.",
+      "d": "It moves individuals from the susceptible to recovered compartment directly."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 28,
+    "question": "What role does 'seasonality' play in the spread of certain infectious diseases?",
+    "options": {
+      "a": "Seasonality can affect the transmission rate of diseases that are sensitive to environmental factors like temperature and humidity.",
+      "b": "Seasonality decreases the basic reproduction number (R0) of all diseases.",
+      "c": "Seasonality has no effect; infectious diseases spread independently of seasons.",
+      "d": "Seasonality only affects diseases spread by insects."
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 29,
+    "question": "How would restricting air travel most likely affect the spread of an infectious disease across the continental United States?",
+    "options": {
+      "a": "It would have no effect as people would still travel by other means.",
+      "b": "It would speed up the spread as people would resort to more local travel, infecting their immediate surroundings.",
+      "c": "It would slow the spread by reducing the number of long-distance travel connections that can transport the disease to new areas.",
+      "d": "It would cause the disease to spread in a clustered pattern, with no clear impact on the speed of spread."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 30,
+    "question": "If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics?",
+    "options": {
+      "a": "The disease has a long incubation period allowing for widespread before detection.",
+      "b": "The disease is likely transmitted through vectors that thrive in urban settings.",
+      "c": "The disease may have a high R0, indicating that each case can infect many others, often exacerbated by dense population settings.",
+      "d": "The disease spreads exclusively through water and food sources commonly found in urban areas."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 31,
+    "question": "What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas?",
+    "options": {
+      "a": "An increase in disease spread in rural areas due to their lower population immunity.",
+      "b": "A decrease in disease spread due to improved herd immunity.",
+      "c": "No change, because population density is the only factor in disease spread.",
+      "d": "A localized outbreak in the urban areas only, with rural areas remaining unaffected."
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 32,
+    "question": "In the simulation, which intervention would likely reduce the spread of an airborne infectious disease?",
+    "options": {
+      "a": "Increasing the number of hospitals in affected areas.",
+      "b": "Implementing temperature screenings at airports.",
+      "c": "Enforcing mask mandates in areas with high rates of air travel.",
+      "d": "Promoting the use of personal vehicles
+ },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 33,
+    "question": "Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease?",
+    "options": {
+      "a": "Interstate travel regulations.",
+      "b": "Variations in healthcare quality between states.",
+      "c": "Local wildlife and vector populations.",
+      "d": "International border closures."
+    },
+    "correctAnswer": "d",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 34,
+    "question": "When using the simulation to restrict air travel, what pattern of disease spread might you expect to see?",
+    "options": {
+      "a": "A homogeneous spread of the disease throughout the country.",
+      "b": "An immediate halt in disease spread.",
+      "c": "A patchy spread, with outbreaks concentrated around major urban centers.",
+      "d": "A rapid spread in coastal areas followed by the interior regions."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  }
+]
+

@@ -1,0 +1,87 @@
+---
+title: "Activity 1"
+---
+
+# Activity 1: Understanding Basic Compartment Models
+
+## Learning Objectives
+
+- Understand the structure and function of basic infectious disease compartment models, such as the SIR and SEIR models.
+- Identify the critical assumptions underlying compartment models and their implications for modeling infectious disease spread.
+- Recognize how compartment models can be used to predict disease dynamics and inform public health interventions.
+
+---
+
+## Slide 1: Introduction to Compartment Models
+
+### What are Compartment Models?
+
+- **Simplified frameworks** to understand infectious disease dynamics.
+- Divide population into **compartments** representing disease states (e.g., Susceptible, Infected, Recovered).
+- Use **mathematical equations** to describe the transitions between compartments.
+
+---
+
+## Slide 2: The SIR Model
+
+### Exploring the SIR Model Structure
+
+- **Susceptible (S):** Individuals who can contract the disease.
+- **Infected (I):** Individuals who have contracted the disease and can spread it.
+- **Recovered (R):** Individuals who have recovered and gained immunity.
+
+### SIR Model Dynamics
+
+- **Transition rates** determine how quickly individuals move from one compartment to another.
+
+---
+
+## Slide 3: Critical Assumptions of SIR Models
+
+### Homogeneous Mixing
+
+- Assumes every individual has an equal chance of coming into contact with an infected person.
+
+### Constant Population
+
+- Assumes no births, deaths (unrelated to the disease), or migration during the outbreak.
+
+### Closed Population
+
+- Assumes no new individuals enter the population, and no one leaves.
+
+---
+
+## Slide 4: Implications of SIR Model Assumptions
+
+### Impact on Predictions
+
+- **Over-simplification** can lead to inaccurate predictions.
+- Important to consider modifications for different diseases or populations.
+
+### Using Models Responsibly
+
+- Understand the limitations and the context of the model.
+- Use models as one tool among many for public health decision-making.
+
+---
+
+## Slide 5: Conclusion
+
+### Compartment Models and Public Health
+
+- Valuable for **estimating outbreak dynamics** and **evaluating control strategies**.
+- Need to be used with an understanding of their assumptions and limitations.
+
+### Next Steps
+
+- Dive deeper into more complex models that consider age-structure, spatial distribution, and other factors.
+- Reflect on how these models could apply to real-world scenarios.
+
+---
+
+## Activity Steps
+
+1. Review the slide show and supplementary reading material.
+2. Participate in a facilitated discussion on the assumptions of compartment models.
+3. Complete a short quiz to assess understanding of the basic compartment model concepts.

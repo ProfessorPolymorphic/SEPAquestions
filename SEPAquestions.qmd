@@ -1,0 +1,70 @@
+---
+title: "SEPAquestions"
+---
+
+```{r}
+# install.packages("gt")
+library(tidyverse)
+library(jsonlite)
+library(gt)
+
+questions <- unnest(fromJSON("questions1.json"))
+
+questions<- questions%>%
+  mutate(questionID = row_number())
+
+answers <- unnest(fromJSON("answers1.json"))
+
+answers <- answers %>%
+  rename(questionID = questionId)
+
+
+questcomplete<- questions %>%
+  left_join(answers, by = "questionID")
+
+questionslong <- questcomplete %>%
+  pivot_longer(cols = 2:5, 
+  names_to = "option",    
+  values_to = "text" 
+)
+
+questions2 <- unnest(fromJSON("questions2.json"))
+
+```
+
+
+## Testing the questions
+
+```{r}
+questable <- questionslong %>%
+  select(option, question, text)%>%
+  gt(rowname_col = "option", groupname_col = "question") %>%
+  tab_header(
+    title = md("This is a set of **systems thinking** questions."),
+    subtitle = md("We can use the `option` and `question` columns to structure the table")
+  ) %>%
+  tab_source_note(md("we can explore adding metadata to each question..."))%>%
+  tab_options(
+    summary_row.background.color = "#ACEACE80",
+    grand_summary_row.background.color = "#990000",
+    row_group.background.color = "#FFEFDB80",
+    heading.background.color = "#EFFBFC",
+    column_labels.background.color = "#EFFBFC",
+    stub.background.color = "#EFFBFC",
+    table.font.color = "#323232",
+    table_body.hlines.color = "#989898",
+    table_body.border.top.color = "#989898",
+    heading.border.bottom.color = "#989898",
+    row_group.border.top.color = "#989898",
+    row_group.border.bottom.style = "none",
+    stub.border.style = "dashed",
+    stub.border.color = "#989898",
+    stub.border.width = "1px",
+    summary_row.border.color = "#989898",
+    table.width = "60%"
+  ) %>%
+  opt_all_caps()
+
+questable
+
+```

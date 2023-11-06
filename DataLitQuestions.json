@@ -1,0 +1,93 @@
+[
+  {
+    "questionID": 101,
+    "questionText": "At what time point does the Infected (I) compartment reach its peak value?",
+    "options": [
+      "Between days X and Y",
+      "Before day X",
+      "After day Y",
+      "The data does not show a clear peak within the time frame"
+    ],
+    "correctAnswer": "A",
+    "DataLit": true,
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 102,
+    "questionText": "What is the approximate number of Recovered (R) individuals by day Z?",
+    "options": [
+      "Number A",
+      "Number B",
+      "Number C",
+      "Number D"
+    ],
+    "correctAnswer": "C",
+    "DataLit": true,
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 103,
+    "questionText": "Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease?",
+    "options": [
+      "The disease is spreading more quickly after day X",
+      "The disease is spreading more slowly after day X",
+      "The spread of the disease has not changed",
+      "There is not enough information to determine the change in spread"
+    ],
+    "correctAnswer": "B",
+    "DataLit": true,
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 104,
+    "questionText": "By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve.",
+    "options": [
+      "Duration A",
+      "Duration B",
+      "Duration C",
+      "Duration D"
+    ],
+    "correctAnswer": "A",
+    "DataLit": true,
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 105,
+    "questionText": "Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals.",
+    "options": [
+      "State A",
+      "State B",
+      "State C",
+      "State D"
+    ],
+    "correctAnswer": "C",
+    "DataLit": true,
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 106,
+    "questionText": "From the provided graphs, which state has the highest ratio of Deaths to Infected individuals?",
+    "options": [
+      "State A",
+      "State B",
+      "State C",
+      "State D"
+    ],
+    "correctAnswer": "B",
+    "DataLit": true,
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 107,
+    "questionText": "How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X?",
+    "options": [
+      "It decreases at a faster rate",
+      "It remains constant",
+      "It increases",
+      "It decreases at a slower rate"
+    ],
+    "correctAnswer": "D",
+    "DataLit": true,
+    "InfectiousDisease": true
+  }
+]
