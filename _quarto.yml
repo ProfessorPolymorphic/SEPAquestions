@@ -1,8 +1,31 @@
 project:
-  title: "SEPAquestions"
+  type: website
+  output-dir: docs
   
+website:
+  title: "SEPA Activities"
+  navbar:
+    left:
+      - href: index.qmd
+        text: HOME
+      - text: "Influenza"
+        file: Influenza1918.qmd
+      - text: "OSv1 Revisions"
+        file: OSv1revisions.qmd
+      - text: "Question Bank"
+        file: SEPAquestions.qmd
+      
 
-  
+  sidebar:
+   contents: auto
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    toc: true
+
+editor: visual
 
 
 

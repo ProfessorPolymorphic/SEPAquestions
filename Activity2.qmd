@@ -10,9 +10,8 @@ title: "Activity 2"
 - Observe the impact of starting location on the spread of an infectious disease through a population.
 - Compare and contrast the outcomes of the simulation with those of a non-spatially structured model.
 
----
 
-## Slide 1: Introduction to Spatial Structure in Epidemics
+## Introduction to Spatial Structure in Epidemics
 
 ### The Importance of Geography
 
@@ -24,9 +23,9 @@ title: "Activity 2"
 - Highly infectious and widespread impact.
 - Varied effects across different regions due to population distribution.
 
----
 
-## Slide 2: Setting Up the Simulation
+
+## Setting Up the Simulation
 
 ### Simulation Parameters
 
@@ -39,9 +38,9 @@ title: "Activity 2"
 - **SIEVR Graphs:** State-wise graphs showing Susceptible, Infected, Exposed, Vaccinated, and Recovered populations over time.
 - **Infection Spread:** Red color intensity on the map represents the level of infection.
 
----
 
-## Slide 3: Running the Simulation
+
+## Running the Simulation (~5 minutes)
 
 ### Interactive Features
 
@@ -50,12 +49,12 @@ title: "Activity 2"
 
 ### Observations
 
-- Note the speed of spread from the starting location.
+- **Speak Aloud** Note the speed of spread from the starting location.
 - Observe the appearance of hotspots and variations in disease dynamics across states.
 
----
 
-## Slide 4: Analysis of Simulation Outcomes
+
+## Analysis of Simulation Outcomes
 
 ### Key Questions for Reflection
 
@@ -63,9 +62,8 @@ title: "Activity 2"
 - What differences are noticeable compared to a non-spatial model?
 - How did transport and local interactions contribute to the spread?
 
----
 
-## Slide 5: Using Interactivity to Enhance Understanding
+## Using Interactivity to Enhance Understanding
 
 ### Interactive Analysis
 
@@ -74,9 +72,9 @@ title: "Activity 2"
 
 ### Comparative Insight
 
-- Discuss how the spatial model provides a different perspective on the epidemic compared to the basic SIR model.
+- Discuss how the spatial model provides a different perspective on the epidemic compared to the basic SIR model. Provide a printed copy of the basic epidemic curve using a non spatial model.
 
----
+
 
 ## Activity Steps
 
@@ -85,4 +83,57 @@ title: "Activity 2"
 3. Use the interactive map to observe the spread and evolution of the disease across states.
 4. Reflect on how the spatial structure influenced the spread compared to a simple SIR model.
 5. Complete a series of questions and prompts to solidify your understanding of spatial dynamics in disease spread.
+
+## Post Test
+
+Answer about 5 multiple choice questions that require data literacy tasks and interaction with the simulation.
+
+### Question Bank
+
+```{r}
+# install.packages("gt")
+library(tidyverse)
+library(jsonlite)
+library(gt)
+
+QA2 <- unnest(fromJSON("DataLitQuestions.json"))
+
+
+
+
+
+
+QA2table <- QA2 %>%
+  select(options, questionText,)%>%
+  gt(rowname_col = "options", groupname_col = "questionText") %>%
+  tab_header(
+    title = md("This is a set of questions that rely on interation with the simulation."),
+    subtitle = md("We would need to customize to the scenario outcomes.")
+  ) %>%
+  tab_source_note(md("we can explore adding metadata to each question..."))%>%
+  tab_options(
+    summary_row.background.color = "#ACEACE80",
+    grand_summary_row.background.color = "#990000",
+    row_group.background.color = "#FFEFDB80",
+    heading.background.color = "#EFFBFC",
+    column_labels.background.color = "#EFFBFC",
+    stub.background.color = "#EFFBFC",
+    table.font.color = "#323232",
+    table_body.hlines.color = "#989898",
+    table_body.border.top.color = "#989898",
+    heading.border.bottom.color = "#989898",
+    row_group.border.top.color = "#989898",
+    row_group.border.bottom.style = "none",
+    stub.border.style = "dashed",
+    stub.border.color = "#989898",
+    stub.border.width = "1px",
+    summary_row.border.color = "#989898",
+    table.width = "100%"
+  ) %>%
+  opt_all_caps()
+
+QA2table
+
+```
+
 

@@ -37,7 +37,7 @@ These objectives encompass a comprehensive understanding of infectious disease m
 - Consider how **accurate modeling informs public health policy**, emergency preparedness, and response strategies.
 
 
-## Activity 1: Understanding Basic Compartment Models
+## [Activity 1: Understanding Basic Compartment Models](Activity1.qmd)
 
 ### Objective
 To introduce the user to the basic concepts of compartment models in epidemiology.
@@ -64,7 +64,7 @@ To introduce the user to the basic concepts of compartment models in epidemiolog
 
 ---
 
-## Activity 2: Simulation with Ground Transportation
+## [Activity 2: Simulation with Ground Transportation](Activity2.qmd)
 
 ### Objective
 To explore how disease spreads in a spatially structured population with limited transportation.
@@ -90,7 +90,7 @@ To explore how disease spreads in a spatially structured population with limited
 
 ---
 
-## Activity 3: Simulation with Air Travel
+## [Activity 3: Simulation with Air Travel](Activity3.qmd)
 
 ### Objective
 To understand the impact of air travel on the spread of infectious diseases.
