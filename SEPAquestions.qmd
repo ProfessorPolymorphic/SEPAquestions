@@ -20,30 +20,78 @@ answers <- answers %>%
 
 
 questcomplete<- questions %>%
-  left_join(answers, by = "questionID")
+  left_join(answers, by = "questionID")%>%
+  mutate(SciReason = "FALSE")%>%
+  mutate(Systems = "TRUE")%>%
+  mutate(InfectiousDisease = "TRUE")%>%
+  mutate(DataLit = "FALSE")%>%
+  select(-detail)
 
-questionslong <- questcomplete %>%
-  pivot_longer(cols = 2:5, 
+
+
+
+
+questions2 <- unnest(fromJSON("questions2.json"))
+questions2 <- questions2%>%
+  mutate(SciReason = "FALSE")%>%
+  mutate(answer = c("c", "b", "c", "c", "b", "b", "b", "b", "a"))%>%
+  mutate(DataLit = "FALSE")
+
+Q1Q2<-rbind(questcomplete,questions2)
+
+
+questions3 <- unnest(fromJSON("questions3.json"))
+questions3 <- questions3%>%
+  mutate(Systems = "FALSE")%>%
+  mutate(answer = correctAnswer)%>%
+  mutate(DataLit = "FALSE")%>%
+  mutate(SciReason = "FALSE")%>%
+  select(-correctAnswer)
+
+Q123<- rbind(Q1Q2, questions3)
+
+questions4 <- unnest(fromJSON("DataLitQuestions_Updated.json"))
+questions4 <- questions4%>%
+  mutate(Systems = "FALSE")%>%
+  mutate(SciReason = "FALSE")
+
+Q1234<-rbind(Q123,questions4)
+
+questions5 <- unnest(fromJSON("AccesstoSimQuestions.json"))
+questions5 <- questions5%>%
+  mutate(Systems = "FALSE")%>%
+  mutate(SciReason = "TRUE")%>%
+  mutate(DataLit = "TRUE")%>%
+  mutate(answer = correctAnswer)%>%
+  select(-AccessToSim, -AirTravel, -correctAnswer)
+
+Q12345<-rbind(Q1234,questions5)
+
+questionslong <- Q12345 %>%
+  pivot_longer(cols = c("a","b","c","d"), 
   names_to = "option",    
   values_to = "text" 
 )
 
-questions2 <- unnest(fromJSON("questions2.json"))
-
 ```
 
+```{r}
+questionslong <- questionslong %>%
+  mutate(is_correct = ifelse(option == answer, TRUE, FALSE))
+
+```
 
 ## Testing the questions
 
 ```{r}
 questable <- questionslong %>%
-  select(option, question, text)%>%
+  select(option, question, text, answer)%>%
   gt(rowname_col = "option", groupname_col = "question") %>%
   tab_header(
-    title = md("This is a set of **systems thinking** questions."),
-    subtitle = md("We can use the `option` and `question` columns to structure the table")
+    title = md("This is a set ofquestions for learning assessment."),
+    subtitle = md("We can tag the quesitons in terms of learning categories.*")
   ) %>%
-  tab_source_note(md("we can explore adding metadata to each question..."))%>%
+  tab_source_note(md("* Current tags are 'Systems', 'Infectious Disease', 'Science Reasoning', and 'Data Literacy'."))%>%
   tab_options(
     summary_row.background.color = "#ACEACE80",
     grand_summary_row.background.color = "#990000",
@@ -61,9 +109,16 @@ questable <- questionslong %>%
     stub.border.color = "#989898",
     stub.border.width = "1px",
     summary_row.border.color = "#989898",
-    table.width = "60%"
+    table.width = "100%"
   ) %>%
-  opt_all_caps()
+  opt_all_caps()%>%
+   data_color(
+    columns = option,
+    colors = scales::col_factor(
+      palette = c(
+        "white", "orange", "red", "blue"),
+      domain = NULL)
+  )
 
 questable
 

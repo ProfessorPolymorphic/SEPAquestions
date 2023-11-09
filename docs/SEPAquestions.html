@@ -268,72 +268,142 @@ The following object is masked from 'package:purrr':
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>questcomplete<span class="ot">&lt;-</span> questions <span class="sc">%&gt;%</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(answers, <span class="at">by =</span> <span class="st">"questionID"</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>questionslong <span class="ot">&lt;-</span> questcomplete <span class="sc">%&gt;%</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>, </span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">names_to =</span> <span class="st">"option"</span>,    </span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">values_to =</span> <span class="st">"text"</span> </span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(answers, <span class="at">by =</span> <span class="st">"questionID"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SciReason =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Systems =</span> <span class="st">"TRUE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">InfectiousDisease =</span> <span class="st">"TRUE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DataLit =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>detail)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>questions2 <span class="ot">&lt;-</span> <span class="fu">unnest</span>(<span class="fu">fromJSON</span>(<span class="st">"questions2.json"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>questions2 <span class="ot">&lt;-</span> <span class="fu">unnest</span>(<span class="fu">fromJSON</span>(<span class="st">"questions2.json"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: `cols` is now required when using `unnest()`.
 ℹ Please use `cols = c(options)`.</code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>questions2 <span class="ot">&lt;-</span> questions2<span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SciReason =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">answer =</span> <span class="fu">c</span>(<span class="st">"c"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"b"</span>, <span class="st">"a"</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DataLit =</span> <span class="st">"FALSE"</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>Q1Q2<span class="ot">&lt;-</span><span class="fu">rbind</span>(questcomplete,questions2)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>questions3 <span class="ot">&lt;-</span> <span class="fu">unnest</span>(<span class="fu">fromJSON</span>(<span class="st">"questions3.json"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `cols` is now required when using `unnest()`.
+ℹ Please use `cols = c(options)`.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>questions3 <span class="ot">&lt;-</span> questions3<span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Systems =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">answer =</span> correctAnswer)<span class="sc">%&gt;%</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DataLit =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SciReason =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>correctAnswer)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>Q123<span class="ot">&lt;-</span> <span class="fu">rbind</span>(Q1Q2, questions3)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>questions4 <span class="ot">&lt;-</span> <span class="fu">unnest</span>(<span class="fu">fromJSON</span>(<span class="st">"DataLitQuestions_Updated.json"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `cols` is now required when using `unnest()`.
+ℹ Please use `cols = c(options)`.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>questions4 <span class="ot">&lt;-</span> questions4<span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Systems =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SciReason =</span> <span class="st">"FALSE"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>Q1234<span class="ot">&lt;-</span><span class="fu">rbind</span>(Q123,questions4)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>questions5 <span class="ot">&lt;-</span> <span class="fu">unnest</span>(<span class="fu">fromJSON</span>(<span class="st">"AccesstoSimQuestions.json"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `cols` is now required when using `unnest()`.
+ℹ Please use `cols = c(options)`.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>questions5 <span class="ot">&lt;-</span> questions5<span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Systems =</span> <span class="st">"FALSE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">SciReason =</span> <span class="st">"TRUE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">DataLit =</span> <span class="st">"TRUE"</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">answer =</span> correctAnswer)<span class="sc">%&gt;%</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>AccessToSim, <span class="sc">-</span>AirTravel, <span class="sc">-</span>correctAnswer)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>Q12345<span class="ot">&lt;-</span><span class="fu">rbind</span>(Q1234,questions5)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>questionslong <span class="ot">&lt;-</span> Q12345 <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>,<span class="st">"d"</span>), </span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">names_to =</span> <span class="st">"option"</span>,    </span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">values_to =</span> <span class="st">"text"</span> </span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>questionslong <span class="ot">&lt;-</span> questionslong <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_correct =</span> <span class="fu">ifelse</span>(option <span class="sc">==</span> answer, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="testing-the-questions" class="level2">
 <h2 class="anchored" data-anchor-id="testing-the-questions">Testing the questions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>questable <span class="ot">&lt;-</span> questionslong <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(option, question, text)<span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">rowname_col =</span> <span class="st">"option"</span>, <span class="at">groupname_col =</span> <span class="st">"question"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">"This is a set of **systems thinking** questions."</span>),</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">md</span>(<span class="st">"We can use the `option` and `question` columns to structure the table"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(<span class="fu">md</span>(<span class="st">"we can explore adding metadata to each question..."</span>))<span class="sc">%&gt;%</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">summary_row.background.color =</span> <span class="st">"#ACEACE80"</span>,</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">grand_summary_row.background.color =</span> <span class="st">"#990000"</span>,</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">row_group.background.color =</span> <span class="st">"#FFEFDB80"</span>,</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"#EFFBFC"</span>,</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"#EFFBFC"</span>,</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.background.color =</span> <span class="st">"#EFFBFC"</span>,</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.font.color =</span> <span class="st">"#323232"</span>,</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">table_body.hlines.color =</span> <span class="st">"#989898"</span>,</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">table_body.border.top.color =</span> <span class="st">"#989898"</span>,</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.border.bottom.color =</span> <span class="st">"#989898"</span>,</span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">row_group.border.top.color =</span> <span class="st">"#989898"</span>,</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">row_group.border.bottom.style =</span> <span class="st">"none"</span>,</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.border.style =</span> <span class="st">"dashed"</span>,</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.border.color =</span> <span class="st">"#989898"</span>,</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.border.width =</span> <span class="st">"1px"</span>,</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">summary_row.border.color =</span> <span class="st">"#989898"</span>,</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="st">"60%"</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_all_caps</span>()</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>questable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>questable <span class="ot">&lt;-</span> questionslong <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(option, question, text, answer)<span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">rowname_col =</span> <span class="st">"option"</span>, <span class="at">groupname_col =</span> <span class="st">"question"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">"This is a set ofquestions for learning assessment."</span>),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">md</span>(<span class="st">"We can tag the quesitons in terms of learning categories.*"</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(<span class="fu">md</span>(<span class="st">"* Current tags are 'Systems', 'Infectious Disease', 'Science Reasoning', and 'Data Literacy'."</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">summary_row.background.color =</span> <span class="st">"#ACEACE80"</span>,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">grand_summary_row.background.color =</span> <span class="st">"#990000"</span>,</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">row_group.background.color =</span> <span class="st">"#FFEFDB80"</span>,</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"#EFFBFC"</span>,</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"#EFFBFC"</span>,</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.background.color =</span> <span class="st">"#EFFBFC"</span>,</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.font.color =</span> <span class="st">"#323232"</span>,</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">table_body.hlines.color =</span> <span class="st">"#989898"</span>,</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">table_body.border.top.color =</span> <span class="st">"#989898"</span>,</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.border.bottom.color =</span> <span class="st">"#989898"</span>,</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">row_group.border.top.color =</span> <span class="st">"#989898"</span>,</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">row_group.border.bottom.style =</span> <span class="st">"none"</span>,</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.border.style =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.border.color =</span> <span class="st">"#989898"</span>,</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">stub.border.width =</span> <span class="st">"1px"</span>,</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">summary_row.border.color =</span> <span class="st">"#989898"</span>,</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="st">"100%"</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_all_caps</span>()<span class="sc">%&gt;%</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>   <span class="fu">data_color</span>(</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> option,</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">colors =</span> scales<span class="sc">::</span><span class="fu">col_factor</span>(</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">palette =</span> <span class="fu">c</span>(</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">"white"</span>, <span class="st">"orange"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>),</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">domain =</span> <span class="cn">NULL</span>)</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Since gt v0.9.0, the `colors` argument has been deprecated.
+• Please use the `fn` argument instead.
+This warning is displayed once every 8 hours.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>questable</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="ytpkgewbfw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ytpkgewbfw table {
+<div id="fwguczfuwn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fwguczfuwn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ytpkgewbfw thead, #ytpkgewbfw tbody, #ytpkgewbfw tfoot, #ytpkgewbfw tr, #ytpkgewbfw td, #ytpkgewbfw th {
+#fwguczfuwn thead, #fwguczfuwn tbody, #fwguczfuwn tfoot, #fwguczfuwn tr, #fwguczfuwn td, #fwguczfuwn th {
   border-style: none;
 }
 
-#ytpkgewbfw p {
+#fwguczfuwn p {
   margin: 0;
   padding: 0;
 }
 
-#ytpkgewbfw .gt_table {
+#fwguczfuwn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -344,7 +414,7 @@ The following object is masked from 'package:purrr':
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
-  width: 60%;
+  width: 100%;
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #A8A8A8;
@@ -359,12 +429,12 @@ The following object is masked from 'package:purrr':
   border-left-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_caption {
+#fwguczfuwn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ytpkgewbfw .gt_title {
+#fwguczfuwn .gt_title {
   color: #323232;
   font-size: 125%;
   font-weight: initial;
@@ -376,7 +446,7 @@ The following object is masked from 'package:purrr':
   border-bottom-width: 0;
 }
 
-#ytpkgewbfw .gt_subtitle {
+#fwguczfuwn .gt_subtitle {
   color: #323232;
   font-size: 85%;
   font-weight: initial;
@@ -388,7 +458,7 @@ The following object is masked from 'package:purrr':
   border-top-width: 0;
 }
 
-#ytpkgewbfw .gt_heading {
+#fwguczfuwn .gt_heading {
   background-color: #EFFBFC;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -400,13 +470,13 @@ The following object is masked from 'package:purrr':
   border-right-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_bottom_border {
+#fwguczfuwn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #989898;
 }
 
-#ytpkgewbfw .gt_col_headings {
+#fwguczfuwn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -421,7 +491,7 @@ The following object is masked from 'package:purrr':
   border-right-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_col_heading {
+#fwguczfuwn .gt_col_heading {
   color: #323232;
   background-color: #EFFBFC;
   font-size: 80%;
@@ -441,7 +511,7 @@ The following object is masked from 'package:purrr':
   overflow-x: hidden;
 }
 
-#ytpkgewbfw .gt_column_spanner_outer {
+#fwguczfuwn .gt_column_spanner_outer {
   color: #323232;
   background-color: #EFFBFC;
   font-size: 80%;
@@ -453,15 +523,15 @@ The following object is masked from 'package:purrr':
   padding-right: 4px;
 }
 
-#ytpkgewbfw .gt_column_spanner_outer:first-child {
+#fwguczfuwn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ytpkgewbfw .gt_column_spanner_outer:last-child {
+#fwguczfuwn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ytpkgewbfw .gt_column_spanner {
+#fwguczfuwn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -473,11 +543,11 @@ The following object is masked from 'package:purrr':
   width: 100%;
 }
 
-#ytpkgewbfw .gt_spanner_row {
+#fwguczfuwn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ytpkgewbfw .gt_group_heading {
+#fwguczfuwn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -503,7 +573,7 @@ The following object is masked from 'package:purrr':
   text-align: left;
 }
 
-#ytpkgewbfw .gt_empty_group_heading {
+#fwguczfuwn .gt_empty_group_heading {
   padding: 0.5px;
   color: #323232;
   background-color: rgba(255, 239, 219, 0.5);
@@ -518,15 +588,15 @@ The following object is masked from 'package:purrr':
   vertical-align: middle;
 }
 
-#ytpkgewbfw .gt_from_md > :first-child {
+#fwguczfuwn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ytpkgewbfw .gt_from_md > :last-child {
+#fwguczfuwn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ytpkgewbfw .gt_row {
+#fwguczfuwn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -545,7 +615,7 @@ The following object is masked from 'package:purrr':
   overflow-x: hidden;
 }
 
-#ytpkgewbfw .gt_stub {
+#fwguczfuwn .gt_stub {
   color: #323232;
   background-color: #EFFBFC;
   font-size: 80%;
@@ -558,7 +628,7 @@ The following object is masked from 'package:purrr':
   padding-right: 5px;
 }
 
-#ytpkgewbfw .gt_stub_row_group {
+#fwguczfuwn .gt_stub_row_group {
   color: #323232;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -572,15 +642,15 @@ The following object is masked from 'package:purrr':
   vertical-align: top;
 }
 
-#ytpkgewbfw .gt_row_group_first td {
+#fwguczfuwn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ytpkgewbfw .gt_row_group_first th {
+#fwguczfuwn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ytpkgewbfw .gt_summary_row {
+#fwguczfuwn .gt_summary_row {
   color: #323232;
   background-color: rgba(172, 234, 206, 0.5);
   text-transform: inherit;
@@ -590,16 +660,16 @@ The following object is masked from 'package:purrr':
   padding-right: 5px;
 }
 
-#ytpkgewbfw .gt_first_summary_row {
+#fwguczfuwn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #989898;
 }
 
-#ytpkgewbfw .gt_first_summary_row.thick {
+#fwguczfuwn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ytpkgewbfw .gt_last_summary_row {
+#fwguczfuwn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -609,7 +679,7 @@ The following object is masked from 'package:purrr':
   border-bottom-color: #989898;
 }
 
-#ytpkgewbfw .gt_grand_summary_row {
+#fwguczfuwn .gt_grand_summary_row {
   color: #FFFFFF;
   background-color: #990000;
   text-transform: inherit;
@@ -619,7 +689,7 @@ The following object is masked from 'package:purrr':
   padding-right: 5px;
 }
 
-#ytpkgewbfw .gt_first_grand_summary_row {
+#fwguczfuwn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -629,7 +699,7 @@ The following object is masked from 'package:purrr':
   border-top-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_last_grand_summary_row_top {
+#fwguczfuwn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -639,11 +709,11 @@ The following object is masked from 'package:purrr':
   border-bottom-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_striped {
+#fwguczfuwn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ytpkgewbfw .gt_table_body {
+#fwguczfuwn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #989898;
@@ -652,7 +722,7 @@ The following object is masked from 'package:purrr':
   border-bottom-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_footnotes {
+#fwguczfuwn .gt_footnotes {
   color: #323232;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -666,7 +736,7 @@ The following object is masked from 'package:purrr':
   border-right-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_footnote {
+#fwguczfuwn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -675,7 +745,7 @@ The following object is masked from 'package:purrr':
   padding-right: 5px;
 }
 
-#ytpkgewbfw .gt_sourcenotes {
+#fwguczfuwn .gt_sourcenotes {
   color: #323232;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -689,7 +759,7 @@ The following object is masked from 'package:purrr':
   border-right-color: #D3D3D3;
 }
 
-#ytpkgewbfw .gt_sourcenote {
+#fwguczfuwn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -697,161 +767,778 @@ The following object is masked from 'package:purrr':
   padding-right: 5px;
 }
 
-#ytpkgewbfw .gt_left {
+#fwguczfuwn .gt_left {
   text-align: left;
 }
 
-#ytpkgewbfw .gt_center {
+#fwguczfuwn .gt_center {
   text-align: center;
 }
 
-#ytpkgewbfw .gt_right {
+#fwguczfuwn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ytpkgewbfw .gt_font_normal {
+#fwguczfuwn .gt_font_normal {
   font-weight: normal;
 }
 
-#ytpkgewbfw .gt_font_bold {
+#fwguczfuwn .gt_font_bold {
   font-weight: bold;
 }
 
-#ytpkgewbfw .gt_font_italic {
+#fwguczfuwn .gt_font_italic {
   font-style: italic;
 }
 
-#ytpkgewbfw .gt_super {
+#fwguczfuwn .gt_super {
   font-size: 65%;
 }
 
-#ytpkgewbfw .gt_footnote_marks {
+#fwguczfuwn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ytpkgewbfw .gt_asterisk {
+#fwguczfuwn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ytpkgewbfw .gt_indent_1 {
+#fwguczfuwn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ytpkgewbfw .gt_indent_2 {
+#fwguczfuwn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ytpkgewbfw .gt_indent_3 {
+#fwguczfuwn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ytpkgewbfw .gt_indent_4 {
+#fwguczfuwn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ytpkgewbfw .gt_indent_5 {
+#fwguczfuwn .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
   <thead>
     <tr class="gt_heading">
-      <td colspan="2" class="gt_heading gt_title gt_font_normal" style="">This is a set of <strong>systems thinking</strong> questions.</td>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal" style="">This is a set ofquestions for learning assessment.</td>
     </tr>
     <tr class="gt_heading">
-      <td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">We can use the <code>option</code> and <code>question</code> columns to structure the table</td>
+      <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">We can tag the quesitons in terms of learning categories.*</td>
     </tr>
     <tr class="gt_col_headings">
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="text">text</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="answer">answer</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="Which of the following factors is NOT considered to be a component of an infectious disease system?">Which of the following factors is NOT considered to be a component of an infectious disease system?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Which of the following factors is NOT considered to be a component of an infectious disease system?">Which of the following factors is NOT considered to be a component of an infectious disease system?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_1" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_1 text" class="gt_row gt_left">The pathogen that causes the disease</td></tr>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_1 text" class="gt_row gt_left">The pathogen that causes the disease</td>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_1 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_2" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_2 text" class="gt_row gt_left">The host population that the pathogen infects</td></tr>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_2 text" class="gt_row gt_left">The host population that the pathogen infects</td>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_2 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_3" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_3 text" class="gt_row gt_left">The environment in which the pathogen and host interact</td></tr>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_3 text" class="gt_row gt_left">The environment in which the pathogen and host interact</td>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_3 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_4" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_4 text" class="gt_row gt_left">The stock market</td></tr>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_4 text" class="gt_row gt_left">The stock market</td>
+<td headers="Which of the following factors is NOT considered to be a component of an infectious disease system? stub_1_4 answer" class="gt_row gt_left">d</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="Which of the following is NOT a characteristic of a complex adaptive system?">Which of the following is NOT a characteristic of a complex adaptive system?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Which of the following is NOT a characteristic of a complex adaptive system?">Which of the following is NOT a characteristic of a complex adaptive system?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_5" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_5 text" class="gt_row gt_left">Nonlinear relationships</td></tr>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_5 text" class="gt_row gt_left">Nonlinear relationships</td>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_5 answer" class="gt_row gt_left">c</td></tr>
     <tr><th id="stub_1_6" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_6 text" class="gt_row gt_left">Feedback loops</td></tr>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_6 text" class="gt_row gt_left">Feedback loops</td>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_6 answer" class="gt_row gt_left">c</td></tr>
     <tr><th id="stub_1_7" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_7 text" class="gt_row gt_left">Predetermined outcomes</td></tr>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_7 text" class="gt_row gt_left">Predetermined outcomes</td>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_7 answer" class="gt_row gt_left">c</td></tr>
     <tr><th id="stub_1_8" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_8 text" class="gt_row gt_left">Self-organization</td></tr>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_8 text" class="gt_row gt_left">Self-organization</td>
+<td headers="Which of the following is NOT a characteristic of a complex adaptive system? stub_1_8 answer" class="gt_row gt_left">c</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="What is the role of herd immunity in controlling the spread of an infectious disease?">What is the role of herd immunity in controlling the spread of an infectious disease?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is the role of herd immunity in controlling the spread of an infectious disease?">What is the role of herd immunity in controlling the spread of an infectious disease?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_9" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_9 text" class="gt_row gt_left">It increases the susceptibility of the population to the disease</td></tr>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_9 text" class="gt_row gt_left">It increases the susceptibility of the population to the disease</td>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_9 answer" class="gt_row gt_left">b</td></tr>
     <tr><th id="stub_1_10" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_10 text" class="gt_row gt_left">It reduces the number of individuals who can contract the disease</td></tr>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_10 text" class="gt_row gt_left">It reduces the number of individuals who can contract the disease</td>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_10 answer" class="gt_row gt_left">b</td></tr>
     <tr><th id="stub_1_11" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_11 text" class="gt_row gt_left">It eliminates the disease completely</td></tr>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_11 text" class="gt_row gt_left">It eliminates the disease completely</td>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_11 answer" class="gt_row gt_left">b</td></tr>
     <tr><th id="stub_1_12" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_12 text" class="gt_row gt_left">It increases the virulence of the pathogen</td></tr>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_12 text" class="gt_row gt_left">It increases the virulence of the pathogen</td>
+<td headers="What is the role of herd immunity in controlling the spread of an infectious disease? stub_1_12 answer" class="gt_row gt_left">b</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease?">How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease?">How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_13" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_13 text" class="gt_row gt_left">It has no effect</td></tr>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_13 text" class="gt_row gt_left">It has no effect</td>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_13 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_14" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_14 text" class="gt_row gt_left">It increases the transmission of the disease</td></tr>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_14 text" class="gt_row gt_left">It increases the transmission of the disease</td>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_14 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_15" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_15 text" class="gt_row gt_left">It decreases the transmission of the disease</td></tr>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_15 text" class="gt_row gt_left">It decreases the transmission of the disease</td>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_15 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_16" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_16 text" class="gt_row gt_left">It can have either effect depending on the pathogen and host</td></tr>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_16 text" class="gt_row gt_left">It can have either effect depending on the pathogen and host</td>
+<td headers="How does a change in the environment, such as an increase in temperature, affect the transmission of an infectious disease? stub_1_16 answer" class="gt_row gt_left">d</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system?">How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system?">How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_17" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_17 text" class="gt_row gt_left">They have no effect</td></tr>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_17 text" class="gt_row gt_left">They have no effect</td>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_17 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_18" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_18 text" class="gt_row gt_left">They increase the spread of the disease</td></tr>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_18 text" class="gt_row gt_left">They increase the spread of the disease</td>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_18 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_19" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_19 text" class="gt_row gt_left">They decrease the spread of the disease</td></tr>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_19 text" class="gt_row gt_left">They decrease the spread of the disease</td>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_19 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_20" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_20 text" class="gt_row gt_left">They can have either effect depending on the specific intervention and the context of the system</td></tr>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_20 text" class="gt_row gt_left">They can have either effect depending on the specific intervention and the context of the system</td>
+<td headers="How do interventions, such as vaccination programs or quarantine measures, affect the dynamics of an infectious disease system? stub_1_20 answer" class="gt_row gt_left">d</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="What is an example of a feedback loop in an infectious disease system?">What is an example of a feedback loop in an infectious disease system?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is an example of a feedback loop in an infectious disease system?">What is an example of a feedback loop in an infectious disease system?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_21" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_21 text" class="gt_row gt_left">An increase in the number of infected individuals leads to an increase in the number of deaths</td></tr>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_21 text" class="gt_row gt_left">An increase in the number of infected individuals leads to an increase in the number of deaths</td>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_21 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_22" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_22 text" class="gt_row gt_left">An increase in the number of vaccinated individuals leads to a decrease in the number of susceptible individuals</td></tr>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_22 text" class="gt_row gt_left">An increase in the number of vaccinated individuals leads to a decrease in the number of susceptible individuals</td>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_22 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_23" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_23 text" class="gt_row gt_left">An increase in the number of infected individuals leads to an increase in the number of susceptible individuals</td></tr>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_23 text" class="gt_row gt_left">An increase in the number of infected individuals leads to an increase in the number of susceptible individuals</td>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_23 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_24" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_24 text" class="gt_row gt_left">An increase in the number of susceptible individuals leads to an increase in the number of infected individuals</td></tr>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_24 text" class="gt_row gt_left">An increase in the number of susceptible individuals leads to an increase in the number of infected individuals</td>
+<td headers="What is an example of a feedback loop in an infectious disease system? stub_1_24 answer" class="gt_row gt_left">d</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="How does globalization affect the dynamics of infectious disease systems?">How does globalization affect the dynamics of infectious disease systems?</th>
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How does globalization affect the dynamics of infectious disease systems?">How does globalization affect the dynamics of infectious disease systems?</th>
     </tr>
     <tr class="gt_row_group_first"><th id="stub_1_25" scope="row" class="gt_row gt_left gt_stub">a</th>
-<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_25 text" class="gt_row gt_left">It has no effect</td></tr>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_25 text" class="gt_row gt_left">It has no effect</td>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_25 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_26" scope="row" class="gt_row gt_left gt_stub">b</th>
-<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_26 text" class="gt_row gt_left">It increases the spread of diseases</td></tr>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_26 text" class="gt_row gt_left">It increases the spread of diseases</td>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_26 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_27" scope="row" class="gt_row gt_left gt_stub">c</th>
-<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_27 text" class="gt_row gt_left">It decreases the spread of diseases</td></tr>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_27 text" class="gt_row gt_left">It decreases the spread of diseases</td>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_27 answer" class="gt_row gt_left">d</td></tr>
     <tr><th id="stub_1_28" scope="row" class="gt_row gt_left gt_stub">d</th>
-<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_28 text" class="gt_row gt_left">It can have either effect depending on the specific context and the disease in question</td></tr>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_28 text" class="gt_row gt_left">It can have either effect depending on the specific context and the disease in question</td>
+<td headers="How does globalization affect the dynamics of infectious disease systems? stub_1_28 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What does a systems thinking approach entail?">What does a systems thinking approach entail?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_29" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What does a systems thinking approach entail? stub_1_29 text" class="gt_row gt_left">Considering each part of a system in isolation</td>
+<td headers="What does a systems thinking approach entail? stub_1_29 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_30" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What does a systems thinking approach entail? stub_1_30 text" class="gt_row gt_left">Focusing only on the most prominent part of a system</td>
+<td headers="What does a systems thinking approach entail? stub_1_30 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_31" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What does a systems thinking approach entail? stub_1_31 text" class="gt_row gt_left">Considering how all parts of a system interrelate and influence each other</td>
+<td headers="What does a systems thinking approach entail? stub_1_31 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_32" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What does a systems thinking approach entail? stub_1_32 text" class="gt_row gt_left">Ignoring feedback loops and cycles within a system</td>
+<td headers="What does a systems thinking approach entail? stub_1_32 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="In the context of infectious diseases, what is the 'R0' (basic reproduction number)?">In the context of infectious diseases, what is the 'R0' (basic reproduction number)?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_33" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_33 text" class="gt_row gt_left">The total number of people infected by a disease</td>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_33 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_34" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_34 text" class="gt_row gt_left">The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population</td>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_34 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_35" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_35 text" class="gt_row gt_left">The percentage of a population that needs to be immune for herd immunity to be reached</td>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_35 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_36" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_36 text" class="gt_row gt_left">The time it takes for symptoms to appear after a person is infected</td>
+<td headers="In the context of infectious diseases, what is the 'R0' (basic reproduction number)? stub_1_36 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is a feedback loop in the context of systems thinking?">What is a feedback loop in the context of systems thinking?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_37" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_37 text" class="gt_row gt_left">The time it takes for a change to circulate through a system</td>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_37 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_38" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_38 text" class="gt_row gt_left">The one-way sequence of cause and effect in a system</td>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_38 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_39" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_39 text" class="gt_row gt_left">A mechanism where a change in a system leads to an outcome that affects the original change</td>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_39 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_40" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_40 text" class="gt_row gt_left">The linear connection of two separate systems</td>
+<td headers="What is a feedback loop in the context of systems thinking? stub_1_40 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What does the term 'herd immunity' refer to in the context of infectious diseases?">What does the term 'herd immunity' refer to in the context of infectious diseases?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_41" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_41 text" class="gt_row gt_left">Immunity developed in animals in a herd</td>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_41 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_42" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_42 text" class="gt_row gt_left">The protection a vaccine offers to an individual</td>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_42 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_43" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_43 text" class="gt_row gt_left">When a high percentage of a population is immune to a disease, indirectly protecting those who are not immune</td>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_43 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_44" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_44 text" class="gt_row gt_left">When everyone in a population is immune to a disease</td>
+<td headers="What does the term 'herd immunity' refer to in the context of infectious diseases? stub_1_44 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Why is systems thinking particularly important when studying infectious disease dynamics?">Why is systems thinking particularly important when studying infectious disease dynamics?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_45" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_45 text" class="gt_row gt_left">Because systems thinking is a new trend in scientific research</td>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_45 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_46" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_46 text" class="gt_row gt_left">Because the spread of infectious diseases is influenced by a complex interplay of biological, social, and environmental factors</td>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_46 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_47" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_47 text" class="gt_row gt_left">Because systems thinking makes the study of diseases easier</td>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_47 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_48" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_48 text" class="gt_row gt_left">Because infectious diseases only exist within certain systems</td>
+<td headers="Why is systems thinking particularly important when studying infectious disease dynamics? stub_1_48 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How might climate change impact infectious disease dynamics according to a systems thinking perspective?">How might climate change impact infectious disease dynamics according to a systems thinking perspective?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_49" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_49 text" class="gt_row gt_left">Climate change has no impact on infectious disease dynamics</td>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_49 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_50" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_50 text" class="gt_row gt_left">Climate change may alter habitats and lifestyles, indirectly affecting the spread of some diseases</td>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_50 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_51" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_51 text" class="gt_row gt_left">Climate change only affects diseases spread by mosquitoes</td>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_51 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_52" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_52 text" class="gt_row gt_left">Climate change impacts are unrelated to systems thinking</td>
+<td headers="How might climate change impact infectious disease dynamics according to a systems thinking perspective? stub_1_52 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="In a systems model of infectious disease, what role does 'socioeconomic status' play?">In a systems model of infectious disease, what role does 'socioeconomic status' play?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_53" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_53 text" class="gt_row gt_left">It determines the type of disease a person will get</td>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_53 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_54" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_54 text" class="gt_row gt_left">It may influence a person's vulnerability to disease, access to healthcare, and health behaviors</td>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_54 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_55" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_55 text" class="gt_row gt_left">It only matters in low-income countries</td>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_55 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_56" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_56 text" class="gt_row gt_left">It has no role in infectious disease dynamics</td>
+<td headers="In a systems model of infectious disease, what role does 'socioeconomic status' play? stub_1_56 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What does a 'reservoir' refer to in the context of infectious disease dynamics?">What does a 'reservoir' refer to in the context of infectious disease dynamics?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_57" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_57 text" class="gt_row gt_left">The water bodies where diseases originate</td>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_57 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_58" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_58 text" class="gt_row gt_left">A population (animal, human, or environmental) where a pathogen normally lives and multiplies</td>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_58 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_59" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_59 text" class="gt_row gt_left">The hospitals where patients are treated</td>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_59 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_60" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_60 text" class="gt_row gt_left">A specific area in the human body where a disease persists</td>
+<td headers="What does a 'reservoir' refer to in the context of infectious disease dynamics? stub_1_60 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases?">What is the concept of 'social distancing' intended to impact in the spread of infectious diseases?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_61" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_61 text" class="gt_row gt_left">The basic reproduction number (R0)</td>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_61 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_62" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_62 text" class="gt_row gt_left">The economic impact of the disease</td>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_62 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_63" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_63 text" class="gt_row gt_left">The severity of symptoms in individual patients</td>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_63 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_64" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_64 text" class="gt_row gt_left">The geographic distribution of the disease</td>
+<td headers="What is the concept of 'social distancing' intended to impact in the spread of infectious diseases? stub_1_64 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What does the 'S' in the SIR model of infectious diseases stand for?">What does the 'S' in the SIR model of infectious diseases stand for?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_65" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_65 text" class="gt_row gt_left">Susceptible</td>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_65 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_66" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_66 text" class="gt_row gt_left">Sick</td>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_66 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_67" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_67 text" class="gt_row gt_left">Sensitive</td>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_67 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_68" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_68 text" class="gt_row gt_left">Submissive</td>
+<td headers="What does the 'S' in the SIR model of infectious diseases stand for? stub_1_68 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent?">In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_69" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_69 text" class="gt_row gt_left">The rate at which recovered individuals lose immunity</td>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_69 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_70" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_70 text" class="gt_row gt_left">The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population</td>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_70 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_71" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_71 text" class="gt_row gt_left">The ratio of vaccinated individuals to susceptible individuals</td>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_71 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_72" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_72 text" class="gt_row gt_left">The resistance of the population to the disease</td>
+<td headers="In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent? stub_1_72 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious?">Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_73" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_73 text" class="gt_row gt_left">Susceptible</td>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_73 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_74" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_74 text" class="gt_row gt_left">Infectious</td>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_74 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_75" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_75 text" class="gt_row gt_left">Recovered</td>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_75 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_76" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_76 text" class="gt_row gt_left">Exposed</td>
+<td headers="Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious? stub_1_76 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is the significance of 'herd immunity' in the context of infectious disease spread?">What is the significance of 'herd immunity' in the context of infectious disease spread?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_77" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_77 text" class="gt_row gt_left">It refers to the immunity developed by livestock and has no relevance to human diseases.</td>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_77 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_78" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_78 text" class="gt_row gt_left">It's a strategy where only the strongest individuals are vaccinated to protect the weaker ones.</td>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_78 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_79" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_79 text" class="gt_row gt_left">It describes a situation where a sufficiently large proportion of the population is immune, thereby reducing the likelihood of disease spread.</td>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_79 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_80" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_80 text" class="gt_row gt_left">It signifies that the entire 'herd' or population has been infected and therefore is immune.</td>
+<td headers="What is the significance of 'herd immunity' in the context of infectious disease spread? stub_1_80 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Which factor is NOT typically included in a simple infectious disease model?">Which factor is NOT typically included in a simple infectious disease model?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_81" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_81 text" class="gt_row gt_left">Birth rates</td>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_81 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_82" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_82 text" class="gt_row gt_left">Death rates</td>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_82 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_83" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_83 text" class="gt_row gt_left">Immigration rates</td>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_83 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_84" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_84 text" class="gt_row gt_left">Weather patterns</td>
+<td headers="Which factor is NOT typically included in a simple infectious disease model? stub_1_84 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How can spatial structure of a population be important in the spread of infectious diseases?">How can spatial structure of a population be important in the spread of infectious diseases?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_85" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_85 text" class="gt_row gt_left">Disease spread can be slower in spatially structured populations due to limited interactions between different regions.</td>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_85 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_86" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_86 text" class="gt_row gt_left">Spatial structure is irrelevant; infectious diseases spread at the same rate regardless of population structure.</td>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_86 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_87" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_87 text" class="gt_row gt_left">Spatial structure only matters in the spread of diseases in animal populations, not humans.</td>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_87 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_88" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_88 text" class="gt_row gt_left">Diseases spread faster in spatially structured populations because the disease adapts to different regions.</td>
+<td headers="How can spatial structure of a population be important in the spread of infectious diseases? stub_1_88 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true?">If a disease has a basic reproduction number (R0) of less than 1, which of the following is true?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_89" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_89 text" class="gt_row gt_left">The disease will likely lead to an epidemic.</td>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_89 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_90" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_90 text" class="gt_row gt_left">The disease will spread but will not lead to an epidemic.</td>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_90 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_91" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_91 text" class="gt_row gt_left">The disease will gradually disappear from the population.</td>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_91 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_92" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_92 text" class="gt_row gt_left">The disease's spread is not affected by its R0 value.</td>
+<td headers="If a disease has a basic reproduction number (R0) of less than 1, which of the following is true? stub_1_92 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission?">Which statement is true regarding a 'super spreader' in the context of infectious disease transmission?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_93" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_93 text" class="gt_row gt_left">A super spreader is typically someone who is immune to the disease.</td>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_93 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_94" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_94 text" class="gt_row gt_left">A super spreader is an individual who infects significantly more people than the average infected person.</td>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_94 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_95" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_95 text" class="gt_row gt_left">Super spreaders are less likely to spread the disease if they are in a rural area.</td>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_95 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_96" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_96 text" class="gt_row gt_left">Super spreaders can only spread the disease in the absence of a vaccination program.</td>
+<td headers="Which statement is true regarding a 'super spreader' in the context of infectious disease transmission? stub_1_96 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is the impact of a higher incubation period on the spread of an infectious disease?">What is the impact of a higher incubation period on the spread of an infectious disease?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_97" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_97 text" class="gt_row gt_left">It leads to a faster spread as individuals are infectious for longer periods without showing symptoms.</td>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_97 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_98" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_98 text" class="gt_row gt_left">It has no significant impact on the spread of the disease.</td>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_98 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_99" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_99 text" class="gt_row gt_left">It usually results in a slower spread since the time to become infectious is longer.</td>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_99 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_100" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_100 text" class="gt_row gt_left">It decreases the disease's basic reproduction number (R0) directly.</td>
+<td headers="What is the impact of a higher incubation period on the spread of an infectious disease? stub_1_100 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time?">Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_101" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_101 text" class="gt_row gt_left">The number of susceptible individuals will increase over time.</td>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_101 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_102" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_102 text" class="gt_row gt_left">The disease will reach a steady state with a constant number of infectious individuals.</td>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_102 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_103" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_103 text" class="gt_row gt_left">The number of infectious individuals will peak and then decrease as the number of susceptible individuals decreases.</td>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_103 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_104" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_104 text" class="gt_row gt_left">The number of recovered individuals will eventually decrease as they become susceptible again.</td>
+<td headers="Assuming no changes in behavior or intervention strategies, what is the likely outcome as a disease progresses through a population over time? stub_1_104 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How does implementing a quarantine strategy affect the SIR model dynamics?">How does implementing a quarantine strategy affect the SIR model dynamics?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_105" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_105 text" class="gt_row gt_left">It increases the number of susceptible individuals.</td>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_105 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_106" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_106 text" class="gt_row gt_left">It has no effect on the SIR model dynamics.</td>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_106 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_107" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_107 text" class="gt_row gt_left">It reduces the effective contact rate between susceptible and infectious individuals.</td>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_107 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_108" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_108 text" class="gt_row gt_left">It moves individuals from the susceptible to recovered compartment directly.</td>
+<td headers="How does implementing a quarantine strategy affect the SIR model dynamics? stub_1_108 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What role does 'seasonality' play in the spread of certain infectious diseases?">What role does 'seasonality' play in the spread of certain infectious diseases?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_109" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_109 text" class="gt_row gt_left">Seasonality can affect the transmission rate of diseases that are sensitive to environmental factors like temperature and humidity.</td>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_109 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_110" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_110 text" class="gt_row gt_left">Seasonality decreases the basic reproduction number (R0) of all diseases.</td>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_110 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_111" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_111 text" class="gt_row gt_left">Seasonality has no effect; infectious diseases spread independently of seasons.</td>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_111 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_112" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_112 text" class="gt_row gt_left">Seasonality only affects diseases spread by insects.</td>
+<td headers="What role does 'seasonality' play in the spread of certain infectious diseases? stub_1_112 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States?">How would restricting air travel most likely affect the spread of an infectious disease across the continental United States?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_113" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_113 text" class="gt_row gt_left">It would have no effect as people would still travel by other means.</td>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_113 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_114" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_114 text" class="gt_row gt_left">It would speed up the spread as people would resort to more local travel, infecting their immediate surroundings.</td>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_114 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_115" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_115 text" class="gt_row gt_left">It would slow the spread by reducing the number of long-distance travel connections that can transport the disease to new areas.</td>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_115 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_116" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_116 text" class="gt_row gt_left">It would cause the disease to spread in a clustered pattern, with no clear impact on the speed of spread.</td>
+<td headers="How would restricting air travel most likely affect the spread of an infectious disease across the continental United States? stub_1_116 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics?">If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_117" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_117 text" class="gt_row gt_left">The disease has a long incubation period allowing for widespread before detection.</td>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_117 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_118" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_118 text" class="gt_row gt_left">The disease is likely transmitted through vectors that thrive in urban settings.</td>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_118 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_119" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_119 text" class="gt_row gt_left">The disease may have a high R0, indicating that each case can infect many others, often exacerbated by dense population settings.</td>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_119 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_120" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_120 text" class="gt_row gt_left">The disease spreads exclusively through water and food sources commonly found in urban areas.</td>
+<td headers="If the simulation shows a rapid spread of disease in densely populated urban areas, what might that suggest about the disease's transmission characteristics? stub_1_120 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas?">What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_121" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_121 text" class="gt_row gt_left">An increase in disease spread in rural areas due to their lower population immunity.</td>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_121 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_122" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_122 text" class="gt_row gt_left">A decrease in disease spread due to improved herd immunity.</td>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_122 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_123" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_123 text" class="gt_row gt_left">No change, because population density is the only factor in disease spread.</td>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_123 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_124" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_124 text" class="gt_row gt_left">A localized outbreak in the urban areas only, with rural areas remaining unaffected.</td>
+<td headers="What impact might you expect on the spread of an infectious disease if the simulation allowed for increased rates of population movement between rural and urban areas? stub_1_124 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease?">In the simulation, which intervention would likely reduce the spread of an airborne infectious disease?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_125" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_125 text" class="gt_row gt_left">Increasing the number of hospitals in affected areas.</td>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_125 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_126" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_126 text" class="gt_row gt_left">Implementing temperature screenings at airports.</td>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_126 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_127" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_127 text" class="gt_row gt_left">Enforcing mask mandates in areas with high rates of air travel.</td>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_127 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_128" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_128 text" class="gt_row gt_left">Promoting the use of personal vehicles.</td>
+<td headers="In the simulation, which intervention would likely reduce the spread of an airborne infectious disease? stub_1_128 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease?">Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_129" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_129 text" class="gt_row gt_left">Interstate travel regulations.</td>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_129 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_130" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_130 text" class="gt_row gt_left">Variations in healthcare quality between states.</td>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_130 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_131" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_131 text" class="gt_row gt_left">Local wildlife and vector populations.</td>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_131 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_132" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_132 text" class="gt_row gt_left">International border closures.</td>
+<td headers="Considering the simulation shows the continental US, which of the following factors is least likely to affect the spread of a disease? stub_1_132 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see?">When using the simulation to restrict air travel, what pattern of disease spread might you expect to see?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_133" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_133 text" class="gt_row gt_left">A homogeneous spread of the disease throughout the country.</td>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_133 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_134" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_134 text" class="gt_row gt_left">An immediate halt in disease spread.</td>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_134 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_135" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_135 text" class="gt_row gt_left">A patchy spread, with outbreaks concentrated around major urban centers.</td>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_135 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_136" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_136 text" class="gt_row gt_left">A rapid spread in coastal areas followed by the interior regions.</td>
+<td headers="When using the simulation to restrict air travel, what pattern of disease spread might you expect to see? stub_1_136 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="At what time point does the Infected (I) compartment reach its peak value?">At what time point does the Infected (I) compartment reach its peak value?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_137" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_137 text" class="gt_row gt_left">Between days X and Y</td>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_137 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_138" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_138 text" class="gt_row gt_left">Before day X</td>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_138 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_139" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_139 text" class="gt_row gt_left">After day Y</td>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_139 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_140" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_140 text" class="gt_row gt_left">The data does not show a clear peak within the time frame</td>
+<td headers="At what time point does the Infected (I) compartment reach its peak value? stub_1_140 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is the approximate number of Recovered (R) individuals by day Z?">What is the approximate number of Recovered (R) individuals by day Z?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_141" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_141 text" class="gt_row gt_left">Number A</td>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_141 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_142" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_142 text" class="gt_row gt_left">Number B</td>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_142 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_143" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_143 text" class="gt_row gt_left">Number C</td>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_143 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_144" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_144 text" class="gt_row gt_left">Number D</td>
+<td headers="What is the approximate number of Recovered (R) individuals by day Z? stub_1_144 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease?">Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_145" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_145 text" class="gt_row gt_left">The disease is spreading more quickly after day X</td>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_145 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_146" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_146 text" class="gt_row gt_left">The disease is spreading more slowly after day X</td>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_146 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_147" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_147 text" class="gt_row gt_left">The spread of the disease has not changed</td>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_147 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_148" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_148 text" class="gt_row gt_left">There is not enough information to determine the change in spread</td>
+<td headers="Compare the slope of the Deaths curve before and after day X. What does this suggest about the spread of the disease? stub_1_148 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve.">By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve.</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_149" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_149 text" class="gt_row gt_left">Duration A</td>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_149 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_150" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_150 text" class="gt_row gt_left">Duration B</td>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_150 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_151" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_151 text" class="gt_row gt_left">Duration C</td>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_151 answer" class="gt_row gt_left">a</td></tr>
+    <tr><th id="stub_1_152" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_152 text" class="gt_row gt_left">Duration D</td>
+<td headers="By examining the graph, estimate the duration of the infectious period based on the Infected (I) curve. stub_1_152 answer" class="gt_row gt_left">a</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals.">Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals.</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_153" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_153 text" class="gt_row gt_left">State A</td>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_153 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_154" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_154 text" class="gt_row gt_left">State B</td>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_154 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_155" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_155 text" class="gt_row gt_left">State C</td>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_155 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_156" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_156 text" class="gt_row gt_left">State D</td>
+<td headers="Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals. stub_1_156 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals?">From the provided graphs, which state has the highest ratio of Deaths to Infected individuals?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_157" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_157 text" class="gt_row gt_left">State A</td>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_157 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_158" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_158 text" class="gt_row gt_left">State B</td>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_158 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_159" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_159 text" class="gt_row gt_left">State C</td>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_159 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_160" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_160 text" class="gt_row gt_left">State D</td>
+<td headers="From the provided graphs, which state has the highest ratio of Deaths to Infected individuals? stub_1_160 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X?">How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_161" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_161 text" class="gt_row gt_left">It decreases at a faster rate</td>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_161 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_162" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_162 text" class="gt_row gt_left">It remains constant</td>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_162 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_163" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_163 text" class="gt_row gt_left">It increases</td>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_163 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_164" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_164 text" class="gt_row gt_left">It decreases at a slower rate</td>
+<td headers="How does the Susceptible (S) curve change in response to an implemented vaccination campaign starting on day X? stub_1_164 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model?">Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_165" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_165 text" class="gt_row gt_left">The initial number of infected individuals.</td>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_165 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_166" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_166 text" class="gt_row gt_left">The susceptibility of the population.</td>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_166 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_167" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_167 text" class="gt_row gt_left">Population density and mobility patterns.</td>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_167 answer" class="gt_row gt_left">c</td></tr>
+    <tr><th id="stub_1_168" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_168 text" class="gt_row gt_left">The recovery rate of individuals.</td>
+<td headers="Which factor has the most significant impact on the speed of infectious disease spread in a spatially structured population model? stub_1_168 answer" class="gt_row gt_left">c</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation?">In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_169" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_169 text" class="gt_row gt_left">It slows down the spread of the disease.</td>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_169 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_170" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_170 text" class="gt_row gt_left">It has no significant impact on the spread.</td>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_170 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_171" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_171 text" class="gt_row gt_left">It leads to a more uniform spread across regions.</td>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_171 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_172" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_172 text" class="gt_row gt_left">It increases the speed and reach of the disease spread.</td>
+<td headers="In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation? stub_1_172 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first?">When using the simulation with air travel enabled, which states are likely to show higher rates of infection first?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_173" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_173 text" class="gt_row gt_left">States with lower populations.</td>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_173 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_174" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_174 text" class="gt_row gt_left">States with major transportation hubs.</td>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_174 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_175" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_175 text" class="gt_row gt_left">States that are geographically isolated.</td>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_175 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_176" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_176 text" class="gt_row gt_left">States with the highest temperatures.</td>
+<td headers="When using the simulation with air travel enabled, which states are likely to show higher rates of infection first? stub_1_176 answer" class="gt_row gt_left">b</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza?">After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_177" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_177 text" class="gt_row gt_left">Hotspots are primarily rural.</td>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_177 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_178" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_178 text" class="gt_row gt_left">Hotspots are random and evenly distributed.</td>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_178 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_179" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_179 text" class="gt_row gt_left">Hotspots are predominantly in coastal areas.</td>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_179 answer" class="gt_row gt_left">d</td></tr>
+    <tr><th id="stub_1_180" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_180 text" class="gt_row gt_left">Hotspots correlate with areas of high population density and major airports.</td>
+<td headers="After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza? stub_1_180 answer" class="gt_row gt_left">d</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza?">What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza?</th>
+    </tr>
+    <tr class="gt_row_group_first"><th id="stub_1_181" scope="row" class="gt_row gt_left gt_stub">a</th>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_181 text" class="gt_row gt_left">It requires less computational power to run.</td>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_181 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_182" scope="row" class="gt_row gt_left gt_stub">b</th>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_182 text" class="gt_row gt_left">It provides a more realistic scenario by considering geographic distribution and human movement.</td>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_182 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_183" scope="row" class="gt_row gt_left gt_stub">c</th>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_183 text" class="gt_row gt_left">It assumes homogeneous mixing, which simplifies the calculations.</td>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_183 answer" class="gt_row gt_left">b</td></tr>
+    <tr><th id="stub_1_184" scope="row" class="gt_row gt_left gt_stub">d</th>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_184 text" class="gt_row gt_left">It does not require data on population density or travel patterns.</td>
+<td headers="What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza? stub_1_184 answer" class="gt_row gt_left">b</td></tr>
   </tbody>
   <tfoot class="gt_sourcenotes">
     <tr>
-      <td class="gt_sourcenote" colspan="2">we can explore adding metadata to each question…</td>
+      <td class="gt_sourcenote" colspan="3"><ul>
+<li>Current tags are ‘Systems’, ‘Infectious Disease’, ‘Science Reasoning’, and ‘Data Literacy’.</li>
+</ul>
+</td>
     </tr>
   </tfoot>
   

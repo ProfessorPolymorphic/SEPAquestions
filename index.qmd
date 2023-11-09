@@ -8,121 +8,145 @@ title: "Outline"
 
 These objectives encompass a comprehensive understanding of infectious disease modeling, considering both the theoretical underpinnings and practical applications through interactive simulation tools. They aim to equip learners with the ability to analyze and apply complex models to real-world scenarios, thereby enhancing their critical thinking and analytical skills in the field of epidemiology.
 
-1. Understand the Basics of Compartment Models
-- Comprehend the **SEIR (Susceptible, Exposed, Infected, Recovered) models**.
-- Recognize the critical assumptions behind these models, such as **homogeneous mixing** and **constant population**.
+1.  Understand the Basics of Compartment Models
 
-2. Recognize the Limitations of Simple Compartment Models
-- Identify the **limitations of non-spatial models** in accurately predicting the spread of infectious diseases.
-- Understand the importance of **incorporating spatial structure** and population distribution in modeling efforts.
+-   Comprehend the **SEIR (Susceptible, Exposed, Infected, Recovered) models**.
+-   Recognize the critical assumptions behind these models, such as **homogeneous mixing** and **constant population**.
 
-3. Grasp the Dynamics of Disease Spread in a Spatially Structured Population
-- Appreciate how **spatial distribution affects disease transmission dynamics**.
-- Understand how the simulation can **visualize the spread** within a structured population, such as that of the continental US.
+2.  Recognize the Limitations of Simple Compartment Models
 
-4. Evaluate the Impact of Ground vs. Air Travel on Disease Spread
-- Discern the role of different **transportation modes** on the speed and pattern of infectious disease dissemination.
-- Assess how **restricting or allowing air travel** can change the simulation outcomes and real-world spread.
+-   Identify the **limitations of non-spatial models** in accurately predicting the spread of infectious diseases.
+-   Understand the importance of **incorporating spatial structure** and population distribution in modeling efforts.
 
-5. Apply Knowledge to a Historical Context
-- Relate the learning from the simulation to **historical events**, such as the 1918 influenza pandemic.
-- Infer how **modern transportation** could have altered the historical spread of the disease.
+3.  Grasp the Dynamics of Disease Spread in a Spatially Structured Population
 
-6. Analyze Data from Simulations to Draw Conclusions
-- **Interpret the graphical data** and spread patterns from the simulation.
-- Use the interactivity of the simulation to **extract and analyze data** on how infectious diseases propagate over time and space.
+-   Appreciate how **spatial distribution affects disease transmission dynamics**.
+-   Understand how the simulation can **visualize the spread** within a structured population, such as that of the continental US.
 
-7. Connect Simulation Insights to Modern Public Health Policies
-- Reflect on the **implications of disease spread dynamics** for public health interventions.
-- Consider how **accurate modeling informs public health policy**, emergency preparedness, and response strategies.
+4.  Evaluate the Impact of Ground vs. Air Travel on Disease Spread
 
+-   Discern the role of different **transportation modes** on the speed and pattern of infectious disease dissemination.
+-   Assess how **restricting or allowing air travel** can change the simulation outcomes and real-world spread.
+
+5.  Apply Knowledge to a Historical Context
+
+-   Relate the learning from the simulation to **historical events**, such as the 1918 influenza pandemic.
+-   Infer how **modern transportation** could have altered the historical spread of the disease.
+
+6.  Analyze Data from Simulations to Draw Conclusions
+
+-   **Interpret the graphical data** and spread patterns from the simulation.
+-   Use the interactivity of the simulation to **extract and analyze data** on how infectious diseases propagate over time and space.
+
+7.  Connect Simulation Insights to Modern Public Health Policies
+
+-   Reflect on the **implications of disease spread dynamics** for public health interventions.
+-   Consider how **accurate modeling informs public health policy**, emergency preparedness, and response strategies.
 
 ## [Activity 1: Understanding Basic Compartment Models](Activity1.qmd)
 
 ### Objective
+
 To introduce the user to the basic concepts of compartment models in epidemiology.
 
 ### Materials
-- Introductory video on basic compartment models (SIR, SEIR, etc.).
-- Textual explanations and diagrams of the models.
-- Quiz to assess understanding of the basic models.
+
+-   Introductory video on basic compartment models (SIR, SEIR, etc.).
+-   Textual explanations and diagrams of the models.
+-   Quiz to assess understanding of the basic models.
 
 ### Structure
+
 #### Part A: Introductory Video
-- Content covering Susceptible, Infected, and Recovered (SIR) compartments.
-- Explanation of how the model simplifies disease dynamics.
-- Discussion on basic reproduction number (R0) and its significance.
+
+-   Content covering Susceptible, Infected, and Recovered (SIR) compartments.
+-   Explanation of how the model simplifies disease dynamics.
+-   Discussion on basic reproduction number (R0) and its significance.
 
 #### Part B: Comprehension Check
-- A short quiz based on the video content.
-- Interactive examples to manipulate basic model parameters and observe outcomes.
+
+-   A short quiz based on the video content.
+-   Interactive examples to manipulate basic model parameters and observe outcomes.
 
 ### Activity Steps
-1. Watch the introductory video on basic compartment models.
-2. Read additional material provided on these models?
-3. Complete the quiz to test understanding of the concepts.
 
----
+1.  Watch the introductory video on basic compartment models.
+2.  Read additional material provided on these models?
+3.  Complete the quiz to test understanding of the concepts.
+
+------------------------------------------------------------------------
 
 ## [Activity 2: Simulation with Ground Transportation](Activity2.qmd)
 
 ### Objective
+
 To explore how disease spreads in a spatially structured population with limited transportation.
 
 ### Materials
-- Simulation software with functionality to limit to ground transportation.
-- Pre-set scenarios with different levels of ground transportation.
-- Discussion prompts and observation worksheets.
+
+-   Simulation software with functionality to limit to ground transportation.
+-   Pre-set scenarios with different levels of ground transportation.
+-   Discussion prompts and observation worksheets.
 
 ### Structure
+
 #### Part A: Ground Transportation Simulation
-- Users simulate disease spread in a scenario where only ground transportation is available (no air travel).
-- Users observe how the disease spreads between closely connected areas more rapidly than distant ones.
+
+-   Users simulate disease spread in a scenario where only ground transportation is available (no air travel).
+-   Users observe how the disease spreads between closely connected areas more rapidly than distant ones.
 
 #### Part B: Analysis and Discussion
-- Users are prompted to note their observations on the pattern and speed of disease spread.
-- A guided worksheet asks reflective questions on how ground transportation affects disease dynamics.
+
+-   Users are prompted to note their observations on the pattern and speed of disease spread.
+-   A guided worksheet asks reflective questions on how ground transportation affects disease dynamics.
 
 ### Activity Steps
-1. Run the simulation with ground transportation only.
-2. Document the spread of disease and how it correlates with population density and travel paths.
-3. Participate in a discussion or forum to share observations and insights.
 
----
+1.  Run the simulation with ground transportation only.
+2.  Document the spread of disease and how it correlates with population density and travel paths.
+3.  Participate in a discussion or forum to share observations and insights.
+
+------------------------------------------------------------------------
 
 ## [Activity 3: Simulation with Air Travel](Activity3.qmd)
 
 ### Objective
+
 To understand the impact of air travel on the spread of infectious diseases.
 
 ### Materials
-- Simulation software with air travel enabled.
-- Case studies or historical data on disease spread with air travel.
-- Analysis worksheets for documenting changes in disease spread patterns.
+
+-   Simulation software with air travel enabled.
+-   Case studies or historical data on disease spread with air travel.
+-   Analysis worksheets for documenting changes in disease spread patterns.
 
 ### Structure
+
 #### Part A: Air Travel Simulation
-- Users enable air travel in the simulation and compare it with the previous scenario.
-- Focus on observing changes in the speed of spread and the appearance of disease hotspots.
+
+-   Users enable air travel in the simulation and compare it with the previous scenario.
+-   Focus on observing changes in the speed of spread and the appearance of disease hotspots.
 
 #### Part B: Comparative Analysis
-- Users fill out worksheets comparing the two simulations (ground vs. air travel).
-- Discussions on the role of major transport hubs and the effect of international travel on disease dynamics.
+
+-   Users fill out worksheets comparing the two simulations (ground vs. air travel).
+-   Discussions on the role of major transport hubs and the effect of international travel on disease dynamics.
 
 ### Activity Steps
-1. Activate air travel in the simulation and run the scenario.
-2. Document the changes and compare them to the ground transportation scenario.
-3. Engage in discussions or complete a written reflection on how air travel alters disease spread and what that implies for containment strategies.
 
----
+1.  Activate air travel in the simulation and run the scenario.
+2.  Document the changes and compare them to the ground transportation scenario.
+3.  Engage in discussions or complete a written reflection on how air travel alters disease spread and what that implies for containment strategies.
+
+------------------------------------------------------------------------
 
 ## Conclusion and Wrap-up
 
-- Review the key learning points from all activities.
-- Reflect on the assumptions of the basic compartment model versus the complexities introduced by spatial and transportation factors.
-- Final Q&A session to address any remaining questions or curiosities about the simulation and model assumptions.
+-   Review the key learning points from all activities.
+-   Reflect on the assumptions of the basic compartment model versus the complexities introduced by spatial and transportation factors.
+-   Final Q&A session to address any remaining questions or curiosities about the simulation and model assumptions.
 
 ## Supplementary Materials
 
-- Fact sheets on infectious diseases that were impacted significantly by air travel.
-- A video summary highlighting the key differences in disease dynamics with and without air travel.
+-   Fact sheets on infectious diseases that were impacted significantly by air travel.
+-   A video summary highlighting the key differences in disease dynamics with and without air travel.

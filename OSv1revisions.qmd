@@ -2,34 +2,38 @@
 title: "Outbreak Simulator v1 Revisions"
 ---
 
-
 # Outbreak Simulator - Version 1 Revisions
 
 ## General Updates
-- Investigate the Unity / Imotions integration.
-- Correct existing graph axes to ensure accuracy.
-- Consider adding the new title screen and interface.
+
+-   Investigate the Unity / Imotions integration.
+-   Correct existing graph axes to ensure accuracy.
 
 ## Event Log Enhancements
-- Track and log all mouse clicks within the simulator.
-- Record intervention times if applicable, including start and end times.
-- Log the state selected by the user, including time and duration of interaction.
-- Document any changes in data streams visible to the user on graphs.
-- Note changes to map overlay and data presented on the map.
+
+-   Track and log all mouse clicks within the simulator.
+-   Record intervention times if applicable, including start and end times.
+-   Log the state selected by the user, including time and duration of interaction.
+-   Document any changes in data streams visible to the user on graphs.
+-   Note changes to map overlay and data presented on the map.
 
 ## Scenario Updates
-- Parameterize Scenario 2a and 2b for dynamic adjustments.
-- Parameterize Scenario 3a and 3b similarly.
-- Create introductory screens for Scenario 2 and Scenario 3, detailing objectives and instructions.
+
+-   Parameterize Scenario 2a and 2b .
+-   Parameterize Scenario 3a and 3b similarly.
+-   Create introductory screens for Scenario 2 and Scenario 3, detailing objectives and instructions.
 
 ## User Interface Improvements
-- Enhance the ability of the user to interact after the simulation has ended.
-- Implement a button that allows users to exit the scenario upon completion of a post-test.
-- Update controls for panning to improve user experience (consider right-click panning).
-- Add a title screen with options for:
-  - Quitting the application.
-  - Selecting Scenario 2.
-  - Selecting Scenario 3.
+
+-   Enhance the ability of the user to interact after the simulation has ended.
+-   Implement a button that allows users to exit the scenario upon completion of a post-test.
+-   Adjust the color display to enhance visibility of infected individuals.
+-   Update controls for panning to improve user experience (consider right-click panning or WASD navigation).
+-   Add a title screen with options for:
+    -   Quitting the application.
+    -   Selecting Scenario 2.
+    -   Selecting Scenario 3.
 
 ## Bug Fixes
-- Address the Windows 10 quit bug to ensure proper functionality.
+
+-   Address the Windows 10 quit bug to ensure proper functionality.
