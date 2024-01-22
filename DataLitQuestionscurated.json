@@ -1,0 +1,100 @@
+[
+    {
+        "questionID": 101,
+        "question": "At what time point does the Infected (I) compartment reach its peak value?",
+        "options": {
+            "a": "Between days X and Y",
+            "b": "Before day X",
+            "c": "After day Y",
+            "d": "The data does not show a clear peak within the time frame"
+        },
+        "DataLit": true,
+        "InfectiousDisease": true,
+        "answer": "a"
+    },
+    {
+        "questionID": 102,
+        "question": "What is the approximate number of Recovered (R) individuals by day Z?",
+        "options": {
+            "a": "Number A",
+            "b": "Number B",
+            "c": "Number C",
+            "d": "Number D"
+        },
+        "DataLit": true,
+        "InfectiousDisease": true,
+        "answer": "c"
+    },
+   
+   
+    {
+        "questionID": 105,
+        "question": "Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals.",
+        "options": {
+            "a": "State A",
+            "b": "State B",
+            "c": "State C",
+            "d": "State D"
+        },
+        "DataLit": true,
+        "InfectiousDisease": true,
+        "answer": "c"
+    },
+    
+    {
+        "questionID": 18,
+        "question": "In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation?",
+        "options": {
+            "a": "It slows down the spread of the disease.",
+            "b": "It has no significant impact on the spread.",
+            "c": "It leads to a more uniform spread across regions.",
+            "d": "It increases the speed and reach of the disease spread."
+        },
+        "correctAnswer": "d",
+        "InfectiousDisease": true,
+        "AirTravel": true,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 19,
+        "question": "When using the simulation with air travel enabled, which states are likely to show higher rates of infection first?",
+        "options": {
+            "a": "States with lower populations.",
+            "b": "States with major transportation hubs.",
+            "c": "States that are geographically isolated.",
+            "d": "States with the highest temperatures."
+        },
+        "correctAnswer": "b",
+        "InfectiousDisease": true,
+        "AirTravel": true,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 20,
+        "question": "After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza?",
+        "options": {
+            "a": "Hotspots are primarily rural.",
+            "b": "Hotspots are random and evenly distributed.",
+            "c": "Hotspots are predominantly in coastal areas.",
+            "d": "Hotspots correlate with areas of high population density and major airports."
+        },
+        "correctAnswer": "d",
+        "InfectiousDisease": true,
+        "AirTravel": true,
+        "AccessToSim": true
+    },
+    {
+        "questionID": 21,
+        "question": "What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza?",
+        "options": {
+            "a": "It requires less computational power to run.",
+            "b": "It provides a more realistic scenario by considering geographic distribution and human movement.",
+            "c": "It assumes homogeneous mixing, which simplifies the calculations.",
+            "d": "It does not require data on population density or travel patterns."
+        },
+        "correctAnswer": "b",
+        "InfectiousDisease": true,
+        "AirTravel": false,
+        "AccessToSim": true
+    }
+]

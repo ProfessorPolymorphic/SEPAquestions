@@ -2,7 +2,212 @@
 title: "SEPAquestions"
 ---
 
+These are additional questions that address either data literacy or general knowledge gains.  We can use them in pre or post test contexts.
+
+Certainly! Here are the reformatted questions with interactive answers and explanations using Markdown syntax:
+
+1. **At what time point does the Infected (I) compartment reach its peak value?**
+   a) Between days X and Y
+   b) Before day X
+   c) After day Y
+   d) The data does not show a clear peak within the time frame
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** a) Between days X and Y
+
+   **Explanation:** The peak of the Infected compartment is typically identified by analyzing the trend in the graph. It is the point where the number of infected individuals is at its highest before starting to decline.
+   </details>
+
+2. **What is the approximate number of Recovered (R) individuals by day Z?**
+   a) Number A
+   b) Number B
+   c) Number C
+   d) Number D
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** c) Number C
+
+   **Explanation:** This number can be determined by examining the data or graph at day Z, focusing on the Recovered compartment's value.
+   </details>
+
+3. **Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals.**
+   a) State A
+   b) State B
+   c) State C
+   d) State D
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** c) State C
+
+   **Explanation:** By analyzing the infection trends across different states, the state with the earliest decreasing trend can be identified. This is typically the state where control measures are most effective or where the disease has already peaked.
+   </details>
+
+4. **In the context of the 1918 influenza spread simulation, what effect does enabling air travel have compared to only allowing ground transportation?**
+   a) It slows down the spread of the disease.
+   b) It has no significant impact on the spread.
+   c) It leads to a more uniform spread across regions.
+   d) It increases the speed and reach of the disease spread.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** d) It increases the speed and reach of the disease spread.
+
+   **Explanation:** Enabling air travel in the simulation allows for the rapid and widespread dissemination of the disease, significantly impacting the speed and extent of its spread.
+   </details>
+
+5. **When using the simulation with air travel enabled, which states are likely to show higher rates of infection first?**
+   a) States with lower populations.
+   b) States with major transportation hubs.
+   c) States that are geographically isolated.
+   d) States with the highest temperatures.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** b) States with major transportation hubs.
+
+   **Explanation:** States with major transportation hubs, like large airports, are likely to show higher rates of infection first due to increased travel and movement of people, facilitating the spread of the disease.
+   </details>
+
+6. **After running the simulation with normal patterns of air travel, what observation can be made about the distribution of hotspots in the spread of the 1918 influenza?**
+   a) Hotspots are primarily rural.
+   b) Hotspots are random and evenly distributed.
+   c) Hotspots are predominantly in coastal areas.
+   d) Hotspots correlate with areas of high population density and major airports.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** d) Hotspots correlate with areas of high population density and major airports.
+
+   **Explanation:** The simulation reveals that hotspots for the spread of the 1918 influenza tend to be in areas with high population density and major transportation hubs, highlighting the role of human movement in disease transmission.
+   </details>
+
+7. **What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases like the 1918 influenza?**
+   a) It requires less computational power to run.
+   b) It provides a more realistic scenario by considering geographic distribution and human movement.
+   c) It assumes homogeneous mixing, which simplifies the calculations.
+   d) It does not require data on population density or travel patterns.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** b) It provides a more realistic scenario by considering geographic distribution and human movement.
+
+   **Explanation:** A spatially structured model offers a more realistic representation of disease spread by taking into account factors like geographic distribution and human movement patterns, which are crucial in understanding how infectious diseases spread.
+   </details>
+
+
+1. **Which of the following factors is NOT considered to be a component of an infectious disease system?**
+   a) The pathogen that causes the disease.
+   b) The host population that the pathogen infects.
+   c) The environment in which the pathogen and host interact.
+   d) The stock market.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** d) The stock market.
+
+   **Explanation:** An infectious disease system typically includes the pathogen, the host population, and the environment where they interact. The stock market is not a component of an infectious disease system.
+   </details>
+
+2. **In the context of infectious diseases, what is the 'R0' (basic reproduction number)?**
+   a) The total number of people infected by a disease.
+   b) The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population.
+   c) The percentage of a population that needs to be immune for herd immunity to be reached.
+   d) The time it takes for symptoms to appear after a person is infected.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** b) The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population.
+
+   **Explanation:** The 'R0' value represents the average number of secondary infections produced by an infected individual in a population where no one else is infected or immunized.
+   </details>
+
+3. **What does the 'S' in the SIR model of infectious diseases stand for?**
+   a) Susceptible.
+   b) Sick.
+   c) Sensitive.
+   d) Submissive.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** a) Susceptible.
+
+   **Explanation:** In the SIR model, 'S' stands for Susceptible, referring to individuals who are not yet infected with the disease but are at risk of becoming infected.
+   </details>
+
+4. **In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent?**
+   a) The rate at which recovered individuals lose immunity.
+   b) The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population.
+   c) The ratio of vaccinated individuals to susceptible individuals.
+   d) The resistance of the population to the disease.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** b) The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population.
+
+   **Explanation:** The 'R0' value is a measure of the contagiousness of an infectious disease, indicating the average number of new infections caused by each infected individual.
+   </details>
+
+5. **Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious?**
+   a) Susceptible.
+   b) Infectious.
+   c) Recovered.
+   d) Exposed.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** d) Exposed.
+
+   **Explanation:** In the SEIR model, the 'Exposed' compartment represents individuals who have been exposed to the pathogen but are not yet infectious themselves.
+   </details>
+
+6. **How can spatial structure of a population be important in the spread of infectious diseases?**
+   a) Disease spread can be slower in spatially structured populations due to limited interactions between different regions.
+   b) Spatial structure is irrelevant; infectious diseases spread at the same rate regardless of population structure.
+   c) Spatial structure only matters in the spread of diseases in animal populations, not humans.
+   d) Diseases spread faster in spatially structured populations because the disease adapts to different regions.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** a) Disease spread can be slower in spatially structured populations due to limited interactions between different regions.
+
+   **Explanation:** The spatial structure of a population can significantly impact the spread of infectious diseases, as it influences the frequency and pattern of interactions between individuals in different regions.
+   </details>
+
+7. **If a disease has a basic reproduction number (R0) of less than 1, which of the following is true?**
+   a) The disease will likely lead to an epidemic.
+   b) The disease will spread but will not lead to an epidemic.
+   c) The disease will gradually disappear from the population.
+   d) The disease's spread is not affected by its R0 value.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+   
+   **Answer:** c) The disease will gradually disappear from the population.
+   
+   **Explanation:** An R0 of less than 1 means that each infected individual is causing fewer infections that what it takes to maintain the outbreak.  
+   </details>
+   
+   
 ```{r}
+#| eval: false
+
+
 # install.packages("gt")
 library(tidyverse)
 library(jsonlite)
@@ -76,6 +281,9 @@ questionslong <- Q12345 %>%
 ```
 
 ```{r}
+#| eval: false
+
+
 questionslong <- questionslong %>%
   mutate(is_correct = ifelse(option == answer, TRUE, FALSE))
 
@@ -84,6 +292,9 @@ questionslong <- questionslong %>%
 ## Testing the questions
 
 ```{r}
+#| eval: false
+
+
 questable <- questionslong %>%
   select(option, question, text, answer)%>%
   gt(rowname_col = "option", groupname_col = "question") %>%

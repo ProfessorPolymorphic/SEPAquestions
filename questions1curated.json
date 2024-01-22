@@ -1,0 +1,104 @@
+[
+  {
+    "question": "Which of the following factors is NOT considered to be a component of an infectious disease system?",
+    "options": {
+      "a": "The pathogen that causes the disease",
+      "b": "The host population that the pathogen infects",
+      "c": "The environment in which the pathogen and host interact",
+      "d": "The stock market"
+    }
+  },
+  {
+        "questionID": 9,
+        "InfectiousDisease": true,
+        "Systems": true,
+        "question": "In the context of infectious diseases, what is the 'R0' (basic reproduction number)?",
+        "options": {
+            "a": "The total number of people infected by a disease",
+            "b": "The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population",
+            "c": "The percentage of a population that needs to be immune for herd immunity to be reached",
+            "d": "The time it takes for symptoms to appear after a person is infected"
+        }
+    },
+    {
+    "questionID": 17,
+    "question": "What does the 'S' in the SIR model of infectious diseases stand for?",
+    "options": {
+      "a": "Susceptible",
+      "b": "Sick",
+      "c": "Sensitive",
+      "d": "Submissive"
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 18,
+    "question": "In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent?",
+    "options": {
+      "a": "The rate at which recovered individuals lose immunity",
+      "b": "The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population",
+      "c": "The ratio of vaccinated individuals to susceptible individuals",
+      "d": "The resistance of the population to the disease"
+    },
+    "correctAnswer": "b",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 19,
+    "question": "Which compartment in an SEIR model represents individuals who have been exposed to the disease but are not yet infectious?",
+    "options": {
+      "a": "Susceptible",
+      "b": "Infectious",
+      "c": "Recovered",
+      "d": "Exposed"
+    },
+    {
+    "questionID": 22,
+    "question": "How can spatial structure of a population be important in the spread of infectious diseases?",
+    "options": {
+      "a": "Disease spread can be slower in spatially structured populations due to limited interactions between different regions.",
+      "b": "Spatial structure is irrelevant; infectious diseases spread at the same rate regardless of population structure.",
+      "c": "Spatial structure only matters in the spread of diseases in animal populations, not humans.",
+      "d": "Diseases spread faster in spatially structured populations because the disease adapts to different regions."
+    },
+    "correctAnswer": "a",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 23,
+    "question": "If a disease has a basic reproduction number (R0) of less than 1, which of the following is true?",
+    "options": {
+      "a": "The disease will likely lead to an epidemic.",
+      "b": "The disease will spread but will not lead to an epidemic.",
+      "c": "The disease will gradually disappear from the population.",
+      "d": "The disease's spread is not affected by its R0 value."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 27,
+    "question": "How does implementing a quarantine strategy affect the SIR model dynamics?",
+    "options": {
+      "a": "It increases the number of susceptible individuals.",
+      "b": "It has no effect on the SIR model dynamics.",
+      "c": "It reduces the effective contact rate between susceptible and infectious individuals.",
+      "d": "It moves individuals from the susceptible to recovered compartment directly."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+  {
+    "questionID": 29,
+    "question": "How would restricting air travel most likely affect the spread of an infectious disease across the continental United States?",
+    "options": {
+      "a": "It would have no effect as people would still travel by other means.",
+      "b": "It would speed up the spread as people would resort to more local travel, infecting their immediate surroundings.",
+      "c": "It would slow the spread by reducing the number of long-distance travel connections that can transport the disease to new areas.",
+      "d": "It would cause the disease to spread in a clustered pattern, with no clear impact on the speed of spread."
+    },
+    "correctAnswer": "c",
+    "InfectiousDisease": true
+  },
+]

@@ -78,4 +78,152 @@ title: "Activity 2"
 
 Answer about 5 multiple choice questions that require data literacy tasks and interaction with the simulation.
 
+## ASSESMENT QUESTIONS
+
+### Pre-Test
+
+1. **Why is considering the spatial distribution of a population important in modeling disease spread?**
+   a) It determines the genetic variation of the virus.
+   b) It impacts the rate of vaccine development.
+   c) It influences the transmission rates and spread patterns of the disease.
+   d) It helps in identifying the origin of the disease.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. It influences the transmission rates and spread patterns of the disease.
+
+   **Explanation:** Spatial distribution is crucial as it affects how a disease spreads through a population, influenced by factors like population density and movement patterns, leading to variability in transmission rates across different regions.
+   </details>
+
+2. **How did the starting location of the disease in the simulation affect its spread?**
+   a) It had no significant impact on the spread.
+   b) It influenced the speed and direction of the disease spread.
+   c) It only affected the severity of the disease symptoms.
+   d) It determined the type of population affected.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** B. It influenced the speed and direction of the disease spread.
+
+   **Explanation:** The starting location in a spatial model is crucial as it determines the initial pattern of spread, including the speed and direction in which the disease moves through different population centers.
+   </details>
+
+3. **What is a key difference between spatial and non-spatial disease models?**
+   a) Spatial models only simulate airborne diseases.
+   b) Non-spatial models account for individual immunity levels.
+   c) Spatial models include the impact of geography and population movement.
+   d) Non-spatial models provide more accurate long-term predictions.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. Spatial models include the impact of geography and population movement.
+
+   **Explanation:** Spatial models differ from non-spatial models by incorporating geographical factors and population movement patterns, which affect how a disease spreads in different regions.
+   </details>
+
+4. **What role do transport and local interactions play in a spatial model of disease spread?**
+   a) They determine the effectiveness of vaccines.
+   b) They have no significant impact on disease dynamics.
+   c) They are key factors in how quickly and where the disease spreads.
+   d) They only affect the recovery rate of infected individuals.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. They are key factors in how quickly and where the disease spreads.
+
+   **Explanation:** In spatial disease modeling, transport networks and local interactions are critical as they influence the rate and pathways of disease transmission between different areas.
+   </details>
+
+5. **What insight can a spatial model provide that a basic SIR model cannot?**
+   a) Exact prediction of the disease's end date.
+   b) Detailed genetic analysis of the pathogen.
+   c) The impact of geographic and population factors on disease spread.
+   d) The individual treatment plans for patients.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. The impact of geographic and population factors on disease spread.
+
+   **Explanation:** A spatial model provides insights into how geographic and population factors influence the spread of a disease, something that basic SIR models, which lack spatial structure, cannot offer.
+   </details>
+
+
+### Post-Test
+
+
+1. **In a spatial model, how does population density impact disease transmission?**
+   a) It has no effect on transmission rates.
+   b) Higher density usually leads to slower disease spread.
+   c) Higher density can increase the rate of disease transmission.
+   d) Population density only affects the mortality rate.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. Higher density can increase the rate of disease transmission.
+
+   **Explanation:** In spatial models, higher population density can lead to increased rates of disease transmission due to more frequent contact among individuals.
+   </details>
+
+2. **What can be inferred about the spread of disease from the simulation's starting point?**
+   a) The starting point is irrelevant in spatial models.
+   b) The disease will spread uniformly from the starting point.
+   c) The starting point influences the initial trajectory and rate of spread.
+   d) Only coastal areas are affected by the starting point.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. The starting point influences the initial trajectory and rate of spread.
+
+   **Explanation:** In spatial disease simulations, the starting point is crucial as it influences the initial direction and speed of the disease's spread through various population areas.
+   </details>
+
+3. **How does the inclusion of spatial structure in a model affect disease dynamics compared to a non-spatial model?**
+   a) It leads to less accurate predictions.
+   b) It shows uniform spread regardless of geography.
+   c) It highlights variations in disease spread due to geographical and social factors.
+   d) It focuses solely on individual behavior changes.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. It highlights variations in disease spread due to geographical and social factors.
+
+   **Explanation:** Spatial models reveal how geographical and social factors can cause variations in disease dynamics, unlike non-spatial models which often assume uniform spread across a population.
+   </details>
+
+4. **What role does local interaction play in the spread of disease in spatial models?**
+   a) It is only significant in rural areas.
+   b) It has a negligible impact compared to other factors.
+   c) It significantly influences the pattern and speed of disease spread.
+   d) It affects the mutation rate of the virus.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. It significantly influences the pattern and speed of disease spread.
+
+   **Explanation:** Local interactions, such as how people move and interact within and across regions, play a significant role in determining the pattern and speed of disease spread in spatial models.
+   </details>
+
+5. **What additional insight does a spatial model provide over a basic SIR model in the context of the 1918 influenza simulation?**
+   a) Exact identification of patient zero.
+   b) The role of geographic barriers in disease containment.
+   c) The influence of spatial factors on disease transmission and evolution.
+   d) The effect of temperature on the virus's survival.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. The influence of spatial factors on disease transmission and evolution.
+
+   **Explanation:** A spatial model, as opposed to a basic SIR model, provides insights into how the spread and evolution of a disease like the 1918 influenza are influenced by spatial factors such as geographic location, population density, and movement patterns.
+   </details>
+
 
