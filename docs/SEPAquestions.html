@@ -207,7 +207,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#testing-the-questions" id="toc-testing-the-questions" class="nav-link active" data-scroll-target="#testing-the-questions">Testing the questions</a></li>
+  <li><a href="#additional-questions-by-learning-objective" id="toc-additional-questions-by-learning-objective" class="nav-link active" data-scroll-target="#additional-questions-by-learning-objective">Additional questions by Learning Objective</a></li>
+  <li><a href="#testing-the-questions" id="toc-testing-the-questions" class="nav-link" data-scroll-target="#testing-the-questions">Testing the questions</a></li>
   </ul>
 </nav>
     </div>
@@ -433,6 +434,421 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Explanation:</strong> An R0 of less than 1 means that each infected individual is causing fewer infections that what it takes to maintain the outbreak.</p>
 </details></li>
 </ol>
+<section id="additional-questions-by-learning-objective" class="level2">
+<h2 class="anchored" data-anchor-id="additional-questions-by-learning-objective">Additional questions by Learning Objective</h2>
+<p>Here are four multiple-choice questions for Objective 1, which is to understand the basics of compartment models, specifically the SEIR (Susceptible, Exposed, Infected, Recovered) models:</p>
+<ol type="1">
+<li><p><strong>What does the ‘E’ in the SEIR model represent?</strong></p>
+<ol type="a">
+<li>Environment where the disease spreads.</li>
+<li>Exposed individuals not yet infectious.</li>
+<li>Endemic state of the disease.</li>
+<li>Effectiveness of the treatment.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) Exposed individuals not yet infectious.</p>
+<p><strong>Explanation:</strong> In the SEIR model, ‘E’ stands for ‘Exposed,’ representing individuals who have been exposed to the disease but are not yet infectious.</p>
+</details></li>
+<li><p><strong>Which statement correctly describes a characteristic of the SEIR model?</strong></p>
+<ol type="a">
+<li>It assumes immediate immunity after exposure.</li>
+<li>It includes a stage for individuals exposed but not yet infectious.</li>
+<li>It focuses solely on the vaccinated population.</li>
+<li>It predicts the exact duration of an epidemic.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) It includes a stage for individuals exposed but not yet infectious.</p>
+<p><strong>Explanation:</strong> The SEIR model adds an ‘Exposed’ compartment to the traditional SIR model, accounting for the latency period between exposure and becoming infectious.</p>
+</details></li>
+<li><p><strong>In the SEIR model, what assumption is made about the population?</strong></p>
+<ol type="a">
+<li>The population is constantly decreasing.</li>
+<li>Individuals can be re-infected immediately after recovery.</li>
+<li>The population is homogeneous and mixing uniformly.</li>
+<li>Disease spread is solely airborne.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) The population is homogeneous and mixing uniformly.</p>
+<p><strong>Explanation:</strong> The SEIR model, like other compartment models, often assumes a homogeneous population where individuals mix uniformly, meaning each individual has an equal chance of coming into contact with an infected person.</p>
+</details></li>
+<li><p><strong>Why is the ‘Exposed’ compartment important in the SEIR model?</strong></p>
+<ol type="a">
+<li>It indicates the total eradication of the disease.</li>
+<li>It represents people immune to the disease.</li>
+<li>It accounts for the latency period of the disease.</li>
+<li>It reflects the environmental factors affecting the disease.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) It accounts for the latency period of the disease.</p>
+<p><strong>Explanation:</strong> The ‘Exposed’ compartment in the SEIR model is crucial as it represents the period between when an individual is exposed to the disease and when they become infectious, known as the latency period.</p>
+</details></li>
+</ol>
+<p>For Objective 2, which focuses on recognizing the limitations of simple compartment models, here are four multiple-choice questions:</p>
+<ol type="1">
+<li><p><strong>What is a key limitation of the basic SIR or SEIR models in infectious disease modeling?</strong></p>
+<ol type="a">
+<li>They predict the exact time for disease eradication.</li>
+<li>They assume a homogeneously mixing population.</li>
+<li>They focus exclusively on airborne diseases.</li>
+<li>They require real-time data for accurate predictions.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) They assume a homogeneously mixing population.</p>
+<p><strong>Explanation:</strong> One of the main limitations of basic compartment models like SIR and SEIR is the assumption of homogeneous mixing within the population, which may not accurately reflect real-world scenarios where contact rates vary.</p>
+</details></li>
+<li><p><strong>Why might simple compartment models be inadequate for predicting real-world infectious disease spread?</strong></p>
+<ol type="a">
+<li>They always overestimate the impact of vaccination.</li>
+<li>They include too many disease-specific details.</li>
+<li>They do not account for spatial or age-structured differences in populations.</li>
+<li>They are only applicable for bacterial infections, not viral.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) They do not account for spatial or age-structured differences in populations.</p>
+<p><strong>Explanation:</strong> Simple compartment models often lack the complexity to account for spatial distribution and age-structured differences, which are crucial factors in the real-world spread of infectious diseases.</p>
+</details></li>
+<li><p><strong>Which aspect is often oversimplified in basic SIR and SEIR models?</strong></p>
+<ol type="a">
+<li>The rate of natural immunity development.</li>
+<li>The impact of environmental factors on the disease.</li>
+<li>Population dynamics, such as birth and death rates.</li>
+<li>The role of healthcare infrastructure in disease management.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) Population dynamics, such as birth and death rates.</p>
+<p><strong>Explanation:</strong> Basic SIR and SEIR models often simplify population dynamics by assuming a constant population without considering factors like birth, death, and migration rates, which can affect disease spread.</p>
+</details></li>
+<li><p><strong>In the context of infectious disease modeling, what limitation does the assumption of a closed population impose?</strong></p>
+<ol type="a">
+<li>It neglects the impact of global travel on disease spread.</li>
+<li>It overestimates the speed of vaccine development.</li>
+<li>It assumes that all individuals have equal susceptibility.</li>
+<li>It only considers the impact of the disease in urban areas.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> a) It neglects the impact of global travel on disease spread.</p>
+<p><strong>Explanation:</strong> The assumption of a closed population in basic models overlooks the effects of global travel and migration, which can significantly influence the spread and dynamics of infectious diseases.</p>
+</details></li>
+</ol>
+<p>For Objective 3, which focuses on grasping the dynamics of disease spread in a spatially structured population, here are four multiple-choice questions:</p>
+<ol type="1">
+<li><p><strong>How does spatial structure influence the spread of infectious diseases?</strong></p>
+<ol type="a">
+<li>It ensures uniform spread throughout all regions.</li>
+<li>It leads to variations in spread based on population density and movement.</li>
+<li>It only affects disease spread in urban areas.</li>
+<li>It reduces the overall infection rate significantly.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) It leads to variations in spread based on population density and movement.</p>
+<p><strong>Explanation:</strong> In a spatially structured population, factors like population density and movement patterns play a crucial role, leading to variations in how the disease spreads across different regions.</p>
+</details></li>
+<li><p><strong>Why is considering spatial distribution important in infectious disease modeling?</strong></p>
+<ol type="a">
+<li>It helps predict the exact duration of an epidemic.</li>
+<li>It allows for a more accurate representation of disease transmission dynamics.</li>
+<li>It simplifies the model by assuming uniform population distribution.</li>
+<li>It focuses only on the spread in densely populated cities.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) It allows for a more accurate representation of disease transmission dynamics.</p>
+<p><strong>Explanation:</strong> Incorporating spatial distribution into infectious disease models provides a more accurate and realistic representation of how diseases spread, taking into account factors like regional population densities and movement patterns.</p>
+</details></li>
+<li><p><strong>In a spatially structured model, what can cause differences in disease transmission rates between regions?</strong></p>
+<ol type="a">
+<li>Uniform healthcare policies across all regions.</li>
+<li>Similar climate conditions in different regions.</li>
+<li>Variations in population density and mobility patterns.</li>
+<li>The same pathogen virulence in all areas.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) Variations in population density and mobility patterns.</p>
+<p><strong>Explanation:</strong> Differences in population density and mobility patterns among various regions can cause significant variations in disease transmission rates in a spatially structured model.</p>
+</details></li>
+<li><p><strong>How does a spatially explicit model enhance the understanding of disease spread compared to a non-spatial model?</strong></p>
+<ol type="a">
+<li>It predicts the development of vaccines more accurately.</li>
+<li>It shows the impact of geographical factors on disease dynamics.</li>
+<li>It focuses solely on the genetic mutation of pathogens.</li>
+<li>It assumes a constant rate of recovery across all regions.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) It shows the impact of geographical factors on disease dynamics.</p>
+<p><strong>Explanation:</strong> A spatially explicit model enhances understanding by illustrating the impact of geographical factors, such as location and population movement, on the dynamics of disease spread.</p>
+</details></li>
+</ol>
+<p>For Objective 4, which is to evaluate the impact of ground vs.&nbsp;air travel on disease spread, here are four multiple-choice questions:</p>
+<ol type="1">
+<li><p><strong>How does incorporating air travel into disease models change the predicted spread of a disease?</strong></p>
+<ol type="a">
+<li>It limits the disease to only major cities.</li>
+<li>It accelerates the spread to distant and non-adjacent areas.</li>
+<li>It has no significant impact on the spread.</li>
+<li>It only affects the disease’s severity, not its spread.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) It accelerates the spread to distant and non-adjacent areas.</p>
+<p><strong>Explanation:</strong> Incorporating air travel into disease models often leads to faster and more widespread dissemination, especially to distant and non-adjacent areas, due to the rapid movement of people across large distances.</p>
+</details></li>
+<li><p><strong>What is the primary effect of ground transportation on the spread of infectious diseases in models?</strong></p>
+<ol type="a">
+<li>It causes the disease to remain localized.</li>
+<li>It spreads the disease evenly across all regions.</li>
+<li>It facilitates gradual spread along transportation routes.</li>
+<li>It prevents the disease from reaching rural areas.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) It facilitates gradual spread along transportation routes.</p>
+<p><strong>Explanation:</strong> Ground transportation typically results in a more gradual spread of infectious diseases, following major transportation routes and patterns, which can be slower compared to air travel.</p>
+</details></li>
+<li><p><strong>In a disease spread simulation, what role do major airports play when air travel is enabled?</strong></p>
+<ol type="a">
+<li>They act as barriers to disease spread.</li>
+<li>They become focal points for accelerated disease transmission.</li>
+<li>They have no impact on the disease’s progression.</li>
+<li>They only affect international spread, not domestic.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) They become focal points for accelerated disease transmission.</p>
+<p><strong>Explanation:</strong> When air travel is enabled in a disease spread simulation, major airports often become focal points for accelerated transmission, serving as hubs where the disease can spread rapidly to various destinations.</p>
+</details></li>
+<li><p><strong>What impact would restricting air travel likely have in a model of infectious disease spread?</strong></p>
+<ol type="a">
+<li>It would significantly increase the rate of spread.</li>
+<li>It would have no effect on the spread of the disease.</li>
+<li>It would likely slow down the spread to distant areas.</li>
+<li>It would change the pathogen’s virulence.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) It would likely slow down the spread to distant areas.</p>
+<p><strong>Explanation:</strong> Restricting air travel in a model of infectious disease spread would likely slow down the transmission to distant areas, as air travel is a key factor in rapid long-distance disease dissemination.</p>
+</details></li>
+</ol>
+<p>For Objective 5, which involves applying knowledge to a historical context like the 1918 influenza pandemic, here are four multiple-choice questions:</p>
+<ol type="1">
+<li><p><strong>How might modern transportation methods have altered the spread of the 1918 influenza pandemic?</strong></p>
+<ol type="a">
+<li>They would have contained the disease to its origin.</li>
+<li>They could have led to a more rapid and widespread global dissemination.</li>
+<li>They would have had no impact on the pandemic’s spread.</li>
+<li>They would have only affected the spread within cities.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) They could have led to a more rapid and widespread global dissemination.</p>
+<p><strong>Explanation:</strong> Modern transportation methods, especially air travel, could have significantly altered the spread of the 1918 influenza by facilitating faster and more widespread global dissemination of the virus.</p>
+</details></li>
+<li><p><strong>Considering the 1918 influenza, what impact does increased global connectivity have on pandemic spread?</strong></p>
+<ol type="a">
+<li>It restricts pandemics to specific continents.</li>
+<li>It leads to slower spread due to advanced monitoring.</li>
+<li>It enhances the potential for rapid global transmission of diseases.</li>
+<li>It only affects the spread in densely populated areas.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) It enhances the potential for rapid global transmission of diseases.</p>
+<p><strong>Explanation:</strong> Increased global connectivity, especially through air travel, enhances the potential for rapid and widespread transmission of diseases, as seen in the context of historical pandemics like the 1918 influenza.</p>
+</details></li>
+<li><p><strong>What lesson can be learned from comparing the 1918 influenza pandemic to current disease spread models?</strong></p>
+<ol type="a">
+<li>Historical pandemics were less severe due to lower population density.</li>
+<li>Current models show that transportation plays a critical role in disease dynamics.</li>
+<li>Modern diseases are less contagious than historical ones.</li>
+<li>Pandemics are no longer a global threat due to medical advancements.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) Current models show that transportation plays a critical role in disease dynamics.</p>
+<p><strong>Explanation:</strong> Comparing historical pandemics with current disease spread models highlights the critical role of transportation, particularly air travel, in influencing the dynamics and reach of global disease spread.</p>
+</details></li>
+<li><p><strong>How would the inclusion of air travel in 1918 have potentially changed the pandemic’s impact?</strong></p>
+<ol type="a">
+<li>It would have localized the pandemic to urban centers.</li>
+<li>The pandemic would have been largely contained.</li>
+<li>There would have been faster spread to different continents.</li>
+<li>The pandemic’s severity would have been significantly reduced.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) There would have been faster spread to different continents.</p>
+<p><strong>Explanation:</strong> The inclusion of air travel in the 1918 pandemic scenario would likely have led to a much faster spread of the influenza virus to different continents, altering the overall impact and reach of the pandemic.</p>
+</details></li>
+</ol>
+<p>For Objective 6, which is about analyzing data from simulations to draw conclusions, here are four multiple-choice questions:</p>
+<ol type="1">
+<li><p><strong>What does a steep increase in the number of infected individuals in a simulation graph typically indicate about the disease’s spread?</strong></p>
+<ol type="a">
+<li>The disease has a low transmission rate.</li>
+<li>There is effective control and prevention in place.</li>
+<li>The disease is spreading rapidly.</li>
+<li>The population has reached herd immunity.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) The disease is spreading rapidly.</p>
+<p><strong>Explanation:</strong> A steep increase in the number of infected individuals in a simulation graph typically indicates a rapid spread of the disease, often due to a high transmission rate and effective contact among individuals.</p>
+</details></li>
+<li><p><strong>In analyzing simulation data, what does a flattening curve of new infections suggest?</strong></p>
+<ol type="a">
+<li>The disease is becoming more virulent.</li>
+<li>The rate of new infections is decreasing.</li>
+<li>The simulation is malfunctioning.</li>
+<li>New variants of the disease are emerging.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> b) The rate of new infections is decreasing.</p>
+<p><strong>Explanation:</strong> A flattening curve in the context of new infections suggests that the rate of new infections is decreasing, possibly due to the implementation of control measures, increased immunity, or changes in population behavior.</p>
+</details></li>
+<li><p><strong>How can simulation interactivity aid in understanding the spread of infectious diseases?</strong></p>
+<ol type="a">
+<li>By providing entertainment value only.</li>
+<li>It allows for real-time manipulation of virus characteristics.</li>
+<li>It helps in visualizing the impact of different variables on disease dynamics.</li>
+<li>It predicts the exact end date of an epidemic.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) It helps in visualizing the impact of different variables on disease dynamics.</p>
+<p><strong>Explanation:</strong> Interactive simulations enable users to visualize how different variables, such as transmission rates, population movement, or intervention strategies, can impact the dynamics of disease spread.</p>
+</details></li>
+<li><p><strong>What insight can be gained from analyzing the time it takes for a disease to spread from one region to another in a simulation?</strong></p>
+<ol type="a">
+<li>The genetic mutation rate of the virus.</li>
+<li>The effectiveness of the healthcare system.</li>
+<li>The connectivity and susceptibility of different regions.</li>
+<li>The future mutations of the disease.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) The connectivity and susceptibility of different regions.</p>
+<p><strong>Explanation:</strong> Analyzing the time for disease spread between regions in a simulation can provide insights into the connectivity (such as travel and movement patterns) and susceptibility of different regions to the disease.</p>
+</details></li>
+</ol>
+<p>For Objective 7, which focuses on connecting simulation insights to modern public health policies, here are four multiple-choice questions:</p>
+<ol type="1">
+<li><p><strong>How can disease spread simulations inform public health policies?</strong></p>
+<ol type="a">
+<li>By providing exact dates for disease eradication.</li>
+<li>They are primarily used for medical research, not policy-making.</li>
+<li>By illustrating potential outcomes of different intervention strategies.</li>
+<li>They only help in predicting economic impacts.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) By illustrating potential outcomes of different intervention strategies.</p>
+<p><strong>Explanation:</strong> Disease spread simulations can inform public health policies by illustrating the potential outcomes of various intervention strategies, aiding in decision-making regarding control measures and resource allocation.</p>
+</details></li>
+<li><p><strong>What is the importance of accurate modeling in epidemic preparedness and response?</strong></p>
+<ol type="a">
+<li>It ensures the disease will be eradicated quickly.</li>
+<li>Accurate models help predict the disease’s mutation patterns.</li>
+<li>It aids in understanding potential scenarios and preparing appropriate responses.</li>
+<li>It guarantees the development of effective vaccines.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) It aids in understanding potential scenarios and preparing appropriate responses.</p>
+<p><strong>Explanation:</strong> Accurate modeling is crucial in epidemic preparedness and response as it helps health authorities understand potential scenarios, plan for different outcomes, and implement appropriate responses based on model predictions.</p>
+</details></li>
+<li><p><strong>How do simulations of infectious disease spread contribute to emergency preparedness?</strong></p>
+<ol type="a">
+<li>By providing a diversion during emergency situations.</li>
+<li>They enable real-time tracking of individual cases.</li>
+<li>They assist in planning and testing response strategies.</li>
+<li>They are mainly used for academic purposes.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) They assist in planning and testing response strategies.</p>
+<p><strong>Explanation:</strong> Simulations play a key role in emergency preparedness by allowing health authorities to plan, test, and evaluate different response strategies, enhancing readiness for actual disease outbreaks.</p>
+</details></li>
+<li><p><strong>What role do disease models play in shaping public health interventions?</strong></p>
+<ol type="a">
+<li>They are secondary to economic considerations.</li>
+<li>Models primarily focus on post-epidemic analysis.</li>
+<li>They provide insights for targeted and effective intervention planning.</li>
+<li>They are used exclusively for vaccine development.</li>
+</ol>
+<details>
+<summary>
+<p>Click to see the answer</p>
+</summary>
+<p><strong>Answer:</strong> c) They provide insights for targeted and effective intervention planning.</p>
+<p><strong>Explanation:</strong> Disease models are crucial in shaping public health interventions as they provide valuable insights into how different strategies might play out, enabling targeted and effective planning for disease control and prevention.</p>
+</details></li>
+</ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("gt")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -508,6 +924,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>questionslong <span class="ot">&lt;-</span> questionslong <span class="sc">%&gt;%</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">is_correct =</span> <span class="fu">ifelse</span>(option <span class="sc">==</span> answer, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
 <section id="testing-the-questions" class="level2">
 <h2 class="anchored" data-anchor-id="testing-the-questions">Testing the questions</h2>
 <div class="cell">
