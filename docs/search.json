@@ -520,5 +520,159 @@
       "HOME",
       "SEPAquestions"
     ]
+  },
+  {
+    "objectID": "Activity1Script.html#sir-model",
+    "href": "Activity1Script.html#sir-model",
+    "title": "Activity 1 Script",
+    "section": "",
+    "text": "The SIR model is a basic framework used to understand the spread of infectious diseases. It divides the population into three compartments: Susceptible, Infectious, and Recovered. This model helps in predicting disease spread and the impact of interventions.\nSusceptible Individuals: People not yet infected but at risk of catching the disease.\nInfectious Individuals: Infected people who can spread the disease to others.\nRecovered Individuals: People who have recovered from the infection and are no longer infectious.\nTransition Dynamics: Movement between compartments based on infection and recovery rates.\nModel Applications: Used for epidemic prediction, understanding disease dynamics, and informing public health policies.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#infection-dynamics",
+    "href": "Activity1Script.html#infection-dynamics",
+    "title": "Activity 1 Script",
+    "section": "INFECTION DYNAMICS",
+    "text": "INFECTION DYNAMICS\nhe transition from Susceptible to Infectious in disease models is determined by several key factors. These factors influence how quickly and efficiently a disease can spread through a susceptible population. Understanding these components is crucial for effective disease management and control.\nContact Rate: Frequency of interaction between susceptible and infectious individuals. Transmission Probability: Likelihood of disease transmission during a contact. Population Density: Higher densities can lead to increased contact rates. Duration of Exposure: Longer exposure times can increase the risk of transmission. Immune System Strength: Individuals with weaker immune systems are more likely to transition from susceptible to infectious.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#recovery-dynamics",
+    "href": "Activity1Script.html#recovery-dynamics",
+    "title": "Activity 1 Script",
+    "section": "RECOVERY DYNAMICS",
+    "text": "RECOVERY DYNAMICS\nThe transition from the Infectious to Recovered stage in disease models is influenced by a range of factors. These factors determine the rate and efficiency of recovery, impacting the overall dynamics of an epidemic. Understanding these influences is key to managing and predicting disease outcomes.\nMedical Treatment: Access to and effectiveness of medical interventions. Immune Response: The strength and speed of the body’s immune response to the infection. Disease Severity: Variations in the severity of the disease among individuals. Age and Health: Age and overall health can significantly affect recovery rates. Social Support: The role of caregiving and community support in aiding recovery.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#exposure-and-latency",
+    "href": "Activity1Script.html#exposure-and-latency",
+    "title": "Activity 1 Script",
+    "section": "EXPOSURE AND LATENCY",
+    "text": "EXPOSURE AND LATENCY\nAdding the ‘Exposed’ compartment to disease models creates a more nuanced understanding of disease transmission dynamics. This compartment represents individuals who have been exposed to the disease but are not yet infectious. It bridges the gap between Susceptible and Infectious stages, offering a more realistic representation of disease spread.\nExposure Phase: Period between encountering the disease and becoming infectious. Latent Infection: Individuals in this stage are not yet symptomatic or contagious. Transition to Infectious: Exposed individuals eventually progress to the infectious stage. Indirect Transmission: Reflects diseases with an incubation period before symptoms show. Impact on Dynamics: Changes predictions and intervention strategies in disease modeling.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#adding-mortality-the-deceased-compartment",
+    "href": "Activity1Script.html#adding-mortality-the-deceased-compartment",
+    "title": "Activity 1 Script",
+    "section": "Adding Mortality: The ‘Deceased’ Compartment",
+    "text": "Adding Mortality: The ‘Deceased’ Compartment\n\nUnderstanding the Impact of Mortality in Disease Models\n\nExpanded Model: SEIRD (Susceptible, Exposed, Infected, Recovered, Deceased)\nDeceased Compartment: Represents individuals who succumb to the disease.\nMortality Rate: Factors affecting the transition from ‘Infected’ to ‘Deceased.’\n\n\n\nKey Dynamics:\n\nDisease Severity: How virulence affects mortality rates.\nMedical Infrastructure: The role of healthcare capacity in preventing disease-related deaths.\nPublic Health Implications: Understanding mortality to enhance emergency response and healthcare planning.\n\n\n\nModel Applications:\n\nEpidemiological Insights: Provides a more comprehensive view of the disease’s impact on a population.\nPolicy Planning: Aids in resource allocation and emergency preparedness, considering potential fatalities.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#critical-assumptions-of-non-spatial-disease-models",
+    "href": "Activity1Script.html#critical-assumptions-of-non-spatial-disease-models",
+    "title": "Activity 1 Script",
+    "section": "Critical Assumptions of Non-Spatial Disease Models",
+    "text": "Critical Assumptions of Non-Spatial Disease Models\n\nUnderstanding the Foundations of Basic Compartment Models\n\nHomogeneous Mixing: Assumes each individual has an equal chance of encountering and transmitting the disease to others.\nConstant Population Size: No significant changes in population size due to births, deaths, or migration during the model’s timeframe.\nUniform Disease Parameters: Disease characteristics (like transmission rate) are consistent across the entire population.\nNo Spatial Variation: Assumes no differences in disease spread dynamics due to geographical or environmental factors.\n\n\n\nImplications of These Assumptions:\n\nSimplification of Real-world Complexity: These assumptions simplify the modeling process but may not capture the full complexity of real-world disease dynamics.\nUnderstanding Limitations: Recognizing these limitations is crucial for interpreting model predictions and applying them to actual disease control strategies.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#incorporating-spatial-structure-in-disease-models",
+    "href": "Activity1Script.html#incorporating-spatial-structure-in-disease-models",
+    "title": "Activity 1 Script",
+    "section": "Incorporating Spatial Structure in Disease Models",
+    "text": "Incorporating Spatial Structure in Disease Models\n\nThe Role of Spatial Variation in Disease Dynamics\n\nSpatial Structure: Recognizes variations in population distribution, density, and movement across different geographical areas.\nImpact on Transmission: Spatial heterogeneity can lead to varied disease transmission rates due to differences in contact patterns and mobility.\n\n\n\nInfluencing Factors:\n\nEnvironmental Variables: Factors like vaccination hesitancy, access to medical care, and social dynamics can vary spatially, influencing disease spread.\nLocal vs. Global Interactions: Differences in how populations interact within and between regions affect disease dynamics.\n\n\n\nImplications for Modeling:\n\nEnhanced Realism: Incorporating spatial structure adds complexity but offers a more realistic representation of how diseases spread in real-world scenarios.\nTargeted Intervention Strategies: Understanding spatial variations enables more effective, location-specific public health interventions.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html",
+    "href": "Activity1Script.html",
+    "title": "Activity 1 Script",
+    "section": "",
+    "text": "The SIR model is a basic framework used to understand the spread of infectious diseases. It divides the population into three compartments: Susceptible, Infectious, and Recovered. This model helps in predicting disease spread and the impact of interventions.\nSusceptible Individuals: People not yet infected but at risk of catching the disease.\nInfectious Individuals: Infected people who can spread the disease to others.\nRecovered Individuals: People who have recovered from the infection and are no longer infectious.\nTransition Dynamics: Movement between compartments based on infection and recovery rates.\nModel Applications: Used for epidemic prediction, understanding disease dynamics, and informing public health policies.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#understanding-the-basic-reproduction-number-r_0",
+    "href": "Activity1Script.html#understanding-the-basic-reproduction-number-r_0",
+    "title": "Activity 1 Script",
+    "section": "Understanding the Basic Reproduction Number: ( R_0 )",
+    "text": "Understanding the Basic Reproduction Number: ( R_0 )\n\nWhat is ( R_0 ) in Disease Modeling?\n\nDefinition: ( R_0 ) (Basic Reproduction Number) represents the average number of new infections caused by an infectious individual in a totally susceptible population.\nSignificance: Indicates how contagious a disease is.\n\n\n\nInterpreting ( R_0 ):\n\nGreater than 1: Disease is likely to spread in the population.\nLess than 1: Disease spread will likely decrease and eventually stop.\n\n\n\nFactors Influencing ( R_0 ):\n\nContact Rate: Frequency of interaction between people.\nTransmission Probability: Likelihood of the disease spreading upon contact.\nDuration of Infectiousness: How long an individual is infectious.\n\n\n\nImplications:\n\nPublic Health Strategies: ( R_0 ) helps guide interventions like vaccination, social distancing, and lockdowns.\nEpidemic Prediction: Understanding ( R_0 ) is key for predicting the potential scale of an outbreak.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#visualizing-disease-dynamics-the-seivrd-model-graph",
+    "href": "Activity1Script.html#visualizing-disease-dynamics-the-seivrd-model-graph",
+    "title": "Activity 1 Script",
+    "section": "Visualizing Disease Dynamics: The SEIVRD Model Graph",
+    "text": "Visualizing Disease Dynamics: The SEIVRD Model Graph\n\nGraphical Representation of SEIVRD Model\n\nSEIVRD Components: Susceptible, Exposed, Infected, Vaccinated, Recovered, Deceased.\nGraph Elements: Each compartment represented as a line or curve over time.\n\n\n\nUnderstanding the Graph:\n\nY-Axis: Number of individuals in each compartment.\nX-Axis: Time progression.\nCurves: Show how the population in each compartment changes over time.\n\n\n\nKey Observations:\n\nInfection Peak: Point where the ‘Infected’ curve reaches its maximum.\nVaccination Impact: How the ‘Vaccinated’ curve influences the other compartments.\nRecovery and Mortality: Observing the transitions to ‘Recovered’ and ‘Deceased’ compartments.\n\n\n\nAnalytical Insights:\n\nDisease Progression: Understand how the disease evolves and spreads over time.\nIntervention Effectiveness: Assess the impact of public health interventions like vaccination.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#overview-of-the-1918-influenza-outbreak",
+    "href": "Activity1Script.html#overview-of-the-1918-influenza-outbreak",
+    "title": "Activity 1 Script",
+    "section": "Overview of the 1918 Influenza Outbreak",
+    "text": "Overview of the 1918 Influenza Outbreak\n\nCharacteristics of the 1918 Influenza Virus\n\nStrain Type: H1N1 influenza A virus.\nGlobal Impact: One of the deadliest pandemics in history, affecting one-third of the global population.\n\n\n\nEstimated Model Parameters:\n\nTransmission Rate: High, due to the virus’s efficient spread.\nRecovery Rate: Varied, reflecting the different medical interventions and individual health statuses at the time.\nMortality Rate: Estimated at about 2-3%, significantly higher than typical seasonal influenza.\n\n\n\nDiscussion Points:\n\nVirus Severity: Factors contributing to the high mortality rate and widespread impact.\nModeling Challenges: Considerations in accurately modeling the outbreak, given historical data limitations and variable medical interventions.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#hypothetical-scenario-1918-flu-in-todays-population",
+    "href": "Activity1Script.html#hypothetical-scenario-1918-flu-in-todays-population",
+    "title": "Activity 1 Script",
+    "section": "Hypothetical Scenario: 1918 Flu in Today’s Population",
+    "text": "Hypothetical Scenario: 1918 Flu in Today’s Population\n\nlibrary(deSolve)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Parameters\nN &lt;- 318e6  # Total population\ninitial_infected &lt;- 1\ninitial_exposed &lt;- 0\ninitial_recovered &lt;- 0\ninitial_deceased &lt;- 0\nbeta &lt;- 0.3   # Transmission rate\ngamma &lt;- 1/14 # Recovery rate (14 days recovery period)\nmu &lt;- 0.02    # Mortality rate\nsigma &lt;- 1/5 # Transition rate from exposed to infectious (5 days incubation period)\n\n\n# Initial state\ninitial_state &lt;- c(S = N - initial_infected - initial_exposed - initial_recovered - initial_deceased,\n                   E = initial_exposed,\n                   I = initial_infected,\n                   R = initial_recovered,\n                   D = initial_deceased)\n\n# SEIRD model equations\nseird_model &lt;- function(time, state, parameters) {\n    with(as.list(c(state, parameters)), {\n        dS &lt;- -beta * S * I / N\n        dE &lt;- beta * S * I / N - sigma * E\n        dI &lt;- sigma * E - gamma * I - mu * I\n        dR &lt;- gamma * I\n        dD &lt;- mu * I\n        return(list(c(dS, dE, dI, dR, dD)))\n    })\n}\n\n# Time\ntime &lt;- seq(0, 365, by = 1) # 6 months\n\n# Solve the differential equations\noutput &lt;- ode(y = initial_state, times = time, func = seird_model, parms = NULL)\n\n# Convert output to data frame\noutput_df &lt;- as.data.frame(output)\n\n# Create plot with ggplot\nggplot(data = output_df, aes(x = time)) +\n  geom_line(aes(y = S, color = \"Susceptible\")) +\n  geom_line(aes(y = E, color = \"Exposed\")) +\n  geom_line(aes(y = I, color = \"Infected\")) +\n  geom_line(aes(y = R, color = \"Recovered\")) +\n  geom_line(aes(y = D, color = \"Deceased\")) +\n  labs(title = \"Dynamics of an SEIRD Model\",\n       x = \"Time (days)\",\n       y = \"Number of Individuals\",\n       color = \"Compartments\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nNon-Spatial Model Approach\n\nScenario: Reintroduction of the 1918 influenza virus into the modern-day population of the lower 48 states.\nModel Assumption: The population is treated as one large, homogeneously mixing group.\n\n\n\nKey Aspects:\n\nPopulation Size: Total population of the continental United States.\nHomogeneous Mixing: Assumes every individual has an equal chance of encountering the virus.\nDisease Parameters: Utilizing known data of the 1918 flu regarding transmission rate, recovery rate, and mortality.\n\n\n\nDiscussion Points:\n\nInfection Spread: Predicting how the virus would spread in a large, interconnected population without considering spatial differences.\nPublic Health Response: Exploring potential challenges and strategies in managing such a widespread outbreak under this model assumption.",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#analyzing-spatial-variations-in-disease-dynamics",
+    "href": "Activity1Script.html#analyzing-spatial-variations-in-disease-dynamics",
+    "title": "Activity 1 Script",
+    "section": "Analyzing Spatial Variations in Disease Dynamics",
+    "text": "Analyzing Spatial Variations in Disease Dynamics\n\nReflecting on Infection and Recovery Dynamics\nConsider the factors influencing the transition from Susceptible to Infectious and Infectious to Recovered in disease models: - Contact Rate - Transmission Probability - Population Density - Duration of Exposure - Immune System Strength - Medical Treatment - Immune Response - Disease Severity - Age and Health - Social Support\n\n\nDiscussion Points:\n\nSpatial Variability: Which of these factors do you think might vary significantly across different geographical areas?\nImpact on Modeling: How might these variations alter the predictions of a disease spread model in various spatial contexts?\nPublic Health Strategy: How can understanding these spatial variations aid in developing targeted public health interventions?",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
+  },
+  {
+    "objectID": "Activity1Script.html#introduction-to-outbreak-simulator",
+    "href": "Activity1Script.html#introduction-to-outbreak-simulator",
+    "title": "Activity 1 Script",
+    "section": "Introduction to Outbreak Simulator",
+    "text": "Introduction to Outbreak Simulator\n\nUser Interface\n\n\nScenario 1 (1918 flu)\n\n\nSecnario 2 (1918 flu with air travel)",
+    "crumbs": [
+      "HOME",
+      "Activity 1 Script"
+    ]
   }
 ]
