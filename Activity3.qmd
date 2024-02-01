@@ -85,153 +85,178 @@ title: "Activity 3"
 4.  Answer questions designed to encourage critical thinking about the role of air travel in disease dynamics.
 5.  Participate in a discussion on the findings and their implications for current and future infectious disease outbreaks.
 
-
 ## ASSESSMENT QUESTIONS
 
 ### Pre-Test
 
+1.  **How does air travel impact the spread of infectious diseases in a spatial model?**
 
-1. **How does air travel impact the spread of infectious diseases in a spatial model?**
-   a) It slows down the spread due to increased surveillance.
-   b) It has no significant impact on the spread.
-   c) It allows for rapid and long-distance transmission of diseases.
-   d) It only affects the spread in coastal areas.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    a)  It slows down the spread due to increased surveillance.
+    b)  It has no significant impact on the spread.
+    c)  It allows for rapid and long-distance transmission of diseases.
+    d)  It only affects the spread in coastal areas.
 
-   **Answer:** C. It allows for rapid and long-distance transmission of diseases.
+    <details>
 
-   **Explanation:** Air travel facilitates rapid and long-distance transmission of infectious diseases, significantly altering the spread pattern by enabling the disease to reach non-adjacent areas quickly.
-   </details>
+    <summary>Click to see the answer</summary>
 
-2. **What role do transportation hubs play in disease spread in models that include air travel?**
-   a) They are typically disease-free zones.
-   b) They act as amplifiers for disease spread.
-   c) They only affect local disease dynamics.
-   d) They have a negligible impact compared to other factors.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    **Answer:** C. It allows for rapid and long-distance transmission of diseases.
 
-   **Answer:** B. They act as amplifiers for disease spread.
+    **Explanation:** Air travel facilitates rapid and long-distance transmission of infectious diseases, significantly altering the spread pattern by enabling the disease to reach non-adjacent areas quickly.
 
-   **Explanation:** Transportation hubs, such as major airports, play a critical role in disease dissemination, acting as amplifiers and points of spread to various regions, both nationally and internationally.
-   </details>
+    </details>
 
-3. **In the context of the 1918 Influenza, how would the inclusion of air travel in the simulation likely change the spread?**
-   a) It would limit the spread to specific continents.
-   b) It would result in a slower spread of the disease.
-   c) It would lead to a more rapid and widespread global dissemination.
-   d) It would have no impact on the spread pattern.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+2.  **What role do transportation hubs play in disease spread in models that include air travel?**
 
-   **Answer:** C. It would lead to a more rapid and widespread global dissemination.
+    a)  They are typically disease-free zones.
+    b)  They act as amplifiers for disease spread.
+    c)  They only affect local disease dynamics.
+    d)  They have a negligible impact compared to other factors.
 
-   **Explanation:** The inclusion of air travel in modeling the 1918 Influenza would likely result in a faster and more widespread global spread of the disease, as air travel enables the virus to reach distant areas quickly.
-   </details>
+    <details>
 
-4. **How does the introduction of air travel in the simulation alter the predicted outcomes compared to ground transportation models?**
-   a) It predicts a more localized spread of the disease.
-   b) It shows no difference in the spread patterns.
-   c) It forecasts a faster and more extensive spread to non-adjacent areas.
-   d) It indicates a slower spread due to advanced medical interventions.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    <summary>Click to see the answer</summary>
 
-   **Answer:** C. It forecasts a faster and more extensive spread to non-adjacent areas.
+    **Answer:** B. They act as amplifiers for disease spread.
 
-   **Explanation:** With air travel, the model predicts a faster and more extensive spread of the disease, particularly to non-adjacent states and countries, differing significantly from ground transportation models.
-   </details>
+    **Explanation:** Transportation hubs, such as major airports, play a critical role in disease dissemination, acting as amplifiers and points of spread to various regions, both nationally and internationally.
 
-5. **Reflecting on modern examples, what implications does air travel have for public health policy and response strategies?**
-   a) It necessitates a focus on local health systems only.
-   b) It underscores the need for global coordination and rapid response.
-   c) It suggests that air travel restrictions have no effect.
-   d) It indicates that diseases are less likely to spread in modern times.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    </details>
 
-   **Answer:** B. It underscores the need for global coordination and rapid response.
+3.  **In the context of the 1918 Influenza, how would the inclusion of air travel in the simulation likely change the spread?**
 
-   **Explanation:** The role of air travel in the rapid spread of diseases highlights the importance of global coordination and rapid response strategies in public health policy to effectively manage and contain outbreaks.
-   </details>
+    a)  It would limit the spread to specific continents.
+    b)  It would result in a slower spread of the disease.
+    c)  It would lead to a more rapid and widespread global dissemination.
+    d)  It would have no impact on the spread pattern.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It would lead to a more rapid and widespread global dissemination.
+
+    **Explanation:** The inclusion of air travel in modeling the 1918 Influenza would likely result in a faster and more widespread global spread of the disease, as air travel enables the virus to reach distant areas quickly.
+
+    </details>
+
+4.  **How does the introduction of air travel in the simulation alter the predicted outcomes compared to ground transportation models?**
+
+    a)  It predicts a more localized spread of the disease.
+    b)  It shows no difference in the spread patterns.
+    c)  It forecasts a faster and more extensive spread to non-adjacent areas.
+    d)  It indicates a slower spread due to advanced medical interventions.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It forecasts a faster and more extensive spread to non-adjacent areas.
+
+    **Explanation:** With air travel, the model predicts a faster and more extensive spread of the disease, particularly to non-adjacent states and countries, differing significantly from ground transportation models.
+
+    </details>
+
+5.  **Reflecting on modern examples, what implications does air travel have for public health policy and response strategies?**
+
+    a)  It necessitates a focus on local health systems only.
+    b)  It underscores the need for global coordination and rapid response.
+    c)  It suggests that air travel restrictions have no effect.
+    d)  It indicates that diseases are less likely to spread in modern times.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. It underscores the need for global coordination and rapid response.
+
+    **Explanation:** The role of air travel in the rapid spread of diseases highlights the importance of global coordination and rapid response strategies in public health policy to effectively manage and contain outbreaks.
+
+    </details>
 
 ### Post-Test
 
+1.  **What effect does international air travel have on the containment efforts of infectious diseases?**
 
-1. **What effect does international air travel have on the containment efforts of infectious diseases?**
-   a) It enhances containment by limiting regional spread.
-   b) It complicates containment due to rapid global spread.
-   c) It has no impact on containment strategies.
-   d) It only affects containment in non-urban areas.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    a)  It enhances containment by limiting regional spread.
+    b)  It complicates containment due to rapid global spread.
+    c)  It has no impact on containment strategies.
+    d)  It only affects containment in non-urban areas.
 
-   **Answer:** B. It complicates containment due to rapid global spread.
+    <details>
 
-   **Explanation:** International air travel can significantly complicate the containment of infectious diseases by facilitating rapid global spread, making localized containment efforts less effective.
-   </details>
+    <summary>Click to see the answer</summary>
 
-2. **In the air travel simulation, what impact do major airports have on regional disease dynamics?**
-   a) They act as significant points of disease entry and spread.
-   b) They serve as effective quarantine zones.
-   c) They have minimal impact on disease dynamics.
-   d) They only affect cargo and goods, not people.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    **Answer:** B. It complicates containment due to rapid global spread.
 
-   **Answer:** A. They act as significant points of disease entry and spread.
+    **Explanation:** International air travel can significantly complicate the containment of infectious diseases by facilitating rapid global spread, making localized containment efforts less effective.
 
-   **Explanation:** Major airports in the air travel simulation act as crucial nodes for disease entry and spread, amplifying the dissemination of the disease to various regions.
-   </details>
+    </details>
 
-3. **Compared to ground transport, how does air travel modify the geographical spread of a disease?**
-   a) It leads to more evenly distributed spread.
-   b) It concentrates the disease in coastal regions.
-   c) It allows for rapid spread to distant and non-adjacent areas.
-   d) It restricts the disease to the hemisphere where it originated.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+2.  **In the air travel simulation, what impact do major airports have on regional disease dynamics?**
 
-   **Answer:** C. It allows for rapid spread to distant and non-adjacent areas.
+    a)  They act as significant points of disease entry and spread.
+    b)  They serve as effective quarantine zones.
+    c)  They have minimal impact on disease dynamics.
+    d)  They only affect cargo and goods, not people.
 
-   **Explanation:** Air travel significantly alters the geographical spread of a disease by enabling rapid transmission to distant and geographically non-adjacent areas, beyond the limitations of ground transport.
-   </details>
+    <details>
 
-4. **In the simulation, how did the inclusion of air travel affect the timing of the disease's spread?**
-   a) It resulted in a slower initial spread.
-   b) It had no effect on the timing of spread.
-   c) It accelerated the initial spread to new regions.
-   d) It changed the spread only in the final stages.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    <summary>Click to see the answer</summary>
 
-   **Answer:** C. It accelerated the initial spread to new regions.
+    **Answer:** A. They act as significant points of disease entry and spread.
 
-   **Explanation:** The inclusion of air travel in the simulation significantly accelerated the initial spread of the disease, quickly reaching new regions that would have taken longer to be affected via ground transportation alone.
-   </details>
+    **Explanation:** Major airports in the air travel simulation act as crucial nodes for disease entry and spread, amplifying the dissemination of the disease to various regions.
 
-5. **Reflecting on the simulation, what role do air travel restrictions play in managing disease outbreaks?**
-   a) They have no impact on the spread of diseases.
-   b) They are crucial for early-stage containment and slowing the spread.
-   c) They only affect the economic aspects of the outbreak.
-   d) They increase the spread due to overcrowding at airports.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    </details>
 
-   **Answer:** B. They are crucial for early-stage containment and slowing the spread.
+3.  **Compared to ground transport, how does air travel modify the geographical spread of a disease?**
 
-   **Explanation:** Implementing air travel restrictions can be a critical strategy in the early stages of an outbreak, as it can significantly slow down the rapid global dissemination of the disease, aiding containment efforts.
-   </details>
+    a)  It leads to more evenly distributed spread.
+    b)  It concentrates the disease in coastal regions.
+    c)  It allows for rapid spread to distant and non-adjacent areas.
+    d)  It restricts the disease to the hemisphere where it originated.
 
+    <details>
 
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It allows for rapid spread to distant and non-adjacent areas.
+
+    **Explanation:** Air travel significantly alters the geographical spread of a disease by enabling rapid transmission to distant and geographically non-adjacent areas, beyond the limitations of ground transport.
+
+    </details>
+
+4.  **In the simulation, how did the inclusion of air travel affect the timing of the disease's spread?**
+
+    a)  It resulted in a slower initial spread.
+    b)  It had no effect on the timing of spread.
+    c)  It accelerated the initial spread to new regions.
+    d)  It changed the spread only in the final stages.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It accelerated the initial spread to new regions.
+
+    **Explanation:** The inclusion of air travel in the simulation significantly accelerated the initial spread of the disease, quickly reaching new regions that would have taken longer to be affected via ground transportation alone.
+
+    </details>
+
+5.  **Reflecting on the simulation, what role do air travel restrictions play in managing disease outbreaks?**
+
+    a)  They have no impact on the spread of diseases.
+    b)  They are crucial for early-stage containment and slowing the spread.
+    c)  They only affect the economic aspects of the outbreak.
+    d)  They increase the spread due to overcrowding at airports.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. They are crucial for early-stage containment and slowing the spread.
+
+    **Explanation:** Implementing air travel restrictions can be a critical strategy in the early stages of an outbreak, as it can significantly slow down the rapid global dissemination of the disease, aiding containment efforts.
+
+    </details>

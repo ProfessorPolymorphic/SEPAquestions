@@ -10,8 +10,6 @@ title: "Activity 1"
 -   Identify the critical assumptions underlying compartment models and their implications for modeling infectious disease spread.
 -   Recognize how compartment models can be used to predict disease dynamics and inform public health interventions.
 
-
-
 ## Slide 1: Introduction to Compartment Models
 
 ### What are Compartment Models?
@@ -19,8 +17,6 @@ title: "Activity 1"
 -   **Simplified frameworks** to understand infectious disease dynamics.
 -   Divide population into **compartments** representing disease states (e.g., Susceptible, Infected, Recovered).
 -   Use **mathematical equations** to describe the transitions between compartments.
-
-
 
 ## Slide 2: The SIR Model
 
@@ -33,8 +29,6 @@ title: "Activity 1"
 ### SIR Model Dynamics
 
 -   **Transition rates** determine how quickly individuals move from one compartment to another.
-
-
 
 ## Slide 3: Critical Assumptions of SIR Models
 
@@ -50,8 +44,6 @@ title: "Activity 1"
 
 -   Assumes no new individuals enter the population, and no one leaves.
 
-
-
 ## Slide 4: Implications of SIR Model Assumptions
 
 ### Impact on Predictions
@@ -63,8 +55,6 @@ title: "Activity 1"
 
 -   Understand the limitations and the context of the model.
 -   Use models as one tool among many for public health decision-making.
-
-
 
 ## Slide 5: Conclusion
 
@@ -78,159 +68,184 @@ title: "Activity 1"
 -   Dive deeper into more complex models that consider age-structure, spatial distribution, and other factors.
 -   Reflect on how these models could apply to real-world scenarios.
 
-
-
 ## Activity Steps
 
 1.  Review the slide show and supplementary reading material.
 2.  Participate in a facilitated discussion on the assumptions of compartment models.
 3.  Complete a short quiz to assess understanding of the basic compartment model concepts.
 
-
 ## ASSESMENT QUESTIONS
 
 ### Pre-Test
 
-1. **What is the primary purpose of compartment models in infectious disease modeling?**
-   a) To provide detailed individual case studies.
-   b) To simulate the economic impact of diseases.
-   c) To understand infectious disease dynamics through simplified frameworks.
-   d) To identify the genetic makeup of pathogens.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+1.  **What is the primary purpose of compartment models in infectious disease modeling?**
 
-   **Answer:** C. To understand infectious disease dynamics through simplified frameworks.
+    a)  To provide detailed individual case studies.
+    b)  To simulate the economic impact of diseases.
+    c)  To understand infectious disease dynamics through simplified frameworks.
+    d)  To identify the genetic makeup of pathogens.
 
-   **Explanation:** Compartment models are used to simplify and understand the dynamics of infectious diseases by dividing the population into different disease states and using mathematical equations to describe transitions between these states.
-   </details>
+    <details>
 
-2. **In the SIR model, what does the 'R' compartment represent?**
-   a) Individuals resistant to the disease.
-   b) Individuals who are currently receiving treatment.
-   c) Individuals who have recovered from the disease and gained immunity.
-   d) Individuals at risk of contracting the disease.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    <summary>Click to see the answer</summary>
 
-   **Answer:** C. Individuals who have recovered from the disease and gained immunity.
+    **Answer:** C. To understand infectious disease dynamics through simplified frameworks.
 
-   **Explanation:** In the SIR model, the 'R' compartment stands for 'Recovered'. It represents individuals who have recovered from the disease and are assumed to have gained immunity against it.
-   </details>
+    **Explanation:** Compartment models are used to simplify and understand the dynamics of infectious diseases by dividing the population into different disease states and using mathematical equations to describe transitions between these states.
 
-3. **Which of the following is a critical assumption of the SIR model?**
-   a) Heterogeneous mixing of the population.
-   b) A constant population with no births, deaths, or migration.
-   c) The disease has multiple strains with different characteristics.
-   d) The population is divided into age-specific compartments.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    </details>
 
-   **Answer:** B. A constant population with no births, deaths, or migration.
+2.  **In the SIR model, what does the 'R' compartment represent?**
 
-   **Explanation:** The SIR model assumes a constant population size, meaning there are no births, deaths unrelated to the disease, or migration during the timeframe of the model. This simplification allows for focusing on the disease dynamics.
-   </details>
+    a)  Individuals resistant to the disease.
+    b)  Individuals who are currently receiving treatment.
+    c)  Individuals who have recovered from the disease and gained immunity.
+    d)  Individuals at risk of contracting the disease.
 
-4. **Why is it important to understand the limitations of the SIR model?**
-   a) To predict the exact number of cases in an outbreak.
-   b) To use the model responsibly in public health decision-making.
-   c) To develop vaccines for infectious diseases.
-   d) To provide individualized treatment plans.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    <details>
 
-   **Answer:** B. To use the model responsibly in public health decision-making.
+    <summary>Click to see the answer</summary>
 
-   **Explanation:** Understanding the limitations of the SIR model is crucial for using it responsibly in public health decision-making. Recognizing its simplifications and assumptions helps in interpreting its predictions correctly and avoids over-reliance on the model.
-   </details>
+    **Answer:** C. Individuals who have recovered from the disease and gained immunity.
 
-5. **What is a potential consequence of over-simplification in SIR model predictions?**
-   a) Increased accuracy in long-term predictions.
-   b) Inability to model any infectious diseases.
-   c) Inaccurate predictions due to not considering specific disease or population factors.
-   d) Precise determination of the infection's origin.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    **Explanation:** In the SIR model, the 'R' compartment stands for 'Recovered'. It represents individuals who have recovered from the disease and are assumed to have gained immunity against it.
 
-   **Answer:** C. Inaccurate predictions due to not considering specific disease or population factors.
+    </details>
 
-   **Explanation:** Over-simplification in models like SIR can lead to inaccurate predictions, as they may not account for specific characteristics of the disease or variations within the population, such as different rates of contact or varying immunity levels.
-   </details>
+3.  **Which of the following is a critical assumption of the SIR model?**
 
+    a)  Heterogeneous mixing of the population.
+    b)  A constant population with no births, deaths, or migration.
+    c)  The disease has multiple strains with different characteristics.
+    d)  The population is divided into age-specific compartments.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. A constant population with no births, deaths, or migration.
+
+    **Explanation:** The SIR model assumes a constant population size, meaning there are no births, deaths unrelated to the disease, or migration during the timeframe of the model. This simplification allows for focusing on the disease dynamics.
+
+    </details>
+
+4.  **Why is it important to understand the limitations of the SIR model?**
+
+    a)  To predict the exact number of cases in an outbreak.
+    b)  To use the model responsibly in public health decision-making.
+    c)  To develop vaccines for infectious diseases.
+    d)  To provide individualized treatment plans.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. To use the model responsibly in public health decision-making.
+
+    **Explanation:** Understanding the limitations of the SIR model is crucial for using it responsibly in public health decision-making. Recognizing its simplifications and assumptions helps in interpreting its predictions correctly and avoids over-reliance on the model.
+
+    </details>
+
+5.  **What is a potential consequence of over-simplification in SIR model predictions?**
+
+    a)  Increased accuracy in long-term predictions.
+    b)  Inability to model any infectious diseases.
+    c)  Inaccurate predictions due to not considering specific disease or population factors.
+    d)  Precise determination of the infection's origin.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. Inaccurate predictions due to not considering specific disease or population factors.
+
+    **Explanation:** Over-simplification in models like SIR can lead to inaccurate predictions, as they may not account for specific characteristics of the disease or variations within the population, such as different rates of contact or varying immunity levels.
+
+    </details>
 
 ### Post-Test
 
-1. **How does the SEIR model differ from the SIR model?**
-   a) The SEIR model includes an additional 'Exposed' compartment.
-   b) The SEIR model does not have a 'Recovered' compartment.
-   c) The SEIR model only models non-infectious diseases.
-   d) The SEIR model assumes immediate recovery from the infection.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+1.  **How does the SEIR model differ from the SIR model?**
 
-   **Answer:** A. The SEIR model includes an additional 'Exposed' compartment.
+    a)  The SEIR model includes an additional 'Exposed' compartment.
+    b)  The SEIR model does not have a 'Recovered' compartment.
+    c)  The SEIR model only models non-infectious diseases.
+    d)  The SEIR model assumes immediate recovery from the infection.
 
-   **Explanation:** The SEIR model adds an 'Exposed' compartment to the traditional SIR model, representing individuals who have been exposed to the disease but are not yet infectious.
-   </details>
+    <details>
 
-2. **What does the 'Exposed' compartment in the SEIR model represent?**
-   a) Individuals who are immune to the disease.
-   b) Individuals who have been exposed to the disease but are not yet infectious.
-   c) Individuals who have been vaccinated.
-   d) Individuals who have left the population.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    <summary>Click to see the answer</summary>
 
-   **Answer:** B. Individuals who have been exposed to the disease but are not yet infectious.
+    **Answer:** A. The SEIR model includes an additional 'Exposed' compartment.
 
-   **Explanation:** In the SEIR model, the 'Exposed' compartment includes those who have been exposed to the infectious agent but are not yet capable of transmitting the disease to others.
-   </details>
+    **Explanation:** The SEIR model adds an 'Exposed' compartment to the traditional SIR model, representing individuals who have been exposed to the disease but are not yet infectious.
 
-3. **Which factor is often added to more advanced compartment models to increase realism?**
-   a) Constant population size throughout the model.
-   b) Homogeneous mixing of the population.
-   c) Age-structure or spatial distribution.
-   d) Assumption of immediate immunity after infection.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    </details>
 
-   **Answer:** C. Age-structure or spatial distribution.
+2.  **What does the 'Exposed' compartment in the SEIR model represent?**
 
-   **Explanation:** Advanced compartment models often incorporate factors like age-structure or spatial distribution to more accurately reflect the varying susceptibility and interaction patterns within a population.
-   </details>
+    a)  Individuals who are immune to the disease.
+    b)  Individuals who have been exposed to the disease but are not yet infectious.
+    c)  Individuals who have been vaccinated.
+    d)  Individuals who have left the population.
 
-4. **Why is it crucial to consider the basic reproductive number (R0) in disease modeling?**
-   a) It determines the final size of the epidemic.
-   b) It indicates the number of cases treated successfully.
-   c) It signifies the average number of secondary infections produced by a single infection.
-   d) It represents the mortality rate of the disease.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    <details>
 
-   **Answer:** C. It signifies the average number of secondary infections produced by a single infection.
+    <summary>Click to see the answer</summary>
 
-   **Explanation:** The basic reproductive number (R0) is a key concept in infectious disease modeling, indicating how contagious a disease is by representing the average number of new infections caused by an infected individual in a completely susceptible population.
-   </details>
+    **Answer:** B. Individuals who have been exposed to the disease but are not yet infectious.
 
-5. **What is a limitation of using the basic SIR model for real-world infectious disease prediction?**
-   a) It can predict the exact date when an epidemic will end.
-   b) It assumes a constant rate of recovery for all diseases.
-   c) It does not account for changes in behavior or policy interventions.
-   d) It requires genetic information about the disease.
-   
-   <details>
-   <summary>Click to see the answer</summary>
+    **Explanation:** In the SEIR model, the 'Exposed' compartment includes those who have been exposed to the infectious agent but are not yet capable of transmitting the disease to others.
 
-   **Answer:** C. It does not account for changes in behavior or policy interventions.
+    </details>
 
-   **Explanation:** One limitation of the basic SIR model is that it does not incorporate the effects of changes in human behavior or policy interventions (like social distancing or vaccination campaigns), which can significantly alter disease dynamics.
-   </details>
+3.  **Which factor is often added to more advanced compartment models to increase realism?**
 
+    a)  Constant population size throughout the model.
+    b)  Homogeneous mixing of the population.
+    c)  Age-structure or spatial distribution.
+    d)  Assumption of immediate immunity after infection.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. Age-structure or spatial distribution.
+
+    **Explanation:** Advanced compartment models often incorporate factors like age-structure or spatial distribution to more accurately reflect the varying susceptibility and interaction patterns within a population.
+
+    </details>
+
+4.  **Why is it crucial to consider the basic reproductive number (R0) in disease modeling?**
+
+    a)  It determines the final size of the epidemic.
+    b)  It indicates the number of cases treated successfully.
+    c)  It signifies the average number of secondary infections produced by a single infection.
+    d)  It represents the mortality rate of the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It signifies the average number of secondary infections produced by a single infection.
+
+    **Explanation:** The basic reproductive number (R0) is a key concept in infectious disease modeling, indicating how contagious a disease is by representing the average number of new infections caused by an infected individual in a completely susceptible population.
+
+    </details>
+
+5.  **What is a limitation of using the basic SIR model for real-world infectious disease prediction?**
+
+    a)  It can predict the exact date when an epidemic will end.
+    b)  It assumes a constant rate of recovery for all diseases.
+    c)  It does not account for changes in behavior or policy interventions.
+    d)  It requires genetic information about the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It does not account for changes in behavior or policy interventions.
+
+    **Explanation:** One limitation of the basic SIR model is that it does not incorporate the effects of changes in human behavior or policy interventions (like social distancing or vaccination campaigns), which can significantly alter disease dynamics.
+
+    </details>

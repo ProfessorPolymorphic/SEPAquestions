@@ -1,0 +1,1105 @@
+---
+title: "PRE - POST"
+embed-resources: true
+---
+
+# QUESTION BANK FOR PRE POST EVALUATION
+
+This question bank is currently composed of 61 multiple choice questions.  They are arranged according to the learning objectives associated with each of the three activities.  
+
+The idea is that we would construct a matched pre and post test containing about 10 to 12 balanced but unique questions from eact activity.
+
+Some of the data literacy oriented questions will have associated graphs that I must still generate.
+
+
+# Activity 1: Understanding Basic Compartment Models
+
+## Learning Objectives
+
+-   Understand the structure and function of basic infectious disease compartment models, such as the SIR and SEIR models.
+-   Identify the critical assumptions underlying compartment models and their implications for modeling infectious disease spread.
+-   Recognize how compartment models can be used to predict disease dynamics and inform public health interventions.
+
+## Activity 1 Question pool (29 Questions)
+
+
+1.  **What is a key limitation of the basic SIR or SEIR models in infectious disease modeling?**
+
+    a)  They predict the exact time for disease eradication.
+    b)  They assume a homogeneously mixing population.
+    c)  They focus exclusively on airborne diseases.
+    d)  They require real-time data for accurate predictions.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) They assume a homogeneously mixing population.
+
+    **Explanation:** One of the main limitations of basic compartment models like SIR and SEIR is the assumption of homogeneous mixing within the population, which may not accurately reflect real-world scenarios where contact rates vary.
+
+    </details>
+
+2.  **Why might simple compartment models be inadequate for predicting real-world infectious disease spread?**
+
+    a)  They always overestimate the impact of vaccination.
+    b)  They include too many disease-specific details.
+    c)  They do not account for spatial or age-structured differences in populations.
+    d)  They are only applicable for bacterial infections, not viral.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) They do not account for spatial or age-structured differences in populations.
+
+    **Explanation:** Simple compartment models often lack the complexity to account for spatial distribution and age-structured differences, which are crucial factors in the real-world spread of infectious diseases.
+
+    </details>
+
+3.  **Which aspect is often oversimplified in basic SIR and SEIR models?**
+
+    a)  The rate of natural immunity development.
+    b)  The impact of environmental factors on the disease.
+    c)  Population dynamics, such as birth and death rates.
+    d)  The role of healthcare infrastructure in disease management.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) Population dynamics, such as birth and death rates.
+
+    **Explanation:** Basic SIR and SEIR models often simplify population dynamics by assuming a constant population without considering factors like birth, death, and migration rates, which can affect disease spread.
+
+    </details>
+
+4.  **In the context of infectious disease modeling, what limitation does the assumption of a closed population impose?**
+
+    a)  It neglects the impact of global travel on disease spread.
+    b)  It overestimates the speed of vaccine development.
+    c)  It assumes that all individuals have equal susceptibility.
+    d)  It only considers the impact of the disease in urban areas.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** a) It neglects the impact of global travel on disease spread.
+
+    **Explanation:** The assumption of a closed population in basic models overlooks the effects of global travel and migration, which can significantly influence the spread and dynamics of infectious diseases.
+
+    </details>
+
+19. **If a disease has a basic reproduction number (R0) of less than 1, which of the following is true?**
+
+    a)  The disease will likely lead to an epidemic.
+    b)  The disease will spread but will not lead to an epidemic.
+    c)  The disease will gradually disappear from the population.
+    d)  The disease's spread is not affected by its R0 value.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) The disease will gradually disappear from the population.
+
+    **Explanation:** An R0 of less than 1 means that each infected individual is causing fewer infections that what it takes to maintain the outbreak.
+
+    </details>
+
+
+
+
+13. **Which of the following factors is NOT considered to be a component of an infectious disease system?**
+
+    a)  The pathogen that causes the disease.
+    b)  The host population that the pathogen infects.
+    c)  The environment in which the pathogen and host interact.
+    d)  The stock market.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** d) The stock market.
+
+    **Explanation:** An infectious disease system typically includes the pathogen, the host population, and the environment where they interact. The stock market is not a component of an infectious disease system.
+
+    </details>
+
+14. **In the context of infectious diseases, what is the 'R0' (basic reproduction number)?**
+
+    a)  The total number of people infected by a disease.
+    b)  The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population.
+    c)  The percentage of a population that needs to be immune for herd immunity to be reached.
+    d)  The time it takes for symptoms to appear after a person is infected.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) The number of cases a single case generates on average over the course of its infectious period in an otherwise uninfected population.
+
+    **Explanation:** The 'R0' value represents the average number of secondary infections produced by an infected individual in a population where no one else is infected or immunized.
+
+    </details>
+
+15. **What does the 'S' in the SIR model of infectious diseases stand for?**
+
+    a)  Susceptible.
+    b)  Sick.
+    c)  Sensitive.
+    d)  Submissive.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** a) Susceptible.
+
+    **Explanation:** In the SIR model, 'S' stands for Susceptible, referring to individuals who are not yet infected with the disease but are at risk of becoming infected.
+
+    </details>
+
+16. **In the context of infectious disease modeling, what does 'R0' (basic reproduction number) represent?**
+
+    a)  The rate at which recovered individuals lose immunity.
+    b)  The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population.
+    c)  The ratio of vaccinated individuals to susceptible individuals.
+    d)  The resistance of the population to the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) The number of cases one case generates on average over the course of its infectious period, in an otherwise uninfected population.
+
+    **Explanation:** The 'R0' value is a measure of the contagiousness of an infectious disease, indicating the average number of new infections caused by each infected individual.
+
+    </details>
+
+1.  **What is the primary purpose of compartment models in infectious disease modeling?**
+
+    a)  To provide detailed individual case studies.
+    b)  To simulate the economic impact of diseases.
+    c)  To understand infectious disease dynamics through simplified frameworks.
+    d)  To identify the genetic makeup of pathogens.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. To understand infectious disease dynamics through simplified frameworks.
+
+    **Explanation:** Compartment models are used to simplify and understand the dynamics of infectious diseases by dividing the population into different disease states and using mathematical equations to describe transitions between these states.
+
+    </details>
+
+2.  **In the SIR model, what does the 'R' compartment represent?**
+
+    a)  Individuals resistant to the disease.
+    b)  Individuals who are currently receiving treatment.
+    c)  Individuals who have recovered from the disease and gained immunity.
+    d)  Individuals at risk of contracting the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. Individuals who have recovered from the disease and gained immunity.
+
+    **Explanation:** In the SIR model, the 'R' compartment stands for 'Recovered'. It represents individuals who have recovered from the disease and are assumed to have gained immunity against it.
+
+    </details>
+
+3.  **Which of the following is a critical assumption of the SIR model?**
+
+    a)  Heterogeneous mixing of the population.
+    b)  A constant population with no births, deaths, or migration.
+    c)  The disease has multiple strains with different characteristics.
+    d)  The population is divided into age-specific compartments.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. A constant population with no births, deaths, or migration.
+
+    **Explanation:** The SIR model assumes a constant population size, meaning there are no births, deaths unrelated to the disease, or migration during the timeframe of the model. This simplification allows for focusing on the disease dynamics.
+
+    </details>
+
+4.  **Why is it important to understand the limitations of the SIR model?**
+
+    a)  To predict the exact number of cases in an outbreak.
+    b)  To use the model responsibly in public health decision-making.
+    c)  To develop vaccines for infectious diseases.
+    d)  To provide individualized treatment plans.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. To use the model responsibly in public health decision-making.
+
+    **Explanation:** Understanding the limitations of the SIR model is crucial for using it responsibly in public health decision-making. Recognizing its simplifications and assumptions helps in interpreting its predictions correctly and avoids over-reliance on the model.
+
+    </details>
+
+5.  **What is a potential consequence of over-simplification in SIR model predictions?**
+
+    a)  Increased accuracy in long-term predictions.
+    b)  Inability to model any infectious diseases.
+    c)  Inaccurate predictions due to not considering specific disease or population factors.
+    d)  Precise determination of the infection's origin.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. Inaccurate predictions due to not considering specific disease or population factors.
+
+    **Explanation:** Over-simplification in models like SIR can lead to inaccurate predictions, as they may not account for specific characteristics of the disease or variations within the population, such as different rates of contact or varying immunity levels.
+
+    </details>
+
+
+
+1.  **How can models and simulations of infectious disease outbreaks inform public health policies?**
+
+    a)  By providing exact dates for disease eradication.
+    b)  They are primarily used for medical research, not policy-making.
+    c)  By illustrating potential outcomes of different intervention strategies.
+    d)  They only help in predicting economic impacts.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) By illustrating potential outcomes of different intervention strategies.
+
+    **Explanation:** Disease spread simulations can inform public health policies by illustrating the potential outcomes of various intervention strategies, aiding in decision-making regarding control measures and resource allocation.
+
+    </details>
+
+2.  **What is the importance of accurate modeling in epidemic preparedness and response?**
+
+    a)  It ensures the disease will be eradicated quickly.
+    b)  Accurate models help predict the disease's mutation patterns.
+    c)  It aids in understanding potential scenarios and preparing appropriate responses.
+    d)  It guarantees the development of effective vaccines.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) It aids in understanding potential scenarios and preparing appropriate responses.
+
+    **Explanation:** Accurate modeling is crucial in epidemic preparedness and response as it helps health authorities understand potential scenarios, plan for different outcomes, and implement appropriate responses based on model predictions.
+
+    </details>
+
+3.  **How do simulations of infectious disease spread contribute to emergency preparedness?**
+
+    a)  By providing a diversion during emergency situations.
+    b)  They enable real-time tracking of individual cases.
+    c)  They assist in planning and testing response strategies.
+    d)  They are mainly used for academic purposes by nerds.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) They assist in planning and testing response strategies.
+
+    **Explanation:** Simulations play a key role in emergency preparedness by allowing health authorities to plan, test, and evaluate different response strategies, enhancing readiness for actual disease outbreaks.
+
+    </details>
+
+4.  **What role do disease models play in shaping public health interventions?**
+
+    a)  They are secondary to economic considerations.
+    b)  Models primarily focus on post-epidemic analysis.
+    c)  They provide insights for targeted and effective intervention planning.
+    d)  They are used exclusively for vaccine development.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) They provide insights for targeted and effective intervention planning.
+
+    **Explanation:** Disease models are crucial in shaping public health interventions as they provide valuable insights into how different strategies might play out, enabling targeted and effective planning for disease control and prevention.
+
+    </details>
+
+1.  **At the indicated time point in the graph, what can you say about the basic reproduction rate (R0) of the model?**
+
+    a)  R0 is less than 1.
+    b)  R0 is about 0.
+    c)  R0 is greater than 1.
+    d)  R0 is infinte.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** a) R0 is less than 1.
+
+    **Explanation:** At the indicated time point the number of infections in the population is decreasing, which happens when R0 is less than 1.
+
+    </details>
+
+6.  **At what time point does the Infected (I) compartment reach its peak value?**
+
+    a)  Between days X and Y
+    b)  Before day X
+    c)  After day Y
+    d)  The data does not show a clear peak within the time frame
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** a) Between days X and Y
+
+    **Explanation:** The peak of the Infected compartment is typically identified by analyzing the trend in the graph. It is the point where the number of infected individuals is at its highest before starting to decline.
+
+    </details>
+
+7.  **What is the approximate number of Recovered (R) individuals by day Z?**
+
+    a)  Number A
+    b)  Number B
+    c)  Number C
+    d)  Number D
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) Number C
+
+    **Explanation:** This number can be determined by examining the data or graph at day Z, focusing on the Recovered compartment's value.
+
+    </details>
+
+1.  **How does the SEIR model differ from the SIR model?**
+
+    a)  The SEIR model includes an additional 'Exposed' compartment.
+    b)  The SEIR model does not have a 'Recovered' compartment.
+    c)  The SEIR model only models non-infectious diseases.
+    d)  The SEIR model assumes immediate recovery from the infection.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** A. The SEIR model includes an additional 'Exposed' compartment.
+
+    **Explanation:** The SEIR model adds an 'Exposed' compartment to the traditional SIR model, representing individuals who have been exposed to the disease but are not yet infectious.
+
+    </details>
+
+2.  **What does the 'Exposed' compartment in the SEIR model represent?**
+
+    a)  Individuals who are immune to the disease.
+    b)  Individuals who have been exposed to the disease but are not yet infectious.
+    c)  Individuals who have been vaccinated.
+    d)  Individuals who have left the population.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. Individuals who have been exposed to the disease but are not yet infectious.
+
+    **Explanation:** In the SEIR model, the 'Exposed' compartment includes those who have been exposed to the infectious agent but are not yet capable of transmitting the disease to others.
+
+    </details>
+
+3.  **Which factor is often added to more advanced compartment models to increase realism?**
+
+    a)  Constant population size throughout the model.
+    b)  Homogeneous mixing of the population.
+    c)  Age-structure or spatial distribution.
+    d)  Assumption of immediate immunity after infection.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. Age-structure or spatial distribution.
+
+    **Explanation:** Advanced compartment models often incorporate factors like age-structure or spatial distribution to more accurately reflect the varying susceptibility and interaction patterns within a population.
+
+    </details>
+
+4.  **Why is it crucial to consider the basic reproductive number (R0) in disease modeling?**
+
+    a)  It determines the final size of the epidemic.
+    b)  It indicates the number of cases treated successfully.
+    c)  It signifies the average number of secondary infections produced by a single infection.
+    d)  It represents the mortality rate of the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It signifies the average number of secondary infections produced by a single infection.
+
+    **Explanation:** The basic reproductive number (R0) is a key concept in infectious disease modeling, indicating how contagious a disease is by representing the average number of new infections caused by an infected individual in a completely susceptible population.
+
+    </details>
+
+5.  **What is a limitation of using the basic SIR model for real-world infectious disease prediction?**
+
+    a)  It can predict the exact date when an epidemic will end.
+    b)  It assumes a constant rate of recovery for all diseases.
+    c)  It does not account for changes in behavior or policy interventions.
+    d)  It requires genetic information about the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It does not account for changes in behavior or policy interventions.
+
+    **Explanation:** One limitation of the basic SIR model is that it does not incorporate the effects of changes in human behavior or policy interventions (like social distancing or vaccination campaigns), which can significantly alter disease dynamics.
+
+    </details>
+    
+    1.  **What does the 'E' in the SEIR model represent?**
+
+    a)  Environment where the disease spreads.
+    b)  Exposed individuals not yet infectious.
+    c)  Endemic state of the disease.
+    d)  Effectiveness of the treatment.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) Exposed individuals not yet infectious.
+
+    **Explanation:** In the SEIR model, 'E' stands for 'Exposed,' representing individuals who have been exposed to the disease but are not yet infectious.
+
+    </details>
+
+2.  **Which statement correctly describes a characteristic of the SEIR model?**
+
+    a)  It assumes immediate immunity after exposure.
+    b)  It includes a stage for individuals exposed but not yet infectious.
+    c)  It focuses solely on the vaccinated population.
+    d)  It predicts the exact duration of an epidemic.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) It includes a stage for individuals exposed but not yet infectious.
+
+    **Explanation:** The SEIR model adds an 'Exposed' compartment to the traditional SIR model, accounting for the latency period between exposure and becoming infectious.
+
+    </details>
+
+3.  **In the SEIR model, what assumption is made about the population?**
+
+    a)  The population is constantly decreasing.
+    b)  Individuals can be re-infected immediately after recovery.
+    c)  The population is homogeneous and mixing uniformly.
+    d)  Disease spread is solely airborne.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) The population is homogeneous and mixing uniformly.
+
+    **Explanation:** The SEIR model, like other compartment models, often assumes a homogeneous population where individuals mix uniformly, meaning each individual has an equal chance of coming into contact with an infected person.
+
+    </details>
+
+4.  **Why is the 'Exposed' compartment important in the SEIR model?**
+
+    a)  It indicates the total eradication of the disease.
+    b)  It represents people immune to the disease.
+    c)  It accounts for the latency period of the disease.
+    d)  It reflects the environmental factors affecting the disease.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) It accounts for the latency period of the disease.
+
+    **Explanation:** The 'Exposed' compartment in the SEIR model is crucial as it represents the period between when an individual is exposed to the disease and when they become infectious, known as the latency period.
+
+    </details>
+
+# Activity 2: Spatial Dynamics of Disease Spread
+
+## Learning Objectives
+
+-   Understand how the spatial distribution of a population affects the dynamics of disease spread.
+-   Observe the impact of starting location on the spread of an infectious disease through a population.
+-   Compare and contrast the outcomes of the simulation with those of a non-spatially structured model.
+
+## Activity 2 Question Pool (17 Questions)
+
+
+1.  **How does spatial structure influence the spread of infectious diseases?**
+
+    a)  It ensures uniform spread throughout all regions.
+    b)  It leads to variations in spread based on population density and movement.
+    c)  It only affects disease spread in urban areas.
+    d)  It reduces the overall infection rate significantly.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) It leads to variations in spread based on population density and movement.
+
+    **Explanation:** In a spatially structured population, factors like population density and movement patterns play a crucial role, leading to variations in how the disease spreads across different regions.
+
+    </details>
+
+2.  **Why is considering spatial distribution important in infectious disease modeling?**
+
+    a)  It helps predict the exact duration of an epidemic.
+    b)  It allows for a more accurate representation of disease transmission dynamics.
+    c)  It simplifies the model by assuming uniform population distribution.
+    d)  It focuses only on the spread in densely populated cities.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) It allows for a more accurate representation of disease transmission dynamics.
+
+    **Explanation:** Incorporating spatial distribution into infectious disease models provides a more accurate and realistic representation of how diseases spread, taking into account factors like regional population densities and movement patterns.
+
+    </details>
+
+3.  **In a spatially structured model, what can cause differences in disease transmission rates between regions?**
+
+    a)  Uniform healthcare policies across all regions.
+    b)  Similar climate conditions in different regions.
+    c)  Variations in population density and mobility patterns.
+    d)  The same pathogen virulence in all areas.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) Variations in population density and mobility patterns.
+
+    **Explanation:** Differences in population density and mobility patterns among various regions can cause significant variations in disease transmission rates in a spatially structured model.
+
+    </details>
+
+4.  **How does a spatially explicit model enhance the understanding of disease spread compared to a non-spatial model?**
+
+    a)  It predicts the development of vaccines more accurately.
+    b)  It shows the impact of geographical factors on disease dynamics.
+    c)  It focuses solely on the genetic mutation of pathogens.
+    d)  It assumes a constant rate of recovery across all regions.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) It shows the impact of geographical factors on disease dynamics.
+
+    **Explanation:** A spatially explicit model enhances understanding by illustrating the impact of geographical factors, such as location and population movement, on the dynamics of disease spread.
+
+    </details>
+
+18. **How can spatial structure of a population be important in the spread of infectious diseases?**
+
+    a)  Disease spread can be slower in spatially structured populations due to limited interactions between different regions.
+    b)  Spatial structure is irrelevant; infectious diseases spread at the same rate regardless of population structure.
+    c)  Spatial structure only matters in the spread of diseases in animal populations, not humans.
+    d)  Diseases spread faster in spatially structured populations because the disease adapts to different regions.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** a) Disease spread can be slower in spatially structured populations due to limited interactions between different regions.
+
+    **Explanation:** The spatial structure of a population can significantly impact the spread of infectious diseases, as it influences the frequency and pattern of interactions between individuals in different regions.
+
+    </details>
+
+12. **What is the main reason to use a spatially structured population model over a simple SIR model when simulating infectious diseases?**
+
+    a)  It requires less computational power to run so the predictions can be made faster.
+    b)  It provides a more realistic scenario by considering geographic distribution and human movement.
+    c)  It assumes homogeneous mixing, which simplifies the calculations.
+    d)  It does not require data on population density or travel patterns, which can confound the results.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) It provides a more realistic scenario by considering geographic distribution and human movement.
+
+    **Explanation:** A spatially structured model offers a more realistic representation of disease spread by taking into account factors like geographic distribution and human movement patterns, which are crucial in understanding how infectious diseases spread.
+
+    </details>
+
+1. **Why is considering the spatial distribution of a population important in modeling disease spread?**
+   a) It determines the genetic variation of the virus.
+   b) It impacts the rate of vaccine development.
+   c) It influences the transmission rates and spread patterns of the disease.
+   d) It helps in identifying the origin of the disease.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. It influences the transmission rates and spread patterns of the disease.
+
+   **Explanation:** Spatial distribution is crucial as it affects how a disease spreads through a population, influenced by factors like population density and movement patterns, leading to variability in transmission rates across different regions.
+   </details>
+
+2. **How did the starting location of the disease in the simulation affect its spread?**
+   a) It had no significant impact on the spread.
+   b) It influenced the speed and direction of the disease spread.
+   c) It only affected the severity of the disease symptoms.
+   d) It determined the type of population affected.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** B. It influenced the speed and direction of the disease spread.
+
+   **Explanation:** The starting location in a spatial model is crucial as it determines the initial pattern of spread, including the speed and direction in which the disease moves through different population centers.
+   </details>
+
+3. **What is a key difference between spatial and non-spatial disease models?**
+   a) Spatial models only simulate airborne diseases.
+   b) Non-spatial models account for individual immunity levels.
+   c) Spatial models include the impact of geography and population movement.
+   d) Non-spatial models provide more accurate long-term predictions.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. Spatial models include the impact of geography and population movement.
+
+   **Explanation:** Spatial models differ from non-spatial models by incorporating geographical factors and population movement patterns, which affect how a disease spreads in different regions.
+   </details>
+
+4. **What role do transport and local interactions play in a spatial model of disease spread?**
+   a) They determine the effectiveness of vaccines.
+   b) They have no significant impact on disease dynamics.
+   c) They are key factors in how quickly and where the disease spreads.
+   d) They only affect the recovery rate of infected individuals.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. They are key factors in how quickly and where the disease spreads.
+
+   **Explanation:** In spatial disease modeling, transport networks and local interactions are critical as they influence the rate and pathways of disease transmission between different areas.
+   </details>
+
+5. **What insight can a spatial model provide that a basic SIR model cannot?**
+   a) Exact prediction of the disease's end date.
+   b) Detailed genetic analysis of the pathogen.
+   c) The impact of geographic and population factors on disease spread.
+   d) The individual treatment plans for patients.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. The impact of geographic and population factors on disease spread.
+
+   **Explanation:** A spatial model provides insights into how geographic and population factors influence the spread of a disease, something that basic SIR models, which lack spatial structure, cannot offer.
+   </details>
+   
+8.  **Identify which state shows the earliest signs of a decreasing trend in the number of Infected individuals.**
+
+    a)  State A
+    b)  State B
+    c)  State C
+    d)  State D
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) State C
+
+    **Explanation:** By analyzing the infection trends across different states, the state with the earliest decreasing trend can be identified. This is typically the state where control measures are most effective or where the disease has already peaked.
+
+    </details>
+
+
+
+1. **In a spatial model, how does population density impact disease transmission?**
+   a) It has no effect on transmission rates.
+   b) Higher density usually leads to slower disease spread.
+   c) Higher density can increase the rate of disease transmission.
+   d) Population density only affects the mortality rate.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. Higher density can increase the rate of disease transmission.
+
+   **Explanation:** In spatial models, higher population density can lead to increased rates of disease transmission due to more frequent contact among individuals.
+   </details>
+
+2. **What can be inferred about the spread of disease from the simulation's starting point?**
+   a) The starting point is irrelevant in spatial models.
+   b) The disease will spread uniformly from the starting point.
+   c) The starting point influences the initial trajectory and rate of spread.
+   d) Only coastal areas are affected by the starting point.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. The starting point influences the initial trajectory and rate of spread.
+
+   **Explanation:** In spatial disease simulations, the starting point is crucial as it influences the initial direction and speed of the disease's spread through various population areas.
+   </details>
+
+3. **How does the inclusion of spatial structure in a model affect disease dynamics compared to a non-spatial model?**
+   a) It leads to less accurate predictions.
+   b) It shows uniform spread regardless of geography.
+   c) It highlights variations in disease spread due to geographical and social factors.
+   d) It focuses solely on individual behavior changes.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. It highlights variations in disease spread due to geographical and social factors.
+
+   **Explanation:** Spatial models reveal how geographical and social factors can cause variations in disease dynamics, unlike non-spatial models which often assume uniform spread across a population.
+   </details>
+
+4. **What role does local interaction play in the spread of disease in spatial models?**
+   a) It is only significant in rural areas.
+   b) It has a negligible impact compared to other factors.
+   c) It significantly influences the pattern and speed of disease spread.
+   d) It affects the mutation rate of the virus.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. It significantly influences the pattern and speed of disease spread.
+
+   **Explanation:** Local interactions, such as how people move and interact within and across regions, play a significant role in determining the pattern and speed of disease spread in spatial models.
+   </details>
+
+5. **What additional insight does a spatial model provide over a basic SIR model in the context of the 1918 influenza simulation?**
+   a) Exact identification of patient zero.
+   b) The role of geographic barriers in disease containment.
+   c) The influence of spatial factors on disease transmission and evolution.
+   d) The effect of temperature on the virus's survival.
+   
+   <details>
+   <summary>Click to see the answer</summary>
+
+   **Answer:** C. The influence of spatial factors on disease transmission and evolution.
+
+   **Explanation:** A spatial model, as opposed to a basic SIR model, provides insights into how the spread and evolution of a disease like the 1918 influenza are influenced by spatial factors such as geographic location, population density, and movement patterns.
+   </details>
+   
+# Activity 3: Impact of Air Travel on Disease Spread
+
+## Learning Objectives
+
+-   Evaluate how the inclusion of air travel alters the spread of infectious diseases in a spatial model.
+-   Understand the role of transportation hubs in the dissemination of diseases.
+-   Assess the global reach of diseases with the incorporation of air travel into the simulation.
+
+## Actiity 3 Question Pool (15 questions)
+
+
+1.  **How does air travel impact the spread of infectious diseases in a spatial model?**
+
+    a)  It slows down the spread due to increased surveillance.
+    b)  It has no significant impact on the spread.
+    c)  It allows for rapid and long-distance transmission of diseases.
+    d)  It only affects the spread in coastal areas.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It allows for rapid and long-distance transmission of diseases.
+
+    **Explanation:** Air travel facilitates rapid and long-distance transmission of infectious diseases, significantly altering the spread pattern by enabling the disease to reach non-adjacent areas quickly.
+
+    </details>
+
+2.  **What role do transportation hubs play in disease spread in models that include air travel?**
+
+    a)  They are typically disease-free zones.
+    b)  They act as amplifiers for disease spread.
+    c)  They only affect local disease dynamics.
+    d)  They have a negligible impact compared to other factors.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. They act as amplifiers for disease spread.
+
+    **Explanation:** Transportation hubs, such as major airports, play a critical role in disease dissemination, acting as amplifiers and points of spread to various regions, both nationally and internationally.
+
+    </details>
+
+3.  **In the context of the 1918 Influenza, how would the inclusion of air travel in the simulation likely change the spread?**
+
+    a)  It would limit the spread to specific continents.
+    b)  It would result in a slower spread of the disease.
+    c)  It would lead to a more rapid and widespread global dissemination.
+    d)  It would have no impact on the spread pattern.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It would lead to a more rapid and widespread global dissemination.
+
+    **Explanation:** The inclusion of air travel in modeling the 1918 Influenza would likely result in a faster and more widespread global spread of the disease, as air travel enables the virus to reach distant areas quickly.
+
+    </details>
+
+4.  **How does the introduction of air travel in the simulation alter the predicted outcomes compared to ground transportation models?**
+
+    a)  It predicts a more localized spread of the disease.
+    b)  It shows no difference in the spread patterns.
+    c)  It forecasts a faster and more extensive spread to non-adjacent areas.
+    d)  It indicates a slower spread due to advanced medical interventions.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It forecasts a faster and more extensive spread to non-adjacent areas.
+
+    **Explanation:** With air travel, the model predicts a faster and more extensive spread of the disease, particularly to non-adjacent states and countries, differing significantly from ground transportation models.
+
+    </details>
+
+5.  **Reflecting on modern examples, what implications does air travel have for public health policy and response strategies?**
+
+    a)  It necessitates a focus on local health systems only.
+    b)  It underscores the need for global coordination and rapid response.
+    c)  It suggests that air travel restrictions have no effect.
+    d)  It indicates that diseases are less likely to spread in modern times.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. It underscores the need for global coordination and rapid response.
+
+    **Explanation:** The role of air travel in the rapid spread of diseases highlights the importance of global coordination and rapid response strategies in public health policy to effectively manage and contain outbreaks.
+
+    </details>
+    
+
+
+9.  **What effect does air travel have on the dynamics of an infectious disease outbreak?**
+
+    a)  It slows down the spread of the disease.
+    b)  It has no significant impact on the spread.
+    c)  It leads to a more uniform spread across regions.
+    d)  It increases the rate of disease spread.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** d) It increases the speed and reach of the disease spread.
+
+    **Explanation:** Enabling air travel in the simulation allows for the rapid and widespread dissemination of the disease, significantly impacting the speed and extent of its spread.
+
+    </details>
+
+10. **When air travel is included in a disease model of the United States, which states are likely to show higher rates of infection first?**
+
+    a)  States with lower populations.
+    b)  States with major transportation hubs.
+    c)  States that are geographically isolated.
+    d)  States with the highest temperatures.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) States with major transportation hubs.
+
+    **Explanation:** States with major transportation hubs, like large airports, are likely to show higher rates of infection first due to increased travel and movement of people, facilitating the spread of the disease.
+
+    </details>
+
+
+
+
+
+1.  **How does incorporating air travel into disease models change the predicted spread of a disease?**
+
+    a)  It limits the disease to only major cities.
+    b)  It accelerates the spread to distant and non-adjacent areas.
+    c)  It has no significant impact on the spread.
+    d)  It only affects the disease's severity, not its spread.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) It accelerates the spread to distant and non-adjacent areas.
+
+    **Explanation:** Incorporating air travel into disease models often leads to faster and more widespread dissemination, especially to distant and non-adjacent areas, due to the rapid movement of people across large distances.
+
+    </details>
+
+
+
+3.  **In a disease spread simulation, what role do major airports play when air travel is included in the model?**
+
+    a)  They act as barriers to disease spread.
+    b)  They become focal points for accelerated disease transmission.
+    c)  They have no impact on the disease's progression.
+    d)  They only affect international spread, not domestic.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** b) They become focal points for accelerated disease transmission.
+
+    **Explanation:** When air travel is enabled in a disease spread simulation, major airports often become focal points for accelerated transmission, serving as hubs where the disease can spread rapidly to various destinations.
+
+    </details>
+
+4.  **What impact would restricting air travel likely have in a model of infectious disease spread?**
+
+    a)  It would significantly increase the rate of spread.
+    b)  It would have no effect on the spread of the disease.
+    c)  It would likely slow down the spread to distant areas.
+    d)  It would change the pathogen's virulence.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** c) It would likely slow down the spread to distant areas.
+
+    **Explanation:** Restricting air travel in a model of infectious disease spread would likely slow down the transmission to distant areas, as air travel is a key factor in rapid long-distance disease dissemination.
+
+    </details>
+
+
+1.  **What effect does international air travel have on the containment efforts of infectious diseases?**
+
+    a)  It enhances containment by limiting regional spread.
+    b)  It complicates containment due to rapid global spread.
+    c)  It has no impact on containment strategies.
+    d)  It only affects containment in non-urban areas.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. It complicates containment due to rapid global spread.
+
+    **Explanation:** International air travel can significantly complicate the containment of infectious diseases by facilitating rapid global spread, making localized containment efforts less effective.
+
+    </details>
+
+2.  **In the air travel simulation, what impact do major airports have on regional disease dynamics?**
+
+    a)  They act as significant points of disease entry and spread.
+    b)  They serve as effective quarantine zones.
+    c)  They have minimal impact on disease dynamics.
+    d)  They only affect cargo and goods, not people.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** A. They act as significant points of disease entry and spread.
+
+    **Explanation:** Major airports in the air travel simulation act as crucial nodes for disease entry and spread, amplifying the dissemination of the disease to various regions.
+
+    </details>
+
+3.  **Compared to ground transport, how does air travel modify the geographical spread of a disease?**
+
+    a)  It leads to more evenly distributed spread.
+    b)  It concentrates the disease in coastal regions.
+    c)  It allows for rapid spread to distant and non-adjacent areas.
+    d)  It restricts the disease to the hemisphere where it originated.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It allows for rapid spread to distant and non-adjacent areas.
+
+    **Explanation:** Air travel significantly alters the geographical spread of a disease by enabling rapid transmission to distant and geographically non-adjacent areas, beyond the limitations of ground transport.
+
+    </details>
+
+4.  **In the simulation, how did the inclusion of air travel affect the timing of the disease's spread?**
+
+    a)  It resulted in a slower initial spread.
+    b)  It had no effect on the timing of spread.
+    c)  It accelerated the initial spread to new regions.
+    d)  It changed the spread only in the final stages.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** C. It accelerated the initial spread to new regions.
+
+    **Explanation:** The inclusion of air travel in the simulation significantly accelerated the initial spread of the disease, quickly reaching new regions that would have taken longer to be affected via ground transportation alone.
+
+    </details>
+
+5.  **Reflecting on the simulation, what role do air travel restrictions play in managing disease outbreaks?**
+
+    a)  They have no impact on the spread of diseases.
+    b)  They are crucial for early-stage containment and slowing the spread.
+    c)  They only affect the economic aspects of the outbreak.
+    d)  They increase the spread due to overcrowding at airports.
+
+    <details>
+
+    <summary>Click to see the answer</summary>
+
+    **Answer:** B. They are crucial for early-stage containment and slowing the spread.
+
+    **Explanation:** Implementing air travel restrictions can be a critical strategy in the early stages of an outbreak, as it can significantly slow down the rapid global dissemination of the disease, aiding containment efforts.
+
+    </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
